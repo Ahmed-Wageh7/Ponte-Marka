@@ -129,9 +129,11 @@ function changeLang(lang) {
       });
     });
 }
-
-// تطبيق اللغة المختارة
+// -------------------- تغيير اللغة --------------------
 function changeLang(lang) {
+  // حفظ اللغة في localStorage
+  localStorage.setItem("selectedLang", lang);
+
   fetch(`assets/i18n/${lang}.json`)
     .then((res) => res.json())
     .then((data) => {
@@ -161,7 +163,12 @@ function changeLang(lang) {
     .catch((err) => console.error("Error loading language JSON:", err));
 }
 
+// -------------------- تطبيق اللغة عند التحميل --------------------
 document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("selectedLang") || "en"; // English افتراضي
+  changeLang(savedLang);
+
+  // Mobile nav toggle
   const toggle = document.querySelector(".mobile-nav-toggle");
   const nav = document.querySelector(".navmenu");
   const overlay = document.querySelector(".navmenu-overlay");
