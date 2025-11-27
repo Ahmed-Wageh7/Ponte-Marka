@@ -1,0 +1,202 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "item1": {
+      "title": "Cashew Nuts",
+      "desc": "Premium-grade cashew nuts carefully sourced for their rich flavor, creamy texture, and high nutritional value. Ideal for roasting, confectionery, healthy snacks, and food manufacturing.",
+      "btn": "Read More"
+    },
+    "item2": {
+      "title": "Premium Cloves",
+      "desc": "Hand-picked Tanzanian cloves known for their strong aroma and rich essential oils. Perfect for food processing, herbal blends, and pharmaceutical use.",
+      "btn": "Read More"
+    },
+    "item3": {
+      "title": "PONTE MARKA",
+      "desc": "PANTE MARKA is a leading exporter and supplier of premium agricultural products, specializing in cashews, cloves, beans, and cardamom. Committed to quality, sustainability, and sourcing directly from Tanzanian farms.",
+      "btn": "Read More"
+    },
+    "item4": {
+      "title": "Premium Speckled Beans",
+      "desc": "Popular speckled beans available in purple or brown mottled varieties. Known for their attractive appearance, good swelling capacity, and strong market demand. Cultivated across multiple regions in Tanzania.",
+      "btn": "Read More"
+    },
+    "item5": {
+      "title": "Black Pepper",
+      "desc": "Naturally sun-dried black pepper with bold aroma and high piperine levels. Suitable for spice processors, wholesalers, and premium retail packaging.",
+      "btn": "Read More"
+    },
+    "item6": {
+      "title": "Dried Green Cardamom",
+      "desc": "Naturally sun-dried green cardamom pods with a rich, aromatic flavor. Uniform and bright green, ideal for spice processors and premium packaging.",
+      "btn": "Read More"
+    }
+  },
+  "about": {
+    "title": "Ponte Marka: Trading and Industry Company Limited",
+    "storyTitle": "Our Story",
+    "storyText": "Marka Trading and Industry Company Limited is a Tanzania-Italy based agro-food export company with over 7 years of experience. We connect African agricultural excellence with international markets, ensuring certified quality, sustainable sourcing, and reliable logistics for global importers.",
+    "points": [
+      "Transparency and long-term trust with every business partner.",
+      "Compliance with ISO, phytosanitary, fumigation, and export standards.",
+      "Built on years of consistent cooperation in Tanzania and Italy.",
+      "Strong local roots—operating with global standards."
+    ],
+    "videoText": "Watch Video",
+    "videoLink": "assets/videos/About-vid.mp4"
+  },
+
+  "services": {
+    "vision": {
+      "title": "Vision",
+      "desc": "To be the bridge of excellence connecting Tanzania's natural richness to global markets, ensuring every product tells a story of quality, sustainability, and international cooperation."
+    },
+    "mission": {
+      "title": "Mission",
+      "desc": "To cultivate, select, and export premium sisal fibers, cashew nuts, and spices, managing the full supply chain from land to shipment with rigorous phytosanitary standards."
+    },
+    "integrity": {
+      "title": "Integrity & Trust",
+      "desc": "We uphold absolute transparency and build long-term trust with every business partner, fostering reliable and enduring international relationships."
+    },
+    "quality": {
+      "title": "Certified Quality",
+      "desc": "Strict adherence to international standards including ISO, Phytosanitary, Fumigation, and Export compliance ensures premium product quality."
+    },
+    "glocal": {
+      "title": "Glocal Approach",
+      "desc": "Strong local roots in Tanzania combined with global operational standards guarantee sustainable and professional business practices."
+    },
+    "responsive": {
+      "title": "Responsive & Multilingual",
+      "desc": "Our website is fully responsive across all devices and supports multiple languages: English, Italian, and Arabic for international accessibility."
+    }
+  },
+  "gallery": {
+    "sectionTitle": "Gallery",
+    "sectionSubtitle": "Explore our fields, harvests, and production processes—showcasing the premium quality of our agricultural products and our commitment to excellence.",
+    "filters": {
+      "all": "All",
+      "cashew": "Cashew",
+      "cloves": "Cloves",
+      "beans": "Beans",
+      "cardamom": "Cardamom",
+      "blackpepper": "Black Pepper"
+    },
+    "products": {
+      "cashew": {
+        "product": "Raw Cashew Nuts",
+        "category": "Nuts & Dried Fruits (Premium Export)",
+        "tagline": "Crunchy and naturally sweet. Selected for size and outturn.",
+        "description": "We export raw and processed cashew nuts of the highest quality. Our supply chain guarantees healthy nuts with high outturn rates, perfect for roasting and the Italian and European confectionery industry.",
+        "technicalSpecs": "- Grades (Kernels): W180, W210, W240, W320 (Whole White), Splits, Pieces\n- Outturn: 48-53+ lbs per sack (Raw Nuts)\n- Nut Count: 170-200 per kg\n- Moisture: Max 8-10%\n- Defects: < 5%"
+      },
+      "cloves": {
+        "product": "Cloves",
+        "tagline": "The aromatic essence of Zanzibar. Hand-picked and sun-dried.",
+        "description": "Our cloves are famous for their high essential oil content and rich reddish-brown color. Carefully cleaned and sorted to ensure they are free from stems and impurities.",
+        "technicalSpecs": "- Quality: CG1 (Hand-picked), CG2\n- Moisture: < 12%\n- Stems: Max 2-3%\n- Foreign Matter: < 0.5%\n- Essential Oils: High Content"
+      },
+      "beans": {
+        "product": "Mixed Beans & Pulses",
+        "category": "Pulses",
+        "tagline": "Plant-based proteins from the heart of Africa. Soya, White, Yellow, Red Kidney, Black, and Speckled/Pinto Beans.",
+        "description": "A wide range of legumes cultivated on fertile soils. Includes small to medium White Beans (Navy/Cannellini), large Red Kidney Beans, oval/round Yellow Beans, small Black Beans, and speckled Pinto Beans. Essential, clean, and ready for packaging or processing. Main production: Great Lakes/Western (Kagera & Kigoma), Southern Highlands (Mbeya, Iringa), Northern regions (Arusha, Kilimanjaro, Manyara), and multiple other regions.",
+        "technicalSpecs": "- Types: Soya Beans, White Beans, Yellow Kidney, Red Kidney, Black Beans, Speckled/Pinto, Pigeon Peas (Caiano)\n- Size: Uniform to varied depending on type\n- Moisture: Max 13-14%\n- Impurities (Admixture): Max 1-2% (Machine Cleaned)\n- Insect Damage: Max 1%"
+      },
+      "cardamom": {
+        "product": "Green Cardamom",
+        "tagline": "Top-grade green cardamom pods, tightly closed and bright green, grown in rainforest shade.",
+        "description": "Offers a complex flavor combining sweetness and spice. Cardamom Husks: Outer husks separated from seeds, ideal for flavoring tea, Arabic coffee, ground spice blends, or essential oil extraction at economical cost.",
+        "technicalSpecs": "- Grade: AGEB (Extra Bold), Bold\n- Color: Deep Green\n- Size: 6mm - 8mm+\n- Seeds: Black and aromatic\n- Purity: Cleaned from dust\n- Aroma: Light and balsamic\n- Usage: Tea industry, oil extraction"
+      },
+      "blackpepper": {
+        "product": "Black Pepper",
+        "tagline": "Premium black pepper from Tanga, naturally sun-dried to preserve piperine.",
+        "description": "Dark, wrinkled grains with a penetrating aroma, perfect for the food industry and retail.",
+        "technicalSpecs": "- Density: 500GL - 550GL (grams/liter)\n- Moisture: Max 12%\n- Appearance: Whole, clean grains (de-stoned)\n- Salmonella: Tested and absent"
+      }
+    }
+  },
+  "contact": {
+    "sectionTitle": "Contact Us",
+    "sectionSubtitle": "Have a question or need assistance? We're here to help you anytime.",
+    "tzBranch": {
+      "title": "Location (Tanzania Branch)",
+      "address": "W3CQ+XHM Tanga, Tanzania",
+      "emailTitle": "Email (Tanzania Branch)",
+      "email": "tanga.cent@gmail.com",
+      "phoneTitle": "Phone / WhatsApp (Tanzania Branch)",
+      "phone": "+255 686 778 002"
+    },
+    "italyBranch": {
+      "emailTitle": "Email (Italy Branch)",
+      "email": "info@markatz.com",
+      "phoneTitle": "Phone / WhatsApp (Italy Branch)",
+      "phone": "+39 389 787 9480"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "loading": "Loading",
+      "errorMessage": "There was an error sending your message.",
+      "sentMessage": "Your message has been sent. Thank you!",
+      "button": "Send Message"
+    },
+    "qr": {
+      "title": "Scan to Contact Us",
+      "text": "Scan the QR code to reach us."
+    }
+  },
+  "footer": {
+    "logo": "Marka Trading",
+    "contact": {
+      "address1": "W3CQ+XHM Tanga, Tanzania",
+      "address2": "Tanzania",
+      "phone": "Phone:",
+      "phoneNumber": "+255 686 778 002",
+      "email": "Email:",
+      "emailAddress": "tanga.cent@gmail.com"
+    },
+    "usefulLinks": {
+      "title": "Useful Links",
+      "home": "Home",
+      "about": "About us",
+      "services": "Services",
+      "terms": "Terms of service",
+      "privacy": "Privacy policy"
+    },
+    "ourServices": {
+      "title": "Our Services",
+      "agriculture": "Agricultural Consulting",
+      "crop": "Crop Production",
+      "management": "Farm Management",
+      "fertilizer": "Organic Fertilizer Supply",
+      "market": "Market Analysis & Sales"
+    },
+    "newsletter": {
+      "title": "Subscribe to Updates",
+      "text": "Join our newsletter to stay updated with our latest products, services, and offers!",
+      "email": "Enter your email",
+      "subscribe": "Subscribe",
+      "loading": "Loading",
+      "success": "Thank you! Your subscription has been received."
+    },
+    "copyright": {
+      "copyright": "Copyright",
+      "allRights": "All Rights Reserved",
+      "contact": "Contact us:"
+    },
+    "credits": {
+      "developedBy": "Developed by"
+    }
+  }
+}

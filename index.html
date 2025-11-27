@@ -10,6 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 
     <!-- tap Icon  -->
     <link rel="icon" type="image/jpeg" href="images/icon_tap.jpeg" />
@@ -52,16 +53,11 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li>
-              <a href="#about">About Us</a>
-            </li>
-            <li><a href="#services">Services</a></li>
-            <!-- <li><a href="#certifications">Certifications</a></li> -->
-            <li><a href="#Gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-
-            <!-- أيقونة تغيير اللغة -->
+            <li><a href="#" class="active" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#Gallery" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
 
             <ul class="navbar-nav ms-auto">
               <li class="nav-item dropdown">
@@ -99,10 +95,10 @@
             </ul>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          <!-- <i class="mobile-nav-toggle d-xl-none fas fa-bars d-xl-none"></i> -->
         </nav>
       </div>
     </header>
+    <div class="navmenu-overlay"></div>
 
     <main class="main">
       <!-- Hero Section -->
@@ -111,7 +107,7 @@
           id="hero-carousel"
           class="carousel slide carousel-fade"
           data-bs-ride="carousel"
-          data-bs-interval="2000"
+          data-bs-interval="3000"
           data-bs-wrap="true"
           data-bs-pause="false"
         >
@@ -119,139 +115,125 @@
           <div class="carousel-item active">
             <img src="images/kajo.webp" alt="Kajo" />
             <div class="container">
-              <h2>CASHEW NUTS</h2>
-              <p>
+              <h2 data-i18n="hero.item1.title">Cashew Nuts</h2>
+              <p data-i18n="hero.item1.desc">
                 Premium-grade cashew nuts carefully sourced for their rich
                 flavor, creamy texture, and high nutritional value. Ideal for
                 roasting, confectionery, healthy snacks, and food manufacturing
                 thanks to their consistent quality and freshness.
               </p>
-              <a href="#" class="btn-get-started">Read More</a>
-            </div>
-          </div>
-          <!-- Carousel Item 1 -->
-          <div class="carousel-item">
-            <img src="images/cloves.jpeg" alt="Green Coffee Beans" />
-            <div class="container">
-              <h2>PREMIUM CLOVES</h2>
-              <p>
-                Hand-picked Tanzanian cloves known for their strong aroma and
-                rich essential oils. Perfect for food processing, herbal blends,
-                and pharmaceutical use due to their high oil content and
-                consistent quality.
-              </p>
-              <a href="#" class="btn-get-started">Read More</a>
+              <a
+                href="#Gallery"
+                class="btn-get-started"
+                data-i18n="hero.item1.btn"
+                >Read More</a
+              >
             </div>
           </div>
 
           <!-- Carousel Item 2 -->
           <div class="carousel-item">
+            <img src="images/cloves.jpeg" alt="Green Coffee Beans" />
+            <div class="container">
+              <h2 data-i18n="hero.item2.title">Premium Cloves</h2>
+              <p data-i18n="hero.item2.desc">
+                Hand-picked Tanzanian cloves known for their strong aroma and
+                rich essential oils. Perfect for food processing, herbal blends,
+                and pharmaceutical use due to their high oil content and
+                consistent quality.
+              </p>
+              <a
+                href="#Gallery"
+                class="btn-get-started"
+                data-i18n="hero.item2.btn"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- Carousel Item 3 -->
+          <div class="carousel-item">
             <img src="images/another-head.jpeg" alt="PONTE MARKA" />
             <div class="container">
-              <h2>PONTE MARKA</h2>
-              <p>
+              <h2 data-i18n="hero.item3.title">PONTE MARKA</h2>
+              <p data-i18n="hero.item3.desc">
                 PANTE MARKA is a leading exporter and supplier of premium
                 agricultural products, specializing in cashews, cloves, beans,
                 and cardamom. We are committed to quality, sustainability, and
                 providing our clients with the finest produce directly sourced
                 from Tanzanian farms.
               </p>
-              <a href="#" class="btn-get-started">Read More</a>
+              <a
+                href="#Gallery"
+                class="btn-get-started"
+                data-i18n="hero.item3.btn"
+                >Read More</a
+              >
             </div>
           </div>
 
-          <!-- End Carousel Item -->
-
-          <!-- Carousel Item 3 -->
+          <!-- Carousel Item 4 -->
           <div class="carousel-item">
             <img
-              src="images/Premium Speckled Beans.jpeg"
+              src="images/PremiumSpeckledBeans.jpeg"
               alt="Premium Raw Cashew Nuts"
             />
             <div class="container">
-              <h2>PREMIUM SPECKLED BEANS</h2>
-
-              <p>
+              <h2 data-i18n="hero.item4.title">Premium Speckled Beans</h2>
+              <p data-i18n="hero.item4.desc">
                 Popular speckled beans available in purple or brown mottled
                 varieties. Known for their attractive appearance, good swelling
                 capacity, and strong market demand. Widely cultivated across
                 multiple regions in Tanzania.
               </p>
-              <a href="#" class="btn-get-started">Read More</a>
+              <a
+                href="#Gallery"
+                class="btn-get-started"
+                data-i18n="hero.item4.btn"
+                >Read More</a
+              >
             </div>
           </div>
-          <!-- End Carousel Item -->
 
-          <!-- Carousel Item 4 -->
+          <!-- Carousel Item 5 -->
           <div class="carousel-item">
             <img src="images/black_pepper.jpeg" alt="Black Pepper" />
             <div class="container">
-              <h2>BLACK PEPPER</h2>
-              <p>
+              <h2 data-i18n="hero.item5.title">Black Pepper</h2>
+              <p data-i18n="hero.item5.desc">
                 Naturally sun-dried black pepper with bold aroma and high
                 piperine levels. Uniform dark berries suitable for spice
                 processors, wholesalers, and premium retail packaging.
               </p>
-              <a href="#" class="btn-get-started">Read More</a>
+              <a
+                href="#Gallery"
+                class="btn-get-started"
+                data-i18n="hero.item5.btn"
+                >Read More</a
+              >
             </div>
           </div>
-          <!-- End Carousel Item -->
 
-          <!-- Carousel Item 5 -->
+          <!-- Carousel Item 6 -->
           <div class="carousel-item">
-            <img src="images/Cardamom-powder.webp" alt="Black Pepper" />
+            <img src="images/Cardamom-powder.webp" alt="Dried Green Cardmom" />
             <div class="container">
-              <h2>Dried Green Cardmom</h2>
-              <p>
+              <h2 data-i18n="hero.item6.title">Dried Green Cardmom</h2>
+              <p data-i18n="hero.item6.desc">
                 Naturally sun-dried green cardamom pods with a rich, aromatic
                 flavor. Uniform and bright green, ideal for spice processors,
                 wholesalers, and premium retail packaging.
               </p>
-              <a href="#" class="btn-get-started">Read More</a>
+              <a
+                href="#Gallery"
+                class="btn-get-started"
+                data-i18n="hero.item6.btn"
+                >Read More</a
+              >
             </div>
           </div>
-          <!-- End Carousel Item -->
 
-          <!-- <a
-            class="carousel-control-prev"
-            href="#hero-carousel"
-            role="button"
-            data-bs-slide="prev"
-          >
-            <span
-              class="carousel-control-prev-icon bi bi-chevron-left"
-              aria-hidden="true"
-            ></span>
-          </a>
-
-          <a
-            class="carousel-control-next"
-            href="#hero-carousel"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-control-next-icon bi bi-chevron-right"
-              aria-hidden="true"
-            ></span>
-          </a> -->
-
-          <ol class="carousel-indicators">
-            <li
-              data-bs-target="#hero-carousel"
-              data-bs-slide-to="0"
-              class="active"
-            ></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="2"></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="3"></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="4"></li>
-          </ol>
-          <!-- <div class="carousel-indicators">
-            <span class="active" data-index="0"></span>
-            <span data-index="1"></span>
-            <span data-index="2"></span>
-          </div> -->
+          <!-- Carousel Controls & Indicators stay unchanged -->
         </div>
       </section>
       <!-- /Hero Section -->
@@ -269,13 +251,13 @@
             </div>
 
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-              <h2 class="inner-title">
-                Ponte Marka :Trading and Industry company limited
+              <h2 class="inner-title" data-i18n="about.title">
+                Ponte Marka: Trading and Industry company limited
               </h2>
 
               <div class="our-story">
-                <h3>Our Story</h3>
-                <p>
+                <h3 data-i18n="about.storyTitle">Our Story</h3>
+                <p data-i18n="about.storyText">
                   Marka Trading and Industry Company Limited is a Tanzania-Italy
                   based agro-food export company with over 7 years of
                   experience. We connect African agricultural excellence with
@@ -285,29 +267,29 @@
                 <ul>
                   <li>
                     <i class="bi bi-check-circle"></i>
-                    <span
-                      >Transparency and long-term trust with every business
-                      partner.</span
-                    >
+                    <span data-i18n="about.points.0">
+                      Transparency and long-term trust with every business
+                      partner.
+                    </span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle"></i>
-                    <span
-                      >Compliance with ISO, phytosanitary, fumigation, and
-                      export standards.</span
-                    >
+                    <span data-i18n="about.points.1">
+                      Compliance with ISO, phytosanitary, fumigation, and export
+                      standards.
+                    </span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle"></i>
-                    <span
-                      >Built on years of consistent cooperation in Tanzania and
-                      Italy.</span
-                    >
+                    <span data-i18n="about.points.2">
+                      Built on years of consistent cooperation in Tanzania and
+                      Italy.
+                    </span>
                   </li>
                   <li>
                     <i class="bi bi-check-circle"></i>
-                    <span
-                      >Strong local roots—operating with global standards.
+                    <span data-i18n="about.points.3">
+                      Strong local roots—operating with global standards.
                     </span>
                   </li>
                 </ul>
@@ -315,16 +297,14 @@
                 <div
                   class="watch-video d-flex align-items-center position-relative"
                 >
-                  <div
-                    class="watch-video d-flex align-items-center position-relative"
+                  <i class="bi bi-play-circle"></i>
+                  <a
+                    href="assets/videos/About-vid.mp4"
+                    class="glightbox stretched-link"
+                    data-i18n="about.videoText"
                   >
-                    <i class="bi bi-play-circle"></i>
-                    <a
-                      href="assets/videos/About-vid.mp4"
-                      class="glightbox stretched-link"
-                      >Watch Video</a
-                    >
-                  </div>
+                    Watch Video
+                  </a>
                 </div>
               </div>
             </div>
@@ -337,6 +317,7 @@
       <section id="services" class="services section light-background">
         <div class="container">
           <div class="row gy-4">
+            <!-- Service Item 1 -->
             <div
               class="col-lg-4 col-md-6"
               data-aos="fade-up"
@@ -359,20 +340,17 @@
                   </svg>
                   <i class="bi bi-eye"></i>
                 </div>
-                <a href="#" class="stretched-link">
-                  <h3>Vision</h3>
-                </a>
-                <p>
+                <h3 data-i18n="services.vision.title">Vision</h3>
+                <p data-i18n="services.vision.desc">
                   To be the bridge of excellence connecting Tanzania's natural
                   richness to global markets, ensuring every product tells a
                   story of quality, sustainability, and international
                   cooperation.
                 </p>
-                <a href="#" class="stretched-link"></a>
               </div>
             </div>
-            <!-- End Service Item -->
 
+            <!-- Service Item 2 -->
             <div
               class="col-lg-4 col-md-6"
               data-aos="fade-up"
@@ -395,17 +373,16 @@
                   </svg>
                   <i class="bi bi-check2-square"></i>
                 </div>
-                <a href="#" class="stretched-link"><h3>Mission</h3></a>
-                <p>
+                <h3 data-i18n="services.mission.title">Mission</h3>
+                <p data-i18n="services.mission.desc">
                   To cultivate, select, and export premium sisal fibers, cashew
                   nuts, and spices, managing the full supply chain from land to
                   shipment with rigorous phytosanitary standards.
                 </p>
-                <a href="#" class="stretched-link"></a>
               </div>
             </div>
-            <!-- End Service Item -->
 
+            <!-- Service Item 3 -->
             <div
               class="col-lg-4 col-md-6"
               data-aos="fade-up"
@@ -428,19 +405,16 @@
                   </svg>
                   <i class="bi bi-shield-check"></i>
                 </div>
-                <a href="#" class="stretched-link"
-                  ><h3>Integrity & Trust</h3></a
-                >
-                <p>
+                <h3 data-i18n="services.integrity.title">Integrity & Trust</h3>
+                <p data-i18n="services.integrity.desc">
                   We uphold absolute transparency and build long-term trust with
                   every business partner, fostering reliable and enduring
                   international relationships.
                 </p>
-                <a href="#" class="stretched-link"></a>
               </div>
             </div>
-            <!-- End Service Item -->
 
+            <!-- Service Item 4 -->
             <div
               class="col-lg-4 col-md-6"
               data-aos="fade-up"
@@ -463,19 +437,16 @@
                   </svg>
                   <i class="bi bi-award"></i>
                 </div>
-                <a href="#" class="stretched-link"
-                  ><h3>Certified Quality</h3></a
-                >
-                <p>
+                <h3 data-i18n="services.quality.title">Certified Quality</h3>
+                <p data-i18n="services.quality.desc">
                   Strict adherence to international standards including ISO,
                   Phytosanitary, Fumigation, and Export compliance ensures
                   premium product quality.
                 </p>
-                <a href="#" class="stretched-link"></a>
               </div>
             </div>
-            <!-- End Service Item -->
 
+            <!-- Service Item 5 -->
             <div
               class="col-lg-4 col-md-6"
               data-aos="fade-up"
@@ -498,18 +469,16 @@
                   </svg>
                   <i class="bi bi-globe2 icon"></i>
                 </div>
-                <a href="#" class="stretched-link"><h3>Glocal Approach</h3></a>
-                <p>
+                <h3 data-i18n="services.glocal.title">Glocal Approach</h3>
+                <p data-i18n="services.glocal.desc">
                   Strong local roots in Tanzania combined with global
                   operational standards guarantee sustainable and professional
                   business practices.
                 </p>
-
-                <a href="#" class="stretched-link"></a>
               </div>
             </div>
-            <!-- End Service Item -->
 
+            <!-- Service Item 6 -->
             <div
               class="col-lg-4 col-md-6"
               data-aos="fade-up"
@@ -532,19 +501,16 @@
                   </svg>
                   <i class="bi bi-translate"></i>
                 </div>
-                <a href="#" class="stretched-link"
-                  ><h3>Responsive & Multilingual</h3></a
-                >
-                <p>
+                <h3 data-i18n="services.responsive.title">
+                  Responsive & Multilingual
+                </h3>
+                <p data-i18n="services.responsive.desc">
                   Our website is fully responsive across all devices and
                   supports multiple languages: English, Italian, and Arabic for
                   international accessibility.
                 </p>
-
-                <a href="#" class="stretched-link"></a>
               </div>
             </div>
-            <!-- End Service Item -->
           </div>
         </div>
       </section>
@@ -641,8 +607,8 @@
       <section id="Gallery" class="portfolio section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Gallery</h2>
-          <p>
+          <h2 data-i18n="gallery.sectionTitle">Gallery</h2>
+          <p data-i18n="gallery.sectionSubtitle">
             Explore our fields, harvests, and production processes—showcasing
             the premium quality of our agricultural products and our commitment
             to excellence.
@@ -650,229 +616,7 @@
         </div>
         <!-- End Section Title -->
 
-        <!-- Backup plan -->
-        <!-- <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters mb-5"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Cashew</li>
-              <li data-filter=".filter-product">Cloves</li>
-              <li data-filter=".filter-branding">Beans</li>
-              <li data-filter=".filter-branding">Cardamom</li>
-            </ul>
-        
-
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <img src="images/Gallery/17.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/17.jpeg"
-                    title="App 1"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-       
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <img
-                  src="images/Gallery/frame_007.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/frame_007.jpg"
-                    title="Product 1"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-       
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img src="images/Gallery/13.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/13.jpeg"
-                    title="Branding 1"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-     
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <img src="images/Gallery/4.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/4.jpeg"
-                    title="App 2"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-   
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <img src="images/Gallery/5.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/5.jpeg"
-                    title="Product 2"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img src="images/Gallery/6.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/6.jpeg"
-                    title="Branding 2"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <img src="images/Gallery/7.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/7.jpeg"
-                    title="App 3"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-            
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <img src="images/Gallery/8.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/8.jpeg"
-                    title="Product 3"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-      
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img src="images/Gallery/9.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/9.jpeg"
-                    title="Branding 2"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-      
-            </div>
-          </div>
-        </div> -->
-
-        <!-- try plan  -->
+        <!--  plan  -->
         <div class="container">
           <div
             class="isotope-layout"
@@ -886,13 +630,204 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-cashew">Cashew</li>
-              <li data-filter=".filter-cloves">Cloves</li>
-              <li data-filter=".filter-beans">Beans</li>
-              <li data-filter=".filter-cardamom">Cardamom</li>
+              <li data-filter="*" data-i18n="gallery.filters.all">All</li>
+              <li
+                data-filter=".filter-cashew"
+                class="filter-active"
+                data-i18n="gallery.filters.cashew"
+              >
+                Cashew
+              </li>
+              <li
+                data-filter=".filter-cloves"
+                data-i18n="gallery.filters.cloves"
+              >
+                Cloves
+              </li>
+              <li data-filter=".filter-beans" data-i18n="gallery.filters.beans">
+                Beans
+              </li>
+              <li
+                data-filter=".filter-cardamom"
+                data-i18n="gallery.filters.cardamom"
+              >
+                Cardamom
+              </li>
+              <li
+                data-filter=".filter-blackpepper"
+                data-i18n="gallery.filters.blackpepper"
+              >
+                Black Pepper
+              </li>
             </ul>
             <!-- End Portfolio Filters -->
+
+            <div class="portfolio-description" id="desc-cashew">
+              <p>
+                <strong>Product:</strong>
+                <span data-i18n="gallery.products.cashew.product"
+                  >Raw Cashew Nuts</span
+                ><br />
+
+                <strong>Category:</strong>
+                <span data-i18n="gallery.products.cashew.category"
+                  >Nuts & Dried Fruits (Premium Export)</span
+                ><br />
+
+                <strong>Tagline:</strong>
+                <span data-i18n="gallery.products.cashew.tagline"
+                  >Crunchy and naturally sweet. Selected for size and
+                  outturn</span
+                ><br /><br />
+
+                <strong>Description (Front):</strong>
+                <span data-i18n="gallery.products.cashew.description">
+                  We export raw and processed cashew nuts of the highest
+                  quality. Our supply chain guarantees healthy nuts with high
+                  outturn rates, perfect for roasting and the Italian and
+                  European confectionery industry. </span
+                ><br /><br />
+
+                <strong>Technical Specs (Back/Details):</strong><br />
+                <span data-i18n="gallery.products.cashew.technicalSpecs">
+                  - Grades (Kernels): W180, W210, W240, W320 (Whole White),
+                  Splits, Pieces<br />
+                  - Outturn: 48-53+ lbs per sack (Raw Nuts)<br />
+                  - Nut Count: 170-200 per kg<br />
+                  - Moisture: Max 8-10%<br />
+                  - Defects: &lt; 5%
+                </span>
+              </p>
+            </div>
+            <!-- وصف Cloves -->
+            <div class="portfolio-description" id="desc-cloves">
+              <p>
+                <strong>Product:</strong>
+                <span data-i18n="gallery.products.cloves.product">Cloves</span
+                ><br />
+
+                <strong>Tagline:</strong>
+                <span data-i18n="gallery.products.cloves.tagline">
+                  The aromatic essence of Zanzibar. Hand-picked and sun-dried. </span
+                ><br />
+              </p>
+
+              <p>
+                <strong>Description (Front):</strong>
+                <span data-i18n="gallery.products.cloves.description">
+                  Our cloves are famous for their high essential oil content and
+                  rich reddish-brown color. Carefully cleaned and sorted to
+                  ensure they are free from stems and impurities.
+                </span>
+              </p>
+
+              <p>
+                <strong>Technical Specs (Back/Details):</strong><br />
+
+                <!-- كل المحتوى هيظهر من ملفات اللغات -->
+                <span data-i18n="gallery.products.cloves.technicalSpecs">
+                  - Quality: CG1 (Hand-picked), CG2<br />
+                  - Moisture: &lt; 12%<br />
+                  - Stems: Max 2-3%<br />
+                  - Foreign Matter: &lt; 0.5%<br />
+                  - Essential Oils: High Content
+                </span>
+              </p>
+            </div>
+            <!-- وصف Beans مدموج -->
+            <div class="portfolio-description" id="desc-beans">
+              <p>
+                <strong>Product:</strong>
+                <span data-i18n="gallery.products.beans.product"
+                  >Mixed Beans & Pulses</span
+                ><br />
+
+                <strong>Category:</strong>
+                <span data-i18n="gallery.products.beans.category">Pulses</span
+                ><br />
+
+                <strong>Tagline:</strong>
+                <span data-i18n="gallery.products.beans.tagline">
+                  Plant-based proteins from the heart of Africa. Soya, White,
+                  Yellow, Red Kidney, Black, and Speckled/Pinto Beans. </span
+                ><br /><br />
+
+                <strong>Description (Front):</strong>
+                <span data-i18n="gallery.products.beans.description">
+                  A wide range of legumes cultivated on fertile soils. Includes
+                  small to medium White Beans (Navy/Cannellini), large Red
+                  Kidney Beans, oval/round Yellow Beans, small Black Beans, and
+                  speckled Pinto Beans. Essential, clean, and ready for
+                  packaging or processing. Main production: Great Lakes/Western
+                  (Kagera & Kigoma), Southern Highlands (Mbeya, Iringa),
+                  Northern regions (Arusha, Kilimanjaro, Manyara), and multiple
+                  other regions. </span
+                ><br /><br />
+
+                <strong>Technical Specs (Back/Details):</strong><br />
+                <span data-i18n="gallery.products.beans.technicalSpecs">
+                  - Types: Soya Beans, White Beans, Yellow Kidney, Red Kidney,
+                  Black Beans, Speckled/Pinto, Pigeon Peas (Caiano)<br />
+                  - Size: Uniform to varied depending on type<br />
+                  - Moisture: Max 13-14%<br />
+                  - Impurities (Admixture): Max 1-2% (Machine Cleaned)<br />
+                  - Insect Damage: Max 1%
+                </span>
+              </p>
+            </div>
+
+            <!-- وصف Cardamom -->
+            <div class="portfolio-description" id="desc-cardamom">
+              <p>
+                <strong data-i18n="gallery.products.cardamom.product"
+                  >Green Cardamom:</strong
+                >
+                <span data-i18n="gallery.products.cardamom.tagline">
+                  Top-grade green cardamom pods, tightly closed and bright
+                  green, grown in rainforest shade. Offers a complex flavor
+                  combining sweetness and spice. </span
+                ><br /><br />
+
+                <strong>Cardamom Husks:</strong>
+                <span data-i18n="gallery.products.cardamom.description">
+                  Outer husks separated from seeds, ideal for flavoring tea,
+                  Arabic coffee, ground spice blends, or essential oil
+                  extraction at economical cost. </span
+                ><br /><br />
+
+                <strong>Technical Specs:</strong><br />
+                <span data-i18n="gallery.products.cardamom.technicalSpecs">
+                  - Grade: AGEB (Extra Bold), Bold<br />
+                  - Color: Deep Green<br />
+                  - Size: 6mm - 8mm+<br />
+                  - Seeds: Black and aromatic<br />
+                  - Purity: Cleaned from dust<br />
+                  - Aroma: Light and balsamic<br />
+                  - Usage: Tea industry, oil extraction
+                </span>
+              </p>
+            </div>
+            <!-- وصف Black Pepper -->
+            <div class="portfolio-description" id="desc-blackpepper">
+              <p>
+                <strong data-i18n="gallery.products.blackpepper.product"
+                  >Black Pepper:</strong
+                >
+                <span data-i18n="gallery.products.blackpepper.tagline">
+                  Premium black pepper from Tanga, naturally sun-dried to
+                  preserve piperine. Dark, wrinkled grains with a penetrating
+                  aroma, perfect for the food industry and retail. </span
+                ><br /><br />
+
+                <strong>Technical Specs:</strong><br />
+                <span data-i18n="gallery.products.blackpepper.technicalSpecs">
+                  - Density: 500GL - 550GL (grams/liter)<br />
+                  - Moisture: Max 12%<br />
+                  - Appearance: Whole, clean grains (de-stoned)<br />
+                  - Salmonella: Tested and absent
+                </span>
+              </p>
+            </div>
 
             <div
               class="row gy-4 isotope-container"
@@ -908,20 +843,6 @@
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cashew 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/kajo/kajo-1.webp"
-                    title="Cashew 1"
-                    data-gallery="portfolio-gallery-cashew"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
 
               <div
@@ -932,20 +853,6 @@
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cashew 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/kajo/kajo-2.webp"
-                    title="Cashew 2"
-                    data-gallery="portfolio-gallery-cashew"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
 
               <div
@@ -956,20 +863,6 @@
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cashew 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/kajo/kajo-3.jpg"
-                    title="Cashew 3"
-                    data-gallery="portfolio-gallery-cashew"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cashew"
@@ -979,20 +872,6 @@
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cashew 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/kajo/kajo-4.jpeg"
-                    title="Cashew 4"
-                    data-gallery="portfolio-gallery-cashew"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cashew"
@@ -1002,20 +881,6 @@
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cashew 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/kajo/kajo-5.jpg"
-                    title="Cashew 5"
-                    data-gallery="portfolio-gallery-cashew"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cashew"
@@ -1025,20 +890,6 @@
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cashew 6</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/kajo/kajo-6.webp"
-                    title="Cashew 5"
-                    data-gallery="portfolio-gallery-cashew"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cashew"
@@ -1048,85 +899,48 @@
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cashew 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/kajo/kajo-7.jpg"
-                    title="Cashew 5"
-                    data-gallery="portfolio-gallery-cashew"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
 
               <!-- Cloves -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloves"
               >
+                <img src="images/Gallery/9.jpeg" class="img-fluid" alt="" />
+              </div>
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloves"
+              >
+                <img src="images/Gallery/16.jpeg" class="img-fluid" alt="" />
+              </div>
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloves"
+              >
+                <img src="images/Gallery/18.jpeg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloves"
+              >
+                <img src="images/cloves/cloves1.jpg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloves"
+              >
                 <img
-                  src="images/Gallery/frame_007.jpg"
+                  src="images/cloves/cloves-2.jpg"
                   class="img-fluid"
                   alt=""
                 />
-                <div class="portfolio-info">
-                  <h4>Cloves 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/frame_007.jpg"
-                    title="Cloves 1"
-                    data-gallery="portfolio-gallery-cloves"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
-
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloves"
               >
-                <img src="images/Gallery/5.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Cloves 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/5.jpeg"
-                    title="Cloves 2"
-                    data-gallery="portfolio-gallery-cloves"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cloves"
-              >
-                <img src="images/Gallery/8.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Cloves 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/8.jpeg"
-                    title="Cloves 3"
-                    data-gallery="portfolio-gallery-cloves"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
+                <img
+                  src="images/cloves/cloves-3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
               </div>
 
               <!-- Beans -->
@@ -1134,60 +948,40 @@
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-beans"
               >
                 <img src="images/Gallery/13.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Beans 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/13.jpeg"
-                    title="Beans 1"
-                    data-gallery="portfolio-gallery-beans"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
               </div>
-
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-beans"
               >
-                <img src="images/Gallery/6.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Beans 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/6.jpeg"
-                    title="Beans 2"
-                    data-gallery="portfolio-gallery-beans"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
+                <img src="images/Gallery/14.jpeg" class="img-fluid" alt="" />
               </div>
-
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-beans"
               >
-                <img src="images/Gallery/9.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Beans 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/9.jpeg"
-                    title="Beans 3"
-                    data-gallery="portfolio-gallery-beans"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
+                <img src="images/Gallery/11.jpeg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-beans"
+              >
+                <img
+                  src="images/Gallery/bean44.jpeg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-beans"
+              >
+                <img src="images/been55.jpeg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-beans"
+              >
+                <img src="images/been66.jpeg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-beans"
+              >
+                <img src="images/been666.jpeg" class="img-fluid" alt="" />
               </div>
 
               <!-- Cardamom -->
@@ -1195,20 +989,70 @@
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cardamom"
               >
                 <img src="images/Gallery/6.jpeg" class="img-fluid" alt="" />
-                <div class="portfolio-info">
-                  <h4>Cardamom 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="images/Gallery/6.jpeg"
-                    title="Cardamom 1"
-                    data-gallery="portfolio-gallery-cardamom"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a href="#" title="More Details" class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cardamom"
+              >
+                <img src="images/cardmom100.jpeg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cardamom"
+              >
+                <img src="images/cardmom101.jpeg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cardamom"
+              >
+                <img src="images/cardmom102.jpeg" class="img-fluid" alt="" />
+              </div>
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cardamom"
+              >
+                <img src="images/cardmom104.jpeg" class="img-fluid" alt="" />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cardamom"
+              >
+                <img src="images/cardmom106.jpeg" class="img-fluid" alt="" />
+              </div>
+
+              <!-- Black Pepper -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-blackpepper"
+              >
+                <img
+                  src="images/Gallery/5.jpeg"
+                  class="img-fluid"
+                  alt="Black Pepper"
+                />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-blackpepper"
+              >
+                <img
+                  src="images/Gallery/4.jpeg"
+                  class="img-fluid"
+                  alt="Black Pepper"
+                />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-blackpepper"
+              >
+                <img
+                  src="images/blackpepper-1.jpeg"
+                  class="img-fluid"
+                  alt="Black Pepper"
+                />
+              </div>
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-blackpepper"
+              >
+                <img
+                  src="images/blackpepper-2.jpeg"
+                  class="img-fluid"
+                  alt="Black Pepper"
+                />
               </div>
             </div>
           </div>
@@ -1220,8 +1064,8 @@
       <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title text-center" data-aos="fade-up">
-          <h2>Contact Us</h2>
-          <p>
+          <h2 data-i18n="contact.sectionTitle">Contact Us</h2>
+          <p data-i18n="contact.sectionSubtitle">
             Have a question or need assistance? We're here to help you anytime.
           </p>
         </div>
@@ -1238,54 +1082,168 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <!-- End Google Maps -->
+
         <!-- Contact Info -->
         <div class="container" data-aos="fade-up">
-          <div class="contact-info row">
-            <!-- Row 1: Top 3 cards -->
-            <a
-              href="https://goo.gl/maps/tanzania-branch-location"
-              class="col-md-4 info-item link-card"
-            >
-              <i class="bi bi-geo-alt fs-2 mb-2"></i>
-              <h4>Location (Tanzania Branch)</h4>
-              <p>W3CQ+XHM Tanga, Tanzania</p>
-            </a>
+          <div class="row g-4">
+            <!-- LEFT COLUMN — CONTACT INFO -->
+            <div class="col-lg-4">
+              <div class="contact-info row g-3">
+                <a
+                  href="https://goo.gl/maps/tanzania-branch-location"
+                  class="col-12 info-item link-card"
+                >
+                  <i class="bi bi-geo-alt fs-2 mb-2"></i>
+                  <h4 data-i18n="contact.tzBranch.title">
+                    Location (Tanzania Branch)
+                  </h4>
+                  <p data-i18n="contact.tzBranch.address">
+                    W3CQ+XHM Tanga, Tanzania
+                  </p>
+                </a>
 
-            <a
-              href="mailto:info@markatz.com"
-              class="col-md-4 info-item link-card"
-            >
-              <i class="bi bi-envelope fs-2 mb-2"></i>
-              <h4>Email (Italy Branch)</h4>
-              <p>info@markatz.com</p>
-            </a>
+                <a
+                  href="mailto:info@markatz.com"
+                  class="col-12 info-item link-card"
+                >
+                  <i class="bi bi-envelope fs-2 mb-2"></i>
+                  <h4 data-i18n="contact.italyBranch.emailTitle">
+                    Email (Italy Branch)
+                  </h4>
+                  <p data-i18n="contact.italyBranch.email">info@markatz.com</p>
+                </a>
 
-            <a href="tel:+393897879480" class="col-md-4 info-item link-card">
-              <i class="bi bi-whatsapp fs-2 mb-2"></i>
-              <h4>Phone / WhatsApp (Italy Branch)</h4>
-              <p>+39 389 787 9480</p>
-            </a>
+                <a href="tel:+393897879480" class="col-12 info-item link-card">
+                  <i class="bi bi-whatsapp fs-2 mb-2"></i>
+                  <h4 data-i18n="contact.italyBranch.phoneTitle">
+                    Phone / WhatsApp (Italy Branch)
+                  </h4>
+                  <p data-i18n="contact.italyBranch.phone">+39 389 787 9480</p>
+                </a>
 
-            <!-- Row 2: Bottom 2 cards -->
-            <a
-              href="mailto:tanga.cent@gmail.com"
-              class="col-md-6 info-item link-card"
-            >
-              <i class="bi bi-envelope fs-2 mb-2"></i>
-              <h4>Email (Tanzania Branch)</h4>
-              <p>tanga.cent@gmail.com</p>
-            </a>
+                <a
+                  href="mailto:tanga.cent@gmail.com"
+                  class="col-12 info-item link-card"
+                >
+                  <i class="bi bi-envelope fs-2 mb-2"></i>
+                  <h4 data-i18n="contact.tzBranch.emailTitle">
+                    Email (Tanzania Branch)
+                  </h4>
+                  <p data-i18n="contact.tzBranch.email">tanga.cent@gmail.com</p>
+                </a>
 
-            <a
-              href="https://wa.me/255686778002"
-              target="_blank"
-              class="col-md-6 info-item link-card"
-            >
-              <i class="bi bi-whatsapp fs-2 mb-2"></i>
-              <h4>Phone / WhatsApp (Tanzania Branch)</h4>
-              <p>+255 686 778 002</p>
-            </a>
+                <a
+                  href="https://wa.me/255686778002"
+                  target="_blank"
+                  class="col-12 info-item link-card"
+                >
+                  <i class="bi bi-whatsapp fs-2 mb-2"></i>
+                  <h4 data-i18n="contact.tzBranch.phoneTitle">
+                    Phone / WhatsApp (Tanzania Branch)
+                  </h4>
+                  <p data-i18n="contact.tzBranch.phone">+255 686 778 002</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN — CONTACT FORM -->
+            <div class="col-lg-8">
+              <form
+                action="forms/contact.php"
+                method="post"
+                role="form"
+                class="php-email-form"
+              >
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder=" Your Name"
+                      data-i18n="[placeholder]contact.form.name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder=" Your Email"
+                      data-i18n="[placeholder]contact.form.email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    placeholder="Subject"
+                    data-i18n="[placeholder]contact.form.subject"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mt-3">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    placeholder="Message"
+                    data-i18n="[placeholder]contact.form.message"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading" data-i18n="contact.form.loading">
+                    Loading
+                  </div>
+                  <div
+                    class="error-message"
+                    data-i18n="contact.form.errorMessage"
+                  >
+                    <!-- There was an error sending your message. -->
+                  </div>
+                  <div
+                    class="sent-message"
+                    data-i18n="contact.form.sentMessage"
+                  >
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" data-i18n="contact.form.button">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+
+              <div class="container my-5" data-aos="fade-up">
+                <div class="row justify-content-center">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card text-center shadow-sm p-3">
+                      <h5 class="mb-3" data-i18n="contact.qr.title">
+                        Scan to Contact Us
+                      </h5>
+                      <img
+                        src="images/QR.jpeg"
+                        alt="QR Code"
+                        class="img-fluid mx-auto"
+                        style="max-width: 200px"
+                      />
+                      <p class="mt-3 text-muted" data-i18n="contact.qr.text">
+                        Scan the QR code to reach us.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1296,53 +1254,98 @@
           <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
               <a href="index.html" class="logo d-flex align-items-center">
-                <span class="sitename">Marka Trading</span>
+                <span class="sitename" data-i18n="footer.logo"
+                  >Marka Trading</span
+                >
               </a>
               <div class="footer-contact pt-3">
-                <p>W3CQ+XHM Tanga, Tanzania</p>
-                <p>Tanzania</p>
-                <p class="mt-3">
-                  <strong>Phone:</strong> <span>+255 686 778 002</span>
+                <p data-i18n="footer.contact.address1">
+                  W3CQ+XHM Tanga, Tanzania
                 </p>
-                <p><strong>Email:</strong> <span>tanga.cent@gmail.com</span></p>
+                <p data-i18n="footer.contact.address2">Tanzania</p>
+                <p class="mt-3">
+                  <strong data-i18n="footer.contact.phone">Phone:</strong>
+                  <span data-i18n="footer.contact.phoneNumber"
+                    >+255 686 778 002</span
+                  >
+                </p>
+                <p>
+                  <strong data-i18n="footer.contact.email">Email:</strong>
+                  <span data-i18n="footer.contact.emailAddress"
+                    >tanga.cent@gmail.com</span
+                  >
+                </p>
               </div>
               <div class="social-links d-flex mt-4">
-                <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
 
             <div class="col-lg-2 col-md-3 footer-links">
-              <h4>Useful Links</h4>
+              <h4 data-i18n="footer.usefulLinks.title">Useful Links</h4>
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#">Terms of service</a></li>
-                <li><a href="#">Privacy policy</a></li>
+                <li>
+                  <a href="#" data-i18n="footer.usefulLinks.home">Home</a>
+                </li>
+                <li>
+                  <a href="#about" data-i18n="footer.usefulLinks.about"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="#services" data-i18n="footer.usefulLinks.services"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.usefulLinks.terms"
+                    >Terms of service</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.usefulLinks.privacy"
+                    >Privacy policy</a
+                  >
+                </li>
               </ul>
             </div>
+
             <div class="col-lg-2 col-md-3 footer-links">
-              <h4>Our Services</h4>
+              <h4 data-i18n="footer.ourServices.title">Our Services</h4>
               <ul>
-                <div class="services-info">
-                  <h4>Our Services</h4>
-                  <ul>
-                    <li><a href="#">Agricultural Consulting</a></li>
-                    <li><a href="#">Crop Production</a></li>
-                    <li><a href="#">Farm Management</a></li>
-                    <li><a href="#">Organic Fertilizer Supply</a></li>
-                    <li><a href="#">Market Analysis & Sales</a></li>
-                  </ul>
-                </div>
+                <li>
+                  <a href="#" data-i18n="footer.ourServices.agriculture"
+                    >Agricultural Consulting</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.ourServices.crop"
+                    >Crop Production</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.ourServices.management"
+                    >Farm Management</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.ourServices.fertilizer"
+                    >Organic Fertilizer Supply</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.ourServices.market"
+                    >Market Analysis & Sales</a
+                  >
+                </li>
               </ul>
             </div>
 
             <div class="col-lg-4 col-md-12 footer-newsletter">
-              <h4>Subscribe to Updates</h4>
-              <p>
+              <h4 data-i18n="footer.newsletter.title">Subscribe to Updates</h4>
+              <p data-i18n="footer.newsletter.text">
                 Join our newsletter to stay updated with our latest products,
                 services, and offers!
               </p>
@@ -1355,14 +1358,21 @@
                   <input
                     type="email"
                     name="email"
-                    placeholder="Enter your email"
+                    placeholder=""
+                    data-i18n="[placeholder]footer.newsletter.email"
                     required
                   />
-                  <input type="submit" value="Subscribe" />
+                  <input
+                    type="submit"
+                    value=""
+                    data-i18n="[value]footer.newsletter.subscribe"
+                  />
                 </div>
-                <div class="loading">Loading</div>
+                <div class="loading" data-i18n="footer.newsletter.loading">
+                  Loading
+                </div>
                 <div class="error-message"></div>
-                <div class="sent-message">
+                <div class="sent-message" data-i18n="footer.newsletter.success">
                   Thank you! Your subscription has been received.
                 </div>
               </form>
@@ -1372,15 +1382,18 @@
 
         <div class="container copyright text-center mt-4">
           <p>
-            © <span>Copyright</span> <strong class="px-1 sitename">Gado</strong>
-            <span>All Rights Reserved</span>
+            © <span data-i18n="footer.copyright.copyright">Copyright</span>
+            <strong class="px-1 sitename">Gado</strong>
+            <span data-i18n="footer.copyright.allRights"
+              >All Rights Reserved</span
+            >
           </p>
           <p>
-            Contact us:
+            <span data-i18n="footer.copyright.contact">Contact us:</span>
             <a href="mailto:tanga.cent@gmail.com">Marka Trading</a>
           </p>
           <div class="credits">
-            Developed by
+            <span data-i18n="footer.credits.developedBy">Developed by</span>
             <a href="mailto:ahmed.w.s.gado@gmail.com">Ahmed Wageh</a>
           </div>
         </div>
@@ -1400,32 +1413,17 @@
 
     <!-- GLightbox JS -->
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Isotope -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Bootstrap Bundle (JS + Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script>
-      // اختار الكونتينر
-      var iso = new Isotope(".isotope-container", {
-        itemSelector: ".portfolio-item",
-        layoutMode: "masonry",
-      });
+    <!-- EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-      // اختار كل الفلاتر
-      var filtersElem = document.querySelector(".portfolio-filters");
-      filtersElem.addEventListener("click", function (event) {
-        if (!matchesSelector(event.target, "li")) return;
-
-        var filterValue = event.target.getAttribute("data-filter");
-        iso.arrange({ filter: filterValue });
-
-        // إزالة الكلاس النشط من الكل واضافة للضغط عليه
-        filtersElem.querySelectorAll("li").forEach(function (li) {
-          li.classList.remove("filter-active");
-        });
-        event.target.classList.add("filter-active");
-      });
-    </script>
-    <!--Main JS File  -->
+    <!-- Main JS File -->
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "contact": "Contattaci"
+  },
+  "hero": {
+    "item1": {
+      "title": "Anacardi",
+      "desc": "Anacardi di alta qualità selezionati con cura per il loro sapore ricco, la consistenza cremosa e l'alto valore nutrizionale. Ideali per tostatura, dolci, snack salutari e produzione alimentare.",
+      "btn": "Leggi di più"
+    },
+    "item2": {
+      "title": "Chiodi di Garofano Premium",
+      "desc": "Chiodi di garofano della Tanzania, raccolti a mano, noti per il loro aroma intenso e oli essenziali ricchi. Perfetti per lavorazioni alimentari, miscele di erbe e uso farmaceutico.",
+      "btn": "Leggi di più"
+    },
+    "item3": {
+      "title": "PONTE MARKA",
+      "desc": "PANTE MARKA è un'azienda leader nell'esportazione e fornitura di prodotti agricoli premium, specializzata in anacardi, chiodi di garofano, fagioli e cardamomo. Impegnata nella qualità, sostenibilità e nel fornire il meglio dai campi della Tanzania.",
+      "btn": "Leggi di più"
+    },
+    "item4": {
+      "title": "Fagioli Maculati Premium",
+      "desc": "Fagioli maculati disponibili in viola o marrone. Noti per il loro aspetto attraente, buona capacità di rigonfiamento e forte domanda sul mercato. Coltivati in varie regioni della Tanzania.",
+      "btn": "Leggi di più"
+    },
+    "item5": {
+      "title": "Pepe Nero",
+      "desc": "Pepe nero naturalmente essiccato al sole, con aroma intenso e alto contenuto di piperina. Adatto a trasformatori di spezie, grossisti e confezionamento premium.",
+      "btn": "Leggi di più"
+    },
+    "item6": {
+      "title": "Cardamomo Verde Essiccato",
+      "desc": "Baccelli di cardamomo verde essiccati naturalmente con sapore ricco e aromatico. Uniformi e luminosi, ideali per trasformazione di spezie e confezioni di qualità.",
+      "btn": "Leggi di più"
+    }
+  },
+  "about": {
+    "title": "Ponte Marka: Trading and Industry Company Limited",
+    "storyTitle": "La Nostra Storia",
+    "storyText": "Marka Trading and Industry Company Limited è un'azienda di esportazione agroalimentare basata in Tanzania e Italia con oltre 7 anni di esperienza. Connettiamo l'eccellenza agricola africana ai mercati internazionali, garantendo qualità certificata, approvvigionamento sostenibile e logistica affidabile per gli importatori globali.",
+    "points": [
+      "Trasparenza e fiducia a lungo termine con ogni partner commerciale.",
+      "Conformità a ISO, fitosanitari, fumigazione e standard di esportazione.",
+      "Basato su anni di cooperazione costante in Tanzania e Italia.",
+      "Radici locali forti, operando con standard globali."
+    ],
+    "videoText": "Guarda il Video",
+    "videoLink": "assets/videos/About-vid.mp4"
+  },
+  "services": {
+    "vision": {
+      "title": "Visione",
+      "desc": "Essere il ponte dell'eccellenza che collega la ricchezza naturale della Tanzania ai mercati globali, garantendo che ogni prodotto racconti una storia di qualità, sostenibilità e cooperazione internazionale."
+    },
+    "mission": {
+      "title": "Missione",
+      "desc": "Coltivare, selezionare ed esportare fibre di sisal, anacardi e spezie premium, gestendo l'intera catena di approvvigionamento dalla terra alla spedizione con rigorosi standard fitosanitari."
+    },
+    "integrity": {
+      "title": "Integrità e Fiducia",
+      "desc": "Manteniamo trasparenza assoluta e costruiamo fiducia a lungo termine con ogni partner commerciale, promuovendo relazioni internazionali affidabili e durature."
+    },
+    "quality": {
+      "title": "Qualità Certificata",
+      "desc": "Conformità rigorosa agli standard internazionali inclusi ISO, fitosanitari, fumigazione ed esportazione garantisce qualità premium del prodotto."
+    },
+    "glocal": {
+      "title": "Approccio Glocal",
+      "desc": "Radici locali forti in Tanzania combinate con standard operativi globali garantiscono pratiche aziendali sostenibili e professionali."
+    },
+    "responsive": {
+      "title": "Responsive e Multilingue",
+      "desc": "Il nostro sito web è completamente responsive su tutti i dispositivi e supporta più lingue: inglese, italiano e arabo per l'accessibilità internazionale."
+    }
+  },
+  "gallery": {
+    "sectionTitle": "Galleria",
+    "sectionSubtitle": "Esplora i nostri campi, raccolti e processi produttivi—mostrando l'eccellente qualità dei nostri prodotti agricoli e il nostro impegno per l'eccellenza.",
+    "filters": {
+      "all": "Tutti",
+      "cashew": "Anacardi",
+      "cloves": "Chiodi di garofano",
+      "beans": "Fagioli",
+      "cardamom": "Cardamomo",
+      "blackpepper": "Pepe nero"
+    },
+    "products": {
+      "cashew": {
+        "product": "Anacardi Crudi",
+        "category": "Frutta secca e noci (Esportazione Premium)",
+        "tagline": "Croccanti e naturalmente dolci. Selezionati per dimensione e resa.",
+        "description": "Esportiamo anacardi crudi e lavorati della massima qualità. La nostra catena di fornitura garantisce noci sane con alte rese, perfette per tostatura e industria dolciaria italiana ed europea.",
+        "technicalSpecs": "- Gradi (Kernel): W180, W210, W240, W320 (bianco intero), spezzati, pezzi\n- Resa: 48-53+ lbs per sacco (Noci crude)\n- Conteggio noci: 170-200 per kg\n- Umidità: Max 8-10%\n- Difetti: < 5%"
+      },
+      "cloves": {
+        "product": "Chiodi di garofano",
+        "tagline": "L'essenza aromatica di Zanzibar. Selezionati a mano e essiccati al sole.",
+        "description": "I nostri chiodi di garofano sono famosi per l'elevato contenuto di oli essenziali e il colore marrone-rossastro intenso. Puliti e selezionati accuratamente per garantire l'assenza di gambi e impurità.",
+        "technicalSpecs": "- Qualità: CG1 (Selezionati a mano), CG2\n- Umidità: < 12%\n- Gambi: Max 2-3%\n- Materie estranee: < 0,5%\n- Oli essenziali: Contenuto elevato"
+      },
+      "beans": {
+        "product": "Fagioli e legumi misti",
+        "category": "Legumi",
+        "tagline": "Proteine vegetali dal cuore dell'Africa. Soia, bianco, giallo, rosso, nero e fagioli maculati.",
+        "description": "Ampia gamma di legumi coltivati su terreni fertili. Include fagioli bianchi piccoli/medi (Navy/Cannellini), fagioli rossi grandi, fagioli gialli ovali/tondi, fagioli neri piccoli e fagioli maculati Pinto. Essenziali, puliti e pronti per imballaggio o lavorazione. Produzione principale: Grandi Laghi/Ovest (Kagera & Kigoma), Altopiani meridionali (Mbeya, Iringa), regioni settentrionali (Arusha, Kilimanjaro, Manyara) e altre regioni.",
+        "technicalSpecs": "- Tipi: Soia, fagioli bianchi, fagioli gialli, fagioli rossi, fagioli neri, fagioli maculati, piselli (Caiano)\n- Dimensioni: Uniformi o variabili secondo il tipo\n- Umidità: Max 13-14%\n- Impurità (Miscela): Max 1-2% (Pulizia meccanica)\n- Danni da insetti: Max 1%"
+      },
+      "cardamom": {
+        "product": "Cardamomo verde",
+        "tagline": "Baccelli di cardamomo di alta qualità, chiusi ermeticamente e verde brillante, coltivati all'ombra della foresta pluviale.",
+        "description": "Offre un sapore complesso che combina dolcezza e spezie. Gusci: gusci esterni separati dai semi, ideali per aromatizzare tè, caffè arabo, miscele di spezie o estrazione di olio essenziale a costi economici.",
+        "technicalSpecs": "- Grado: AGEB (Extra Bold), Bold\n- Colore: Verde intenso\n- Dimensione: 6-8 mm+\n- Semi: Neri e aromatici\n- Purezza: Pulito dalla polvere\n- Aroma: Leggero e balsamico\n- Uso: Industria del tè, estrazione dell'olio"
+      },
+      "blackpepper": {
+        "product": "Pepe nero",
+        "tagline": "Pepe nero premium da Tanga, essiccato al sole per preservare la piperina.",
+        "description": "Grani scuri e rugosi con aroma penetrante, perfetti per l'industria alimentare e il dettaglio.",
+        "technicalSpecs": "- Densità: 500GL - 550GL (grammi/litro)\n- Umidità: Max 12%\n- Aspetto: Grani interi e puliti (senza pietre)\n- Salmonella: Testata e assente"
+      }
+    }
+  },
+  "contact": {
+    "sectionTitle": "Contattaci",
+    "sectionSubtitle": "Hai una domanda o hai bisogno di assistenza? Siamo qui per aiutarti in qualsiasi momento.",
+    "tzBranch": {
+      "title": "Posizione (Filiale Tanzania)",
+      "address": "W3CQ+XHM Tanga, Tanzania",
+      "emailTitle": "Email (Filiale Tanzania)",
+      "email": "tanga.cent@gmail.com",
+      "phoneTitle": "Telefono / WhatsApp (Filiale Tanzania)",
+      "phone": "+255 686 778 002"
+    },
+    "italyBranch": {
+      "emailTitle": "Email (Filiale Italia)",
+      "email": "info@markatz.com",
+      "phoneTitle": "Telefono / WhatsApp (Filiale Italia)",
+      "phone": "+39 389 787 9480"
+    },
+    "form": {
+      "name": "Il tuo nome",
+      "email": "La tua email",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "loading": "Caricamento",
+      "errorMessage": "Si è verificato un errore durante l'invio del messaggio.",
+      "sentMessage": "Il tuo messaggio è stato inviato. Grazie!",
+      "button": "Invia Messaggio"
+    },
+    "qr": {
+      "title": "Scansiona per contattarci",
+      "text": "Scansiona il codice QR per contattarci."
+    }
+  },
+  "footer": {
+    "logo": "Marka Trading",
+    "contact": {
+      "address1": "W3CQ+XHM Tanga, Tanzania",
+      "address2": "Tanzania",
+      "phone": "Telefono:",
+      "phoneNumber": "+255 686 778 002",
+      "email": "Email:",
+      "emailAddress": "tanga.cent@gmail.com"
+    },
+    "usefulLinks": {
+      "title": "Link Utili",
+      "home": "Home",
+      "about": "Chi siamo",
+      "services": "Servizi",
+      "terms": "Termini di servizio",
+      "privacy": "Privacy"
+    },
+    "ourServices": {
+      "title": "I nostri servizi",
+      "agriculture": "Consulenza agricola",
+      "crop": "Produzione agricola",
+      "management": "Gestione della fattoria",
+      "fertilizer": "Fornitura di fertilizzanti biologici",
+      "market": "Analisi e vendite di mercato"
+    },
+    "newsletter": {
+      "title": "Iscriviti agli aggiornamenti",
+      "text": "Iscriviti alla nostra newsletter per rimanere aggiornato sui nostri ultimi prodotti, servizi e offerte!",
+      "email": "Inserisci la tua email",
+      "subscribe": "Iscriviti",
+      "loading": "Caricamento",
+      "success": "Grazie! La tua iscrizione è stata ricevuta."
+    },
+    "copyright": {
+      "copyright": "Copyright",
+      "allRights": "Tutti i diritti riservati",
+      "contact": "Contattaci:"
+    },
+    "credits": {
+      "developedBy": "Sviluppato da"
+    }
+  }
+}
