@@ -58,12 +58,12 @@
     <link
       rel="preload"
       as="image"
-      href="images/kajo.webp"
+      href="images/kajo-compressed.webp"
       fetchpriority="high"
-      media="(max-width: 768px)"
     />
 
     <!-- Main CSS -->
+    <!-- <link rel="stylesheet" href="css/main.min.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- Favicon -->
@@ -75,7 +75,13 @@
         class="container position-relative d-flex align-items-center justify-content-between"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="images/nav_logo.jpeg" alt="Logo" class="w-100 h-100" />
+          <img
+            src="images.wemp/nav_logo-compressed.webp"
+            class="w-100 h-100"
+            alt="PONTE MARKA Logo"
+            width="347"
+            height="90"
+          />
         </a>
 
         <!-- أيقونة اللغة - موبايل -->
@@ -89,6 +95,7 @@
             id="langDropdownMobile"
             role="button"
             data-bs-toggle="dropdown"
+            aria-label="Language menu"
           >
             <i class="fas fa-globe fs-5"></i>
           </a>
@@ -181,11 +188,11 @@
           <!-- Carousel Item 1 -->
           <div class="carousel-item active">
             <img
-              src="images/kajo.webp"
+              src="images/kajo-compressed.webp"
               alt="Premium Cashew Nuts from Tanzania"
               width="1920"
               height="1080"
-              loading="lazy"
+              fetchpriority="high"
             />
             <div class="container">
               <h2 data-i18n="hero.item1.title">Cashew Nuts</h2>
@@ -207,7 +214,10 @@
 
           <!-- Carousel Item 2 -->
           <div class="carousel-item">
-            <img src="images/cloves.jpeg" alt="Green Coffee Beans" />
+            <img
+              src="images.wemp/hero/cloves-compressed.webp"
+              alt="Green Coffee Beans"
+            />
             <div class="container">
               <h2 data-i18n="hero.item2.title">Premium Cloves</h2>
               <p data-i18n="hero.item2.desc">
@@ -228,7 +238,7 @@
 
           <!-- Carousel Item 3 -->
           <div class="carousel-item">
-            <img src="images/new-wild-card.jpeg" alt="PONTE MARKA" />
+            <img src="images.wemp/hero/new-wild-card.webp" alt="PONTE MARKA" />
             <div class="container">
               <h2 data-i18n="hero.item3.title">PONTE MARKA</h2>
               <p data-i18n="hero.item3.desc">
@@ -250,8 +260,9 @@
           <!-- Carousel Item 4 -->
           <div class="carousel-item">
             <img
-              src="images/PremiumSpeckledBeans.jpeg"
+              src="images/PremiumSpeckledBeans-compressed.webp"
               alt="Premium Raw Cashew Nuts"
+              class="img-fluid"
             />
             <div class="container">
               <h2 data-i18n="hero.item4.title">Premium Speckled Beans</h2>
@@ -273,7 +284,11 @@
 
           <!-- Carousel Item 5 -->
           <div class="carousel-item">
-            <img src="images/black_pepper.jpeg" alt="Black Pepper" />
+            <img
+              src="images.wemp/hero/black_pepper-compressed.webp"
+              alt="Black Pepper"
+              class="img-fluid"
+            />
             <div class="container">
               <h2 data-i18n="hero.item5.title">Black Pepper</h2>
               <p data-i18n="hero.item5.desc">
@@ -293,7 +308,11 @@
 
           <!-- Carousel Item 6 -->
           <div class="carousel-item">
-            <img src="images/Cardamom-powder.webp" alt="Dried Green Cardmom" />
+            <img
+              src="images/Cardamom-powder-compressed.webp"
+              alt="Dried Green Cardmom"
+              class="img-fluid"
+            />
             <div class="container">
               <h2 data-i18n="hero.item6.title">Dried Green Cardmom</h2>
               <p data-i18n="hero.item6.desc">
@@ -326,8 +345,9 @@
               data-aos-delay="200"
             >
               <img
-                src="images/about_company.jpeg"
+                src="images.wemp/about_company.webp"
                 class="rounded-4"
+                width="533"
                 alt="about-section-photo"
               />
             </div>
@@ -999,12 +1019,12 @@
               <!-- أول 3 صور للـ All فقط (بدون filter-all) -->
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images/Gallery/kajo/kajo-1.webp"
+                  href="images/Gallery/kajo/kajo-1-compressed.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
                 >
                   <img
-                    src="images/Gallery/kajo/kajo-1.webp"
+                    src="images/Gallery/kajo/kajo-1-compressed.webp"
                     class="img-fluid"
                     alt="Cashew"
                   />
@@ -1013,12 +1033,12 @@
 
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images/Gallery/9.jpeg"
+                  href="images.wemp/Gallery/9-2-compressed.webp"
                   class="glightbox-images"
                   data-gallery="cloves"
                 >
                   <img
-                    src="images/Gallery/9.jpeg"
+                    src="images.wemp/Gallery/9-2-compressed.webp"
                     class="img-fluid"
                     alt="Cloves"
                   />
@@ -1027,12 +1047,12 @@
 
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images/Gallery/13.jpeg"
+                  href="images.wemp/Gallery/13-compressed.webp"
                   class="glightbox-images"
                   data-gallery="beans"
                 >
                   <img
-                    src="images/Gallery/13.jpeg"
+                    src="images.wemp/Gallery/13-compressed.webp"
                     class="img-fluid"
                     alt="Beans"
                   />
@@ -1040,7 +1060,7 @@
               </div>
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images/cardmom101.jpeg"
+                  href="images.wemp/Gallery/cardmom101.webp"
                   class="glightbox-images"
                   data-gallery="cardamom"
                 >
@@ -1053,12 +1073,12 @@
               </div>
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images/blackpepper-1.jpeg"
+                  href="images/blackpepper-1.webp"
                   class="glightbox-images"
                   data-gallery="blackpepper"
                 >
                   <img
-                    src="images/blackpepper-1.jpeg"
+                    src="images/blackpepper-1.webp"
                     class="img-fluid"
                     alt="blackpepper"
                   />
@@ -1071,12 +1091,12 @@
                   <!-- أول صورتين ظاهرين -->
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/kajo/kajo-1.webp"
+                      href="images/Gallery/kajo/kajo-1-compressed.webp"
                       class="glightbox-images"
                       data-gallery="cashew"
                     >
                       <img
-                        src="images/Gallery/kajo/kajo-1.webp"
+                        src="images/Gallery/kajo/kajo-1-compressed.webp"
                         class="img-fluid"
                         alt="Cashew"
                       />
@@ -1102,26 +1122,31 @@
                   href="images/Gallery/kajo/kajo-3.jpg"
                   class="glightbox-images"
                   data-gallery="cashew"
+                  aria-label="Cashew Image 3"
                 ></a>
                 <a
                   href="images/Gallery/kajo/kajo-4.jpeg"
                   class="glightbox-images"
                   data-gallery="cashew"
+                  aria-label="Cashew Image 4"
                 ></a>
                 <a
                   href="images/Gallery/kajo/kajo-5.jpg"
                   class="glightbox-images"
                   data-gallery="cashew"
+                  aria-label="Cashew Image 5"
                 ></a>
                 <a
                   href="images/Gallery/kajo/kajo-6.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
+                  aria-label="Cashew Image 6"
                 ></a>
                 <a
                   href="images/Gallery/kajo/kajo-7.jpg"
                   class="glightbox-images"
                   data-gallery="cashew"
+                  aria-label="Cashew Image 7"
                 ></a>
               </div>
 
@@ -1184,14 +1209,14 @@
               <div class="portfolio-group filter-beans" style="display: none">
                 <div class="row g-3">
                   <!-- أول صورتين ظاهرين -->
-                  <div class="col-md-6">
+                  <div class="col-lg-4 col-md-6 isotope-item first-three">
                     <a
-                      href="images/Gallery/13.jpeg"
+                      href="images.wemp/Gallery/13-compressed.webp"
                       class="glightbox-images"
                       data-gallery="beans"
                     >
                       <img
-                        src="images/Gallery/13.jpeg"
+                        src="images.wemp/Gallery/13-compressed.webp"
                         class="img-fluid"
                         alt="Beans"
                       />
@@ -1557,7 +1582,7 @@
                     <div class="p-3">
                       <!-- إزالة كلاس card -->
                       <img
-                        src="images/new_QRcode.jpeg"
+                        src="images.wemp/new_QRcode.webp"
                         alt="QR Code"
                         class="img-fluid mx-auto"
                         style="max-width: 200px"
@@ -1584,7 +1609,7 @@
         <div class="ticker-track">
           <!-- النسخة الأولى -->
           <img src="images/Gallery/14.jpeg" alt="track-photo" />
-          <img src="images/Gallery/13.jpeg" alt="track-photo" />
+          <img src="images.wemp/Gallery/13-compressed.webp" alt="track-photo" />
           <img src="images/Gallery/kajo/kajo-3.jpg" alt="track-photo" />
           <img src="images/Gallery/12.jpeg" alt="track-photo" />
           <img src="images/Gallery/kajo/kajo-5.jpg" alt="track-photo" />
@@ -1597,7 +1622,7 @@
 
           <!-- النسخة الثانية (ضروري جداً) -->
           <img src="images/Gallery/14.jpeg" alt="track-photo" />
-          <img src="images/Gallery/13.jpeg" alt="track-photo" />
+          <img src="images.wemp/Gallery/13-compressed.webp" alt="track-photo" />
           <img src="images/Gallery/kajo/kajo-3.jpg" alt="track-photo" />
           <img src="images/Gallery/12.jpeg" alt="track-photo" />
           <img src="images/Gallery/kajo/kajo-5.jpg" alt="track-photo" />
@@ -1737,7 +1762,12 @@
       class="scroll-top d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
-    <a href="https://wa.me/255745580363" target="_blank" class="whatsapp-float">
+    <a
+      href="https://wa.me/255745580363"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Chat with us on WhatsApp"
+    >
       <i class="bi bi-whatsapp"></i>
     </a>
 

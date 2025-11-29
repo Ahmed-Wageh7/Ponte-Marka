@@ -209,3 +209,23 @@ document.querySelectorAll("#navmenu a").forEach((link) => {
     mobileNavToggle.classList.remove("bi-x");
   });
 });
+
+// احصل على الزر
+const scrollTopBtn = document.getElementById("scroll-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    // يظهر بعد تمرير 300px
+    scrollTopBtn.classList.add("active");
+  } else {
+    scrollTopBtn.classList.remove("active");
+  }
+});
+
+scrollTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
