@@ -864,6 +864,20 @@ section,
   object-position: center;
   z-index: 1;
 }
+.about .watch-video {
+  touch-action: pan-y; /* يسمح بالتمرير العمودي على الموبايل */
+}
+
+.about .watch-video.stretched-link {
+  pointer-events: auto; /* Link ممكن يتضغط بس مش يمنع السكروول */
+}
+.about .watch-video a.stretched-link {
+  pointer-events: auto; /* يخلي الضغط على الرابط بس شغال */
+}
+
+.about .watch-video i {
+  pointer-events: none; /* أي أيقونة فوق الرابط لا تمنع التمرير */
+}
 
 /*--------------------------------------------------------------
 # Services Section
@@ -1826,4 +1840,8 @@ html[dir="rtl"] #about ul li i {
 /* لو اللغة عربية RTL */
 html[lang="ar"] .info-item {
   flex-direction: row-reverse; /* الأيقونة على اليمين */
+}
+
+.watch-video {
+  touch-action: manipulation; /* يسمح بالنقر فقط، يمنع السحب */
 }
