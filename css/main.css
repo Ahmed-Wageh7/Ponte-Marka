@@ -760,6 +760,7 @@ section,
   opacity: 1;
   z-index: 1;
 } */
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1617,36 +1618,25 @@ img {
 * {
   box-sizing: border-box;
 }
-/* line tracker */
-.ticker-link {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-}
-
 .ticker-container {
-  width: 100%;
+  max-width: 1200px; /* نفس عرض الكونتينرات الأخرى */
+  margin: 0 auto;
   overflow: hidden;
-  background: #fff;
   padding: 15px 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  position: relative;
+  background: #fff;
 }
 
 .ticker-track {
   display: flex;
   gap: 25px;
-  width: max-content;
+  width: max-content; /* الصور تحافظ على حجمها الطبيعي */
   animation: slideLTR 20s linear infinite;
 }
 
-html[lang="ar"] .ticker-track {
-  animation: slideRTL 20s linear infinite;
-}
-
 .ticker-track img {
-  width: 160px; /* حجم أكبر إذا تحب */
+  width: 160px;
   height: 110px;
   object-fit: cover;
   border-radius: 8px;
@@ -1660,22 +1650,7 @@ html[lang="ar"] .ticker-track {
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-
-/* RTL */
-@keyframes slideRTL {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(50%);
-  }
-}
-
-/* توقف عند hover */
-.ticker-container:hover .ticker-track {
-  animation-play-state: paused;
+  } /* يتحرك نصف طول الصور فقط */
 }
 /* ///////////////////////////////////// Arabic Hell ///////////////////////////////// */
 
@@ -1850,4 +1825,71 @@ html[lang="ar"] .info-item {
   margin-left: 4px; /* مسافة بسيطة بين النص والإيموجي */
   font-size: 1em; /* نفس حجم النص */
   line-height: 1; /* يحافظ على السطر */
+}
+
+/* إذا حابب تحدد أقصى ارتفاع على الموبايل */
+@media (max-width: 768px) {
+  .hero .carousel-item img {
+    max-height: 400px; /* ارتفاع مناسب للشاشة الصغيرة */
+  }
+}
+/* للعرض أقل من 770px */
+/* للعرض أقل من 770px */
+@media (max-width: 770px) {
+  .hero {
+    height: 60vh; /* ارتفاع السكشن 80% من الشاشة */
+    overflow: hidden; /* لمنع أي scroll إضافي */
+  }
+  .hero .carousel-item img {
+    width: 100%; /* تغطي عرض السكشن بالكامل */
+    height: 300px; /* ارتفاع ثابت لجميع الصور على الموبايل */
+    object-fit: cover; /* الصورة تملأ العنصر بدون تشويه */
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* النصوص تبقى قريبة من الصور */
+  .hero .carousel-item .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* تصغير حجم النصوص على الموبايل */
+  .hero .carousel-item h2 {
+    font-size: 1.5rem;
+  }
+  .hero .carousel-item p {
+    font-size: 0.9rem;
+    overflow-y: auto;
+  }
+}
+
+.hero .container {
+  position: absolute; /* يصبح فوق الصورة */
+  top: -33%; /* التحكم في ارتفاع overlay من أعلى السكشن */
+  left: 50%;
+  height: 220px;
+  transform: translateX(-50%);
+  padding: 15px; /* padding مناسب للنصوص */
+  text-align: center;
+  z-index: 3;
+  background: color-mix(in srgb, var(--surface-color), transparent 40%);
+  border-top: 4px solid var(--accent-color);
+}
+.hero .container {
+  position: absolute;
+  top: -36%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  height: 220px; /* ارتفاع ثابت */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* يوزع h2 + p + button بشكل متناسق */
+  padding: 15px;
+  text-align: center;
+  background: color-mix(in srgb, var(--surface-color), transparent 40%);
+  border-top: 4px solid var(--accent-color);
+  z-index: 3;
 }
