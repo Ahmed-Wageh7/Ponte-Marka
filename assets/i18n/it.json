@@ -19,7 +19,7 @@
     },
     "item3": {
       "title": "PONTE MARKA",
-      "desc": "PANTE MARKA è un'azienda leader nell'esportazione e fornitura di prodotti agricoli premium, specializzata in anacardi, chiodi di garofano, fagioli e cardamomo. Impegnata nella qualità, sostenibilità e nel fornire il meglio dai campi della Tanzania.",
+      "desc": "PONTE MARKA è un'azienda leader nell'esportazione e fornitura di prodotti agricoli premium, specializzata in anacardi, chiodi di garofano, fagioli e cardamomo. Impegnata nella qualità, sostenibilità e nel fornire il meglio dai campi della Tanzania.",
       "btn": "Leggi di più"
     },
     "item4": {
@@ -151,7 +151,6 @@
       "button": "Invia Messaggio"
     },
     "qr": {
-      "title": "Scansiona per contattarci",
       "text": "Scansiona il codice QR per contattarci."
     }
   },

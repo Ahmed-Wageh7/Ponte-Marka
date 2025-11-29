@@ -1,139 +1,136 @@
 // -------------------- GLightbox --------------------
-const lightbox = GLightbox({
-  selector: ".glightbox",
+// للـ فيديو
+const lightboxVideo = GLightbox({
+  selector: ".glightbox-video",
   type: "video",
   source: "local",
   width: "80%",
   autoplayVideos: true,
 });
 
+// للصور
+const lightboxImages = GLightbox({
+  selector: ".glightbox-images",
+});
+
 // -------------------- DOMContentLoaded --------------------
 document.addEventListener("DOMContentLoaded", () => {
-  // --- الفلاتر والوصف الافتراضي (الكاجو) ---
+  // ------------------ Portfolio Filters ------------------
   const filters = document.querySelectorAll(".portfolio-filters li");
   const descriptions = document.querySelectorAll(".portfolio-description");
+  const allGroups = document.querySelectorAll(".portfolio-group");
   const allItems = document.querySelectorAll(".isotope-item");
 
-  // تحديد الفلتر الافتراضي
-  const defaultFilter = document.querySelector(
-    ".portfolio-filters .filter-cashew"
-  );
+  // Hide everything initially
+  allItems.forEach((item) => (item.style.display = "none"));
+  allGroups.forEach((group) => (group.style.display = "none"));
+  descriptions.forEach((desc) => (desc.style.display = "none"));
+
+  // Show default Cashew
+  const defaultFilter = document.querySelector(".filter-cashew");
   if (defaultFilter) defaultFilter.classList.add("filter-active");
 
-  // اخفاء كل الوصفات
-  descriptions.forEach((desc) => (desc.style.display = "none"));
+  const firstGroup = document.querySelector(".portfolio-group.filter-cashew");
+  if (firstGroup) firstGroup.style.display = "flex";
+
   const firstDesc = document.querySelector("#desc-cashew");
   if (firstDesc) firstDesc.style.display = "block";
 
-  // اخفاء كل الصور ماعدا الكاجو
-  allItems.forEach((item) => {
-    item.style.display = item.classList.contains("filter-cashew")
-      ? "block"
-      : "none";
+  document.querySelectorAll(".isotope-item.filter-cashew").forEach((item) => {
+    item.style.display = "block";
   });
 
-  // --- Isotope ---
-  const grid = document.querySelector(".isotope-container");
-  const iso = new Isotope(grid, {
+  const iso = new Isotope(".isotope-container", {
     itemSelector: ".isotope-item",
     layoutMode: "masonry",
-    percentPosition: true,
+    filter: ".filter-cashew",
   });
 
-  // --- التعامل مع الضغط على الفلاتر ---
   filters.forEach((filter) => {
     filter.addEventListener("click", () => {
-      const filterValue = filter.getAttribute("data-filter");
-
-      // إزالة active من الكل واضافة للضغط عليه
+      const filterValue = filter
+        .getAttribute("data-filter")
+        .replace(".filter-", "");
       filters.forEach((f) => f.classList.remove("filter-active"));
       filter.classList.add("filter-active");
 
-      // اخفاء كل الوصفات
+      allItems.forEach((item) => (item.style.display = "none"));
       descriptions.forEach((desc) => (desc.style.display = "none"));
+      allGroups.forEach((group) => (group.style.display = "none"));
 
-      // اظهار الوصف المناسب
       if (filterValue === "*") {
-        allItems.forEach((item) => (item.style.display = "block"));
+        document.querySelectorAll(".first-three").forEach((item) => {
+          item.style.display = "block";
+        });
+        iso.arrange({ filter: "*" });
       } else {
-        const desc = document.querySelector(
-          `#desc-${filterValue.replace(".filter-", "")}`
-        );
+        const desc = document.querySelector(`#desc-${filterValue}`);
         if (desc) desc.style.display = "block";
 
-        // اظهار الصور المناسبة فقط
-        allItems.forEach((item) => {
-          item.style.display = item.classList.contains(
-            filterValue.replace(".", "")
-          )
-            ? "block"
-            : "none";
-        });
-      }
+        const activeGroup = document.querySelector(
+          `.portfolio-group.filter-${filterValue}`
+        );
+        if (activeGroup) activeGroup.style.display = "flex";
 
-      // ترتيب Isotope بعد تغيير الفلاتر
-      iso.arrange({ filter: filterValue });
+        document
+          .querySelectorAll(`.isotope-item.filter-${filterValue}`)
+          .forEach((item) => {
+            item.style.display = "block";
+          });
+
+        iso.arrange({ filter: `.filter-${filterValue}` });
+      }
     });
   });
 
-  // -------------------- EmailJS --------------------
-  const form = document.querySelector(".php-email-form");
-  if (form) {
-    emailjs.init("RTNI71vKNe9BQxvi1"); // مفتاحك العام
-    const loading = form.querySelector(".loading");
-    const error = form.querySelector(".error-message");
-    const success = form.querySelector(".sent-message");
+  // ------------------ Read More Buttons ------------------
+  const readMoreIds = ["Cashew", "Cloves", "Beans", "BlackPepper", "Cardamom"];
+  readMoreIds.forEach((id) => {
+    const btn = document.getElementById(`readMore${id}`);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        setTimeout(() => {
+          const filterBtn = document.querySelector(
+            `.portfolio-filters li[data-filter=".filter-${id.toLowerCase()}"]`
+          );
+          if (filterBtn) filterBtn.click();
+        }, 400);
+      });
+    }
+  });
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      loading.style.display = "block";
-      error.style.display = "none";
-      success.style.display = "none";
+  // ------------------ Language Dropdown Fix ------------------
+  const langDropdown = document.querySelector(".language-dropdown");
+  if (langDropdown) {
+    // Ensure menu is closed on page load
+    langDropdown.classList.remove("show");
 
-      emailjs
-        .sendForm("service_d7hnp1q", "template_adixyjt", form)
-        .then(() => {
-          loading.style.display = "none";
-          success.style.display = "block";
-          form.reset();
-        })
-        .catch((err) => {
-          loading.style.display = "none";
-          error.style.display = "block";
-          error.textContent = "Failed to send message ❌";
-          console.error("EmailJS Error:", err);
-        });
+    // Toggle on click
+    langDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle("show");
+    });
+
+    // Close if clicking outside
+    document.addEventListener("click", () => {
+      langDropdown.classList.remove("show");
     });
   }
 });
-
-// -------------------- تغيير اللغة --------------------
+// -------------------- تغيير اللغة + القائمة --------------------
 function changeLang(lang) {
-  fetch(`assets/i18n/${lang}.json`)
-    .then((res) => res.json())
-    .then((data) => {
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const keyAttr = el.getAttribute("data-i18n");
-        let keys, text;
-        if (keyAttr.startsWith("[placeholder]")) {
-          keys = keyAttr.replace("[placeholder]", "").split(".");
-          text = data;
-          keys.forEach((k) => (text = text[k]));
-          el.setAttribute("placeholder", text);
-        } else {
-          keys = keyAttr.split(".");
-          text = data;
-          keys.forEach((k) => (text = text[k]));
-          el.innerText = text;
-        }
-      });
-    });
-}
-// -------------------- تغيير اللغة --------------------
-function changeLang(lang) {
-  // حفظ اللغة في localStorage
   localStorage.setItem("selectedLang", lang);
 
+  // تغيير اتجاه الصفحة
+  if (lang === "ar") {
+    document.documentElement.setAttribute("dir", "rtl");
+    document.body.classList.add("rtl"); // لتسهيل تعديل CSS للـ RTL
+  } else {
+    document.documentElement.setAttribute("dir", "ltr");
+    document.body.classList.remove("rtl");
+  }
+
+  // تحميل نصوص اللغة
   fetch(`assets/i18n/${lang}.json`)
     .then((res) => res.json())
     .then((data) => {
@@ -144,42 +141,83 @@ function changeLang(lang) {
         if (keyAttr.startsWith("[placeholder]")) {
           keys = keyAttr.replace("[placeholder]", "").split(".");
           text = data;
-          keys.forEach((k) => {
-            if (text && text[k] !== undefined) text = text[k];
-            else text = "";
-          });
+          keys.forEach((k) => (text = text?.[k] ?? ""));
           el.setAttribute("placeholder", text);
         } else {
           keys = keyAttr.split(".");
           text = data;
-          keys.forEach((k) => {
-            if (text && text[k] !== undefined) text = text[k];
-            else text = "";
-          });
+          keys.forEach((k) => (text = text?.[k] ?? ""));
           el.innerText = text;
         }
       });
+
+      hideLangMenu();
     })
     .catch((err) => console.error("Error loading language JSON:", err));
 }
 
-// -------------------- تطبيق اللغة عند التحميل --------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("selectedLang") || "en"; // English افتراضي
-  changeLang(savedLang);
+// document.getElementById("langDropdown").addEventListener("click", function (e) {
+//   e.preventDefault();
+//   const menu = document.querySelector(".dropdown-menu");
+//   menu.style.display = menu.style.display === "block" ? "none" : "block";
+// });
 
-  // Mobile nav toggle
-  const toggle = document.querySelector(".mobile-nav-toggle");
-  const nav = document.querySelector(".navmenu");
-  const overlay = document.querySelector(".navmenu-overlay");
+// function hideLangMenu() {
+//   document.querySelector(".dropdown-menu").style.display = "none";
+// }
 
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("mobile-nav-active");
-    overlay.classList.toggle("active");
+// -------------------- Navbar Active --------------------
+const navLinks = document.querySelectorAll('.navmenu a[href^="#"]');
+const sections = Array.from(navLinks)
+  .map((link) => {
+    const id = link.getAttribute("href").substring(1);
+    return document.getElementById(id);
+  })
+  .filter((sec) => sec !== null);
+
+const observerOptions = {
+  root: null,
+  rootMargin: "-100px 0px 0px 0px",
+  threshold: 0.2,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navLinks.forEach((link) => {
+        if (!link.closest(".portfolio-filters")) {
+          link.classList.remove("active");
+        }
+      });
+      const id = entry.target.id;
+      const activeLink = document.querySelector(`.navmenu a[href="#${id}"]`);
+      if (activeLink) activeLink.classList.add("active");
+    }
   });
+}, observerOptions);
 
-  overlay.addEventListener("click", () => {
-    nav.classList.remove("mobile-nav-active");
-    overlay.classList.remove("active");
+sections.forEach((section) => observer.observe(section));
+
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
+// -------------------- GLightbox إضافي --------------------
+const lightbox2 = GLightbox({ selector: ".glightbox" });
+
+const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+const navMenu = document.querySelector("#navmenu");
+
+// فتح/إغلاق الـ nav
+mobileNavToggle.addEventListener("click", () => {
+  document.body.classList.toggle("mobile-nav-active");
+  mobileNavToggle.classList.toggle("bi-list");
+  mobileNavToggle.classList.toggle("bi-x");
+});
+
+// إغلاق الـ nav عند الضغط على أي nav link
+document.querySelectorAll("#navmenu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.body.classList.remove("mobile-nav-active");
+    mobileNavToggle.classList.add("bi-list");
+    mobileNavToggle.classList.remove("bi-x");
   });
 });

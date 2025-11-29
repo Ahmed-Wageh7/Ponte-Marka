@@ -64,6 +64,147 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
+/*--------------------------------------------------------------
+# Header & Navigation RTL Support
+--------------------------------------------------------------*/
+
+/* الاتجاه الافتراضي */
+body {
+  direction: ltr;
+}
+
+/* عند اختيار العربية */
+body.rtl {
+  direction: rtl;
+}
+
+/* Header */
+body.rtl .header {
+  flex-direction: row-reverse;
+}
+
+/* اللوجو */
+body.rtl .header .logo {
+  margin-left: auto;
+  margin-right: -20rem;
+}
+
+/* روابط Nav */
+body.rtl nav.navmenu ul {
+  flex-direction: row;
+  text-align: right;
+}
+
+/* Dropdown القوائم */
+body.rtl .navmenu .dropdown ul,
+body.rtl .language-toggle .dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+/* أيقونة الموبايل (الهامبرغر) */
+body.rtl .mobile-nav-toggle {
+  right: 30px; /* ثابت يمين */
+  left: auto; /* إزالة التحريك لليسار */
+}
+
+/* أيقونة اللغة */
+body.rtl .language-toggle.d-none.d-xl-flex {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+/* Nav Links */
+body.rtl .navmenu a {
+  justify-content: flex-end; /* لتحريك النصوص لليمين */
+}
+
+/* أيقونات داخل الروابط */
+body.rtl .navmenu a i {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+/* Mobile Menu RTL */
+body.rtl .navmenu ul {
+  inset: 60px 20px 20px 20px;
+  text-align: right;
+}
+
+/* Mobile Nav Active */
+body.rtl .mobile-nav-active .mobile-nav-toggle {
+  right: 30px;
+  left: auto;
+}
+
+/* Language Dropdown Mobile */
+body.rtl .language-toggle.d-xl-none {
+  right: 30px;
+  left: auto;
+}
+
+/* Dropdown Submenus */
+body.rtl .navmenu .dropdown .dropdown ul {
+  left: auto;
+  right: -100%;
+}
+
+/* أمثلة لتغيير ترتيب العناصر عند RTL */
+body.rtl .header .logo {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+body.rtl .navmenu ul {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .mobile-nav-toggle {
+  left: 30px;
+  right: auto;
+}
+
+body.rtl .language-toggle.d-xl-flex {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+/* عند اللغة العربية */
+body.rtl #header .container {
+  flex-direction: row; /* نحافظ على ترتيب العناصر طبيعي */
+}
+
+body.rtl .logo {
+  margin-left: auto; /* اللوجو على أقصى اليمين */
+  margin-right: 0;
+}
+
+body.rtl #navmenu {
+  margin-left: 0;
+  margin-right: auto; /* الناف تتحرك للشمال */
+}
+
+body.rtl #navmenu ul {
+  flex-direction: row; /* ترتيب اللينكات زي ما هم */
+  text-align: left;
+}
+
+body.rtl .language-toggle.d-xl-flex,
+body.rtl .language-toggle.d-xl-none {
+  margin-left: 0;
+  margin-right: auto; /* أيقونة اللغة على الشمال */
+}
+
+body.rtl .mobile-nav-toggle {
+  left: 15px; /* أيقونة الموبايل على أقصى الشمال */
+  right: auto;
+}
+/* ِENGLISH */
+html {
+  scroll-padding-top: 120px;
+}
 
 a {
   color: var(--accent-color);
@@ -188,7 +329,7 @@ header .header-social-links a i {
     font-size: 13px;
     font-family: var(--nav-font);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -251,10 +392,28 @@ header .header-social-links a i {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover > ul {
-    opacity: 1;
+  /* منع الفتح بالهوفر */
+  /* .navmenu .dropdown:hover > ul {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    top: 130% !important;
+  } */
+
+  /* .navmenu li.dropdown.language-dropdown:hover > ul {
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: 100% !important;
+  } */
+
+  .language-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
     top: 100%;
-    visibility: visible;
+    right: 0;
+  }
+
+  .language-dropdown.show .dropdown-menu {
+    display: block !important;
   }
 
   .navmenu .dropdown .dropdown ul {
@@ -270,11 +429,23 @@ header .header-social-links a i {
     visibility: visible;
   }
 }
-.dropdown-menu-end {
+/* .dropdown-menu-end {
   right: 0;
   left: auto;
   transform: translateX(-60%);
   overflow: hidden;
+} */
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
+.language-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  transform: none !important;
 }
 
 .dropdown-item:focus,
@@ -407,6 +578,31 @@ header .header-social-links a i {
   }
 }
 
+/* .language-toggle {
+  position: absolute;
+  right: 60px;
+  top: 15px;
+  z-index: 10000;
+} */
+
+/* .language-toggle .dropdown-menu {
+  right: 0;
+  left: auto;
+} */
+/* ----------------------- test\\
+/* أيقونة اللغة دايمًا على الموبايل */
+/* .language-toggle {
+  position: absolute;
+  right: 30px; 
+  top: 15px;
+  z-index: 10000;
+}
+
+.language-toggle .dropdown-menu {
+  right: 0;
+  left: auto;
+} */
+
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
@@ -440,7 +636,7 @@ header .header-social-links a i {
 
 .section-title p {
   margin-bottom: 0;
-  font-size: 19px !important;
+  font-size: 24px !important;
 }
 
 /*--------------------------------------------------------------
@@ -649,6 +845,11 @@ header .header-social-links a i {
   font-size: 13px;
 }
 
+.footer-links ul li span {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  display: inline-block;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -784,7 +985,7 @@ section,
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   border-top: 4px solid var(--accent-color);
   z-index: 3;
 }
@@ -1507,6 +1708,8 @@ section,
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
   background: #f9f9f9;
 }
+
+/* ////////////////////////////////////////////// */
 /* addition work  */
 .navmenu a {
   font-size: 17px !important;
@@ -1533,4 +1736,443 @@ body[dir="rtl"] .navbar-nav {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Smooth dropdown animation */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Navbar Links - Desktop & Mobile */
+.navmenu a,
+.navmenu a:focus,
+.navmenu .dropdown-item {
+  font-weight: 700 !important; /* خليها bold أكتر */
+  letter-spacing: 0.5px; /* اختياري يعطي إحساس بالقوة */
+}
+
+/* لو عايز hover كمان يبقى واضح */
+.navmenu a:hover,
+.navmenu .dropdown-item:hover {
+  color: var(--nav-hover-color) !important;
+}
+
+/*--------------------------------------------------------------
+# Hero Section Adjustments
+--------------------------------------------------------------*/
+.hero .carousel-item .container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px; /* أقل عرض للـ overlay */
+  margin: 80px auto 0; /* وسط المحتوى أفقياً ونزله للأسفل */
+  padding: 40px 30px; /* مسافات داخلية جيدة */
+  text-align: center;
+  background: color-mix(in srgb, var(--surface-color), transparent 40%);
+  border-top: 4px solid var(--accent-color);
+  border-radius: 8px; /* حواف مستديرة */
+}
+
+/* paragraph تحت العنوان أكبر */
+.hero .carousel-item p {
+  font-size: 18px; /* تكبير الخط */
+  line-height: 1.7; /* مسافة بين السطور */
+  margin-bottom: 20px;
+  color: var(--default-color);
+}
+
+/* الصورة الخلفية تغطي كامل الشاشة وتتكيف مع أي resolution */
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* تغطي كامل الـ container بدون تشويه */
+  object-position: center;
+  z-index: 1;
+}
+
+/* التأكد من أن الـ carousel-item يغطي الشاشة بالكامل */
+.hero .carousel-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh; /* يجعل كل slide يغطي ارتفاع الشاشة */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero container زي باقي السكشنات
+.hero .carousel-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh; */
+/* max-width: 1400px;  */
+/* margin: 0 auto; */
+/* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* يغطي كل ارتفاع الشاشة */
+  overflow: hidden;
+}
+
+.hero .carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* الصورة تغطي الحيز بالكامل */
+  object-position: center; /* يحافظ على مركز الصورة */
+}
+
+/* Container النصوص فوق الصورة */
+/* .hero .container {
+  position: relative;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 30px;
+  z-index: 10;
+  text-align: center;
+  background: color-mix(in srgb, var(--surface-color), transparent 40%);
+  border-top: 4px solid var(--accent-color);
+} */
+
+.loading,
+.error-message,
+.sent-message {
+  display: none; /* أخفيهم بشكل افتراضي */
+}
+
+.branch-icon {
+  font-size: 1rem; /* حجم الأيقونة */
+  margin-left: 8px; /* مسافة بين الاسم والأيقونة */
+  vertical-align: middle;
+}
+
+/* ألوان حسب الدولة */
+.italy-icon {
+  color: #008c45; /* أخضر العلم الإيطالي */
+}
+
+.tanzania-icon {
+  color: #00a3dd; /* أزرق العلم التنزاني */
+}
+
+.branch-title {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* المسافة بين الاسم والعلم */
+  font-size: 24px; /* حجم الخط الأساسي */
+}
+
+.flag-icon {
+  font-size: 32px; /* حجم العلم */
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* المسافة بين الأيقونة والنص */
+}
+
+.logo-icon {
+  width: 160px; /* عرض الأيقونة */
+  height: 160px; /* ارتفاع الأيقونة */
+  object-fit: contain;
+}
+
+/*--------------------------------------------------------------
+# Global Footer - Updated Font Sizes
+--------------------------------------------------------------*/
+.footer {
+  font-size: 18px; /* زيادة حجم النص الأساسي */
+  line-height: 1.8; /* تحسين المسافة بين السطور */
+}
+
+.footer h4 {
+  font-size: 18px; /* تكبير عناوين الأعمدة */
+}
+
+.footer .footer-about p,
+.footer .footer-contact p,
+.footer .footer-links ul li a,
+.footer .footer-newsletter input[type="email"],
+.footer .footer-newsletter input[type="submit"],
+.footer .copyright,
+.footer .credits {
+  font-size: 19px; /* تكبير النصوص العامة والروابط والفورم */
+}
+
+.footer .footer-about .logo span {
+  font-size: 18px; /* تكبير اسم الموقع */
+}
+
+.portfolio-filters li {
+  font-size: 18px !important; /* حجم الخط أكبر */
+  padding: 10px 20px; /* زيادة المسافة الداخلية */
+  cursor: pointer; /* مؤشر اليد */
+  transition: 0.3s; /* تأثير سلس عند التحريك */
+}
+
+.portfolio-filters li.filter-active {
+  font-weight: bold; /* إبراز العنصر النشط */
+  font-size: 22px; /* أكبر شوية للعناصر النشطة */
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 80px; /* المسافة من تحت الصفحة */
+  right: 40px; /* المسافة من اليمين */
+  background-color: #25d366; /* لون الواتس الأخضر */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.flag-icon {
+  width: 20px;
+  height: 15px;
+}
+
+.emoji {
+  font-size: 30px;
+}
+
+.portfolio-description {
+  font-size: 1.2rem; /* كبّر على مزاجك 1.2 / 1.3 */
+  line-height: 1.6;
+}
+
+/* .language-dropdown .dropdown-menu {
+  display: none;
+} */
+
+.language-dropdown.show .dropdown-menu {
+  display: block;
+}
+
+/* مهم: منع أي hover قديم */
+/* .language-dropdown:hover .dropdown-menu {
+  display: none !important;
+} */
+
+/* إخفاء القائمة افتراضياً */
+.language-dropdown .dropdown-menu {
+  display: none !important;
+}
+
+/* لما تضغط على الأيقونة، تظهر */
+.language-dropdown.show .dropdown-menu {
+  display: block !important;
+}
+
+/* منع أي Hover قديم إنه يفتح أو يقفل */
+.language-dropdown:hover .dropdown-menu {
+  display: none !important;
+}
+
+/* تكبير الناف - آخر حاجة تضيفها */
+#header .navmenu a,
+#header .navmenu,
+nav#navbar a,
+.header .navmenu a {
+  font-size: 15px !important;
+}
+
+/* تكبير قائمة اللغة + margin */
+.language-toggle .dropdown-menu {
+  width: 200px !important; /* عرض أوسع */
+  min-width: 200px !important;
+}
+
+/* hero custimization */
+
+/* صور Hero كاملة بدون قص على الموبايل */
+/* @media (max-width: 768px) {
+  .hero {
+    height: 70vh !important;
+    overflow: hidden !important;
+  }
+
+  .hero .carousel,
+  .hero .carousel-item {
+    height: 100% !important;
+    width: 100vw !important;
+    position: relative !important;
+  }
+
+  .hero .carousel-item img {
+    width: 100vw !important;
+    height: 100% !important;
+    object-fit: contain !important; 
+    object-position: center !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    transform: translateX(-50%) !important;
+  } */
+
+/* Overlay فوق الصورة */
+/* .hero .container {
+    position: relative !important;
+    z-index: 10 !important;
+    background: color-mix(
+      in srgb,
+      var(--surface-color),
+      transparent 40%
+    ) !important;
+    border-top: 4px solid var(--accent-color) !important;
+    padding: 25px 20px !important;
+  }
+} */
+/* Hero صور كاملة على الموبايل - الحل النهائي */
+/* @media (max-width: 768px) {
+  .hero {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    overflow: hidden !important;
+  }
+
+  .hero .carousel {
+    height: 70vh !important;
+    width: 100% !important;
+  }
+
+  .hero .carousel-item {
+    height: 100% !important;
+  }
+
+  .hero .carousel-item img {
+    width: 100vw !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+} */
+
+/* light house work  */
+/* Lighthouse 100/100 - بدون تغيير التصميم */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-fade .active.carousel-item {
+    transition: none !important;
+  }
+}
+
+.hero .carousel-item img {
+  content-visibility: auto;
+  contain-intrinsic-size: 400 300;
+  will-change: transform;
+}
+
+.hero {
+  contain: layout style paint;
+}
+
+/* تحسين Performance بدون تأثير على الشكل */
+img {
+  loading: lazy;
+  decoding: async;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* line tracker  */
+.ticker-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+/* هنا السحر: مسارين مكررين علشان الحركة تبقى مستمرة */
+.ticker-track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: slideInfinite 20s linear infinite;
+}
+
+.ticker-track img {
+  width: 140px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* حركة لا نهائية بدون أي انتظار */
+@keyframes slideInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* نصف المسافة علشان النسخة الثانية تكمل */
+  }
+}
+
+/* pause on hover */
+.ticker-container:hover .ticker-track {
+  animation-play-state: paused;
 }

@@ -19,7 +19,7 @@
     },
     "item3": {
       "title": "PONTE MARKA",
-      "desc": "PANTE MARKA is a leading exporter and supplier of premium agricultural products, specializing in cashews, cloves, beans, and cardamom. Committed to quality, sustainability, and sourcing directly from Tanzanian farms.",
+      "desc": "PONTE MARKA is a leading exporter and supplier of premium agricultural products, specializing in cashews, cloves, beans, and cardamom. Committed to quality, sustainability, and sourcing directly from Tanzanian farms.",
       "btn": "Read More"
     },
     "item4": {
@@ -152,7 +152,6 @@
       "button": "Send Message"
     },
     "qr": {
-      "title": "Scan to Contact Us",
       "text": "Scan the QR code to reach us."
     }
   },
@@ -160,7 +159,6 @@
     "logo": "Marka Trading",
     "contact": {
       "address1": "W3CQ+XHM Tanga, Tanzania",
-      "address2": "Tanzania",
       "phone": "Phone:",
       "phoneNumber": "+255 686 778 002",
       "email": "Email:",
@@ -171,8 +169,8 @@
       "home": "Home",
       "about": "About us",
       "services": "Services",
-      "terms": "Terms of service",
-      "privacy": "Privacy policy"
+      "terms": "Gallery",
+      "privacy": "Contact Us"
     },
     "ourServices": {
       "title": "Our Services",
