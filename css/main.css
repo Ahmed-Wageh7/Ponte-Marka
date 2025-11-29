@@ -1862,34 +1862,21 @@ html[lang="ar"] .info-item {
     font-size: 0.9rem;
     overflow-y: auto;
   }
-}
-
-.hero .container {
-  position: absolute; /* يصبح فوق الصورة */
-  top: -33%; /* التحكم في ارتفاع overlay من أعلى السكشن */
-  left: 50%;
-  height: 220px;
-  transform: translateX(-50%);
-  padding: 15px; /* padding مناسب للنصوص */
-  text-align: center;
-  z-index: 3;
-  background: color-mix(in srgb, var(--surface-color), transparent 40%);
-  border-top: 4px solid var(--accent-color);
-}
-.hero .container {
-  position: absolute;
-  top: -36%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 500px;
-  height: 220px; /* ارتفاع ثابت */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* يوزع h2 + p + button بشكل متناسق */
-  padding: 15px;
-  text-align: center;
-  background: color-mix(in srgb, var(--surface-color), transparent 40%);
-  border-top: 4px solid var(--accent-color);
-  z-index: 3;
+  .hero .container {
+    position: absolute;
+    top: -36%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    height: 220px; /* ارتفاع ثابت */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* يوزع h2 + p + button بشكل متناسق */
+    padding: 15px;
+    text-align: center;
+    background: color-mix(in srgb, var(--surface-color), transparent 40%);
+    border-top: 4px solid var(--accent-color);
+    z-index: 3;
+  }
 }
