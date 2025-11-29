@@ -1845,3 +1845,9 @@ html[lang="ar"] .info-item {
 .watch-video {
   touch-action: manipulation; /* يسمح بالنقر فقط، يمنع السحب */
 }
+
+.branch-title .emoji {
+  margin-left: 4px; /* مسافة بسيطة بين النص والإيموجي */
+  font-size: 1em; /* نفس حجم النص */
+  line-height: 1; /* يحافظ على السطر */
+}
