@@ -69,139 +69,12 @@ body {
 --------------------------------------------------------------*/
 
 /* الاتجاه الافتراضي */
-body {
+/* body {
   direction: ltr;
-}
+} */
 
-/* عند اختيار العربية */
-body.rtl {
-  direction: rtl;
-}
+/* ENGLISH */
 
-/* Header */
-body.rtl .header {
-  flex-direction: row-reverse;
-}
-
-/* اللوجو */
-body.rtl .header .logo {
-  margin-left: auto;
-  margin-right: -20rem;
-}
-
-/* روابط Nav */
-body.rtl nav.navmenu ul {
-  flex-direction: row;
-  text-align: right;
-}
-
-/* Dropdown القوائم */
-body.rtl .navmenu .dropdown ul,
-body.rtl .language-toggle .dropdown-menu {
-  right: 0;
-  left: auto;
-  text-align: right;
-}
-
-/* أيقونة الموبايل (الهامبرغر) */
-body.rtl .mobile-nav-toggle {
-  right: 30px; /* ثابت يمين */
-  left: auto; /* إزالة التحريك لليسار */
-}
-
-/* أيقونة اللغة */
-body.rtl .language-toggle.d-none.d-xl-flex {
-  margin-left: 0;
-  margin-right: 15px;
-}
-
-/* Nav Links */
-body.rtl .navmenu a {
-  justify-content: flex-end; /* لتحريك النصوص لليمين */
-}
-
-/* أيقونات داخل الروابط */
-body.rtl .navmenu a i {
-  margin-left: 0;
-  margin-right: 5px;
-}
-
-/* Mobile Menu RTL */
-body.rtl .navmenu ul {
-  inset: 60px 20px 20px 20px;
-  text-align: right;
-}
-
-/* Mobile Nav Active */
-body.rtl .mobile-nav-active .mobile-nav-toggle {
-  right: 30px;
-  left: auto;
-}
-
-/* Language Dropdown Mobile */
-body.rtl .language-toggle.d-xl-none {
-  right: 30px;
-  left: auto;
-}
-
-/* Dropdown Submenus */
-body.rtl .navmenu .dropdown .dropdown ul {
-  left: auto;
-  right: -100%;
-}
-
-/* أمثلة لتغيير ترتيب العناصر عند RTL */
-body.rtl .header .logo {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-body.rtl .navmenu ul {
-  flex-direction: row-reverse;
-  text-align: right;
-}
-
-body.rtl .mobile-nav-toggle {
-  left: 30px;
-  right: auto;
-}
-
-body.rtl .language-toggle.d-xl-flex {
-  margin-left: 0;
-  margin-right: 15px;
-}
-
-/* عند اللغة العربية */
-body.rtl #header .container {
-  flex-direction: row; /* نحافظ على ترتيب العناصر طبيعي */
-}
-
-body.rtl .logo {
-  margin-left: auto; /* اللوجو على أقصى اليمين */
-  margin-right: 0;
-}
-
-body.rtl #navmenu {
-  margin-left: 0;
-  margin-right: auto; /* الناف تتحرك للشمال */
-}
-
-body.rtl #navmenu ul {
-  flex-direction: row; /* ترتيب اللينكات زي ما هم */
-  text-align: left;
-}
-
-body.rtl .language-toggle.d-xl-flex,
-body.rtl .language-toggle.d-xl-none {
-  margin-left: 0;
-  margin-right: auto; /* أيقونة اللغة على الشمال */
-}
-
-body.rtl .mobile-nav-toggle {
-  left: 15px; /* أيقونة الموبايل على أقصى الشمال */
-  right: auto;
-}
-/* ِENGLISH */
 html {
   scroll-padding-top: 120px;
 }
@@ -1145,12 +1018,12 @@ section,
 
 .about .our-story h4 {
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
 .about .our-story h3 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
@@ -1169,10 +1042,11 @@ section,
   padding: 5px 0;
   display: flex;
   align-items: center;
+  font-size: 1.1rem;
 }
 
 .about ul i {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   margin-right: 0.5rem;
   line-height: 1.2;
   color: var(--accent-color);
@@ -1269,7 +1143,7 @@ section,
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 0;
 }
 
@@ -2129,7 +2003,7 @@ img {
 * {
   box-sizing: border-box;
 }
-/* line tracker  */
+/* line tracker */
 .ticker-link {
   display: block;
   width: 100%;
@@ -2146,33 +2020,222 @@ img {
   position: relative;
 }
 
-/* هنا السحر: مسارين مكررين علشان الحركة تبقى مستمرة */
 .ticker-track {
   display: flex;
   gap: 25px;
   width: max-content;
-  animation: slideInfinite 20s linear infinite;
+  animation: slideLTR 20s linear infinite;
+}
+
+html[lang="ar"] .ticker-track {
+  animation: slideRTL 20s linear infinite;
 }
 
 .ticker-track img {
-  width: 140px;
-  height: 95px;
+  width: 160px; /* حجم أكبر إذا تحب */
+  height: 110px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
 }
 
-/* حركة لا نهائية بدون أي انتظار */
-@keyframes slideInfinite {
+/* LTR */
+@keyframes slideLTR {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* نصف المسافة علشان النسخة الثانية تكمل */
+    transform: translateX(-50%);
   }
 }
 
-/* pause on hover */
+/* RTL */
+@keyframes slideRTL {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* توقف عند hover */
 .ticker-container:hover .ticker-track {
   animation-play-state: paused;
+}
+/* ///////////////////////////////////// Arabic Hell ///////////////////////////////// */
+
+/* -------------------------------------------
+   RTL FIXES for Arabic
+   Apply ONLY when <html dir="rtl">
+------------------------------------------- */
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+html[dir="rtl"] .header .logo {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+html[dir="rtl"] .navmenu {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Logo aligns left naturally in RTL, so flip it */
+html[dir="rtl"] .header .logo img {
+  margin-right: 0;
+  /* margin-left: 50rem; */
+}
+
+/* Reverse nav items */
+html[dir="rtl"] .navmenu ul {
+  /* flex-direction: row-reverse; */
+}
+
+/* Remove default left margin and convert it to right */
+html[dir="rtl"] .navmenu a {
+  padding: 18px 15px;
+}
+
+html[dir="rtl"] .navmenu a i {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+/* Dropdown menu flip */
+html[dir="rtl"] .dropdown-menu-end {
+  right: auto;
+  left: 0;
+}
+
+/* Desktop dropdown alignment */
+@media (min-width: 1200px) {
+  html[dir="rtl"] .navmenu .dropdown ul {
+    left: auto;
+    right: 14px;
+  }
+
+  html[dir="rtl"] .navmenu .dropdown .dropdown ul {
+    left: auto;
+    right: -100%;
+  }
+}
+
+/* Mobile menu fix */
+@media (max-width: 1199px) {
+  html[dir="rtl"] .navmenu ul {
+    inset: 60px 20px 20px 20px;
+    text-align: right;
+  }
+
+  html[dir="rtl"] .navmenu a i {
+    margin-right: 5px;
+    margin-left: 0;
+  }
+}
+
+/* Language button position fix */
+html[dir="rtl"] .language-toggle {
+  right: auto !important;
+  left: 30px !important;
+}
+
+/* About Section in Arabic  //////////. //////////. //////////////////////////////////////////////////////////////////////*/
+/* About Section in Arabic  //////////. //////////. //////////////////////////////////////////////////////////////////////*/
+
+/* --- ABOUT RTL FIXES --- */
+/* --- ABOUT RTL FIXES FULL --- */
+html[dir="rtl"] #about .row {
+  direction: rtl;
+}
+
+/* الصورة تبقى ناحية اليمين */
+html[dir="rtl"] #about .about-img {
+  right: auto;
+  left: 0;
+}
+
+/* النص يكون على الشمال */
+html[dir="rtl"] #about .col-lg-7:last-child {
+  text-align: right;
+}
+
+/* قصة الشركة - padding عكس الاتجاه */
+@media (min-width: 991px) {
+  html[dir="rtl"] #about .our-story {
+    padding-right: 40px !important;
+    padding-left: 35% !important;
+  }
+}
+
+/* ---- المميزات ---- */
+html[dir="rtl"] #about ul li {
+  flex-direction: row-reverse; /* قلب أيقونة الصح */
+  text-align: right;
+  justify-content: flex-end; /* جميع العناصر على اليمين */
+}
+
+html[dir="rtl"] #about ul li i {
+  margin-left: 0.5rem; /* مسافة صغيرة من النص */
+  margin-right: 0;
+}
+
+/* ---- زرار الفيديو ---- */
+html[dir="rtl"] #about .watch-video {
+  flex-direction: row; /* أيقونة الفيديو يمين */
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] #about .watch-video a {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+/* المميزات في RTL */
+html[dir="rtl"] #about ul li {
+  display: flex;
+  flex-direction: row; /* الأيقونة على يمين النص */
+  align-items: center;
+  justify-content: flex-start; /* النص + أيقونة يبقوا على اليمين */
+  text-align: left;
+}
+
+html[dir="rtl"] #about ul li i {
+  margin-right: 0; /* إزالة المسافة اليسرى */
+  margin-left: 0.5rem; /* مسافة صغيرة على اليسار (بعد النص) */
+}
+
+/* Contact us  */
+/* لكل اللغات */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px; /* المسافة بين الأيقونة والنص */
+}
+
+/* لو اللغة عربية RTL */
+html[lang="ar"] .info-item {
+  flex-direction: row-reverse; /* الأيقونة على اليمين */
+}
+
+/* services */
+/* الخط الافتراضي لكل اللغات */
+p[data-i18n="services.vision.desc"] {
+  font-size: 20px; /* الحجم الافتراضي */
+  line-height: 1.6; /* عشان يكون عندك مسافة بين السطور */
+}
+
+/* تكبير الخط للعربي */
+html[lang="ar"] p[data-i18n="services.vision.desc"] {
+  font-size: 24px; /* ممكن تزود الرقم حسب ما تحب */
 }

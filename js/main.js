@@ -102,29 +102,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // ------------------ Language Dropdown Fix ------------------
   const langDropdown = document.querySelector(".language-dropdown");
   if (langDropdown) {
-    // Ensure menu is closed on page load
     langDropdown.classList.remove("show");
 
-    // Toggle on click
     langDropdown.addEventListener("click", (e) => {
       e.stopPropagation();
       langDropdown.classList.toggle("show");
     });
 
-    // Close if clicking outside
     document.addEventListener("click", () => {
       langDropdown.classList.remove("show");
     });
   }
+
+  // ------------------ Load saved language ------------------
+  const savedLang = localStorage.getItem("selectedLang") || "en";
+  changeLang(savedLang);
 });
+
 // -------------------- تغيير اللغة + القائمة --------------------
 function changeLang(lang) {
-  localStorage.setItem("selectedLang", lang);
+  localStorage.setItem("selectedLang", lang); // تخزين اللغة
 
   // تغيير اتجاه الصفحة
   if (lang === "ar") {
     document.documentElement.setAttribute("dir", "rtl");
-    document.body.classList.add("rtl"); // لتسهيل تعديل CSS للـ RTL
+    document.body.classList.add("rtl");
   } else {
     document.documentElement.setAttribute("dir", "ltr");
     document.body.classList.remove("rtl");
@@ -150,21 +152,9 @@ function changeLang(lang) {
           el.innerText = text;
         }
       });
-
-      hideLangMenu();
     })
     .catch((err) => console.error("Error loading language JSON:", err));
 }
-
-// document.getElementById("langDropdown").addEventListener("click", function (e) {
-//   e.preventDefault();
-//   const menu = document.querySelector(".dropdown-menu");
-//   menu.style.display = menu.style.display === "block" ? "none" : "block";
-// });
-
-// function hideLangMenu() {
-//   document.querySelector(".dropdown-menu").style.display = "none";
-// }
 
 // -------------------- Navbar Active --------------------
 const navLinks = document.querySelectorAll('.navmenu a[href^="#"]');
@@ -206,14 +196,12 @@ const lightbox2 = GLightbox({ selector: ".glightbox" });
 const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
 const navMenu = document.querySelector("#navmenu");
 
-// فتح/إغلاق الـ nav
 mobileNavToggle.addEventListener("click", () => {
   document.body.classList.toggle("mobile-nav-active");
   mobileNavToggle.classList.toggle("bi-list");
   mobileNavToggle.classList.toggle("bi-x");
 });
 
-// إغلاق الـ nav عند الضغط على أي nav link
 document.querySelectorAll("#navmenu a").forEach((link) => {
   link.addEventListener("click", () => {
     document.body.classList.remove("mobile-nav-active");

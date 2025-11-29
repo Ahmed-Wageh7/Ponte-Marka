@@ -95,7 +95,14 @@
         "category": "Nuts & Dried Fruits (Premium Export)",
         "tagline": "Crunchy and naturally sweet. Selected for size and outturn.",
         "description": "We export raw and processed cashew nuts of the highest quality. Our supply chain guarantees healthy nuts with high outturn rates, perfect for roasting and the Italian and European confectionery industry.",
-        "technicalSpecs": "- Grades (Kernels): W180, W210, W240, W320 (Whole White), Splits, Pieces\n- Outturn: 48-53+ lbs per sack (Raw Nuts)\n- Nut Count: 170-200 per kg\n- Moisture: Max 8-10%\n- Defects: < 5%"
+        "technicalSpecs": "- Grades (Kernels): W180, W210, W240, W320 (Whole White), Splits, Pieces\n- Outturn: 48-53+ lbs per sack (Raw Nuts)\n- Nut Count: 170-200 per kg\n- Moisture: Max 8-10%\n- Defects: < 5%",
+        "strong": {
+          "product": "Product:",
+          "category": "Category:",
+          "tagline": "Tagline:",
+          "description": "Description (Front):",
+          "technicalSpecs": "Technical Specs (Back/Details):"
+        }
       },
       "cloves": {
         "product": "Cloves",
@@ -129,17 +136,35 @@
     "sectionSubtitle": "Have a question or need assistance? We're here to help you anytime.",
     "tzBranch": {
       "title": "Location (Tanzania Branch)",
-      "address": "W3CQ+XHM Tanga, Tanzania",
+      "address": "P.O. Box 6191, Tanga, Tanzania",
       "emailTitle": "Email (Tanzania Branch)",
       "email": "tanga.cent@gmail.com",
       "phoneTitle": "Phone / WhatsApp (Tanzania Branch)",
-      "phone": "+255 686 778 002"
+      "phone": "+393 897 879 480"
+    },
+    "branches": {
+      "italy": {
+        "title": "Italy Branch 🇮🇹",
+        "emailTitle": "Email:",
+        "email": "info@markatz.com",
+        "phoneTitle": "Call:",
+        "phone": "+255 745 580 363"
+      },
+      "tanzania": {
+        "title": "Tanzania Branch 🇹🇿",
+        "locationTitle": "Location:",
+        "location": "P.O. Box 6191, Tanga, Tanzania",
+        "emailTitle": "Email:",
+        "email": "tanga.cent@gmail.com",
+        "phoneTitle": "Call:",
+        "phone": "+393 897 879 480"
+      }
     },
     "italyBranch": {
       "emailTitle": "Email (Italy Branch)",
       "email": "info@markatz.com",
       "phoneTitle": "Phone / WhatsApp (Italy Branch)",
-      "phone": "+39 389 787 9480"
+      "phone": "+255 745 580 363"
     },
     "form": {
       "name": "Your Name",
@@ -158,11 +183,11 @@
   "footer": {
     "logo": "Marka Trading",
     "contact": {
-      "address1": "W3CQ+XHM Tanga, Tanzania",
+      "address1": "P.O. Box 6191, Tanga, Tanzania",
       "phone": "Phone:",
-      "phoneNumber": "+255 686 778 002",
+      "phoneNumber": "+255 745 580 363",
       "email": "Email:",
-      "emailAddress": "tanga.cent@gmail.com"
+      "emailAddress": "info@markatz.com"
     },
     "usefulLinks": {
       "title": "Useful Links",
@@ -181,18 +206,13 @@
       "market": "Market Analysis & Sales"
     },
     "newsletter": {
-      "title": "Subscribe to Updates",
-      "text": "Join our newsletter to stay updated with our latest products, services, and offers!",
-      "email": "Enter your email",
-      "subscribe": "Subscribe",
-      "loading": "Loading",
-      "success": "Thank you! Your subscription has been received."
+      "qrText": "Scan the QR code to reach us."
     },
     "copyright": {
-      "copyright": "Copyright",
       "allRights": "All Rights Reserved",
       "contact": "Contact us:"
     },
+
     "credits": {
       "developedBy": "Developed by"
     }

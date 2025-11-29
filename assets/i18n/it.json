@@ -128,17 +128,36 @@
     "sectionSubtitle": "Hai una domanda o hai bisogno di assistenza? Siamo qui per aiutarti in qualsiasi momento.",
     "tzBranch": {
       "title": "Posizione (Filiale Tanzania)",
-      "address": "W3CQ+XHM Tanga, Tanzania",
+      "address": "P.O. Box 6191, Tanga, Tanzania",
       "emailTitle": "Email (Filiale Tanzania)",
       "email": "tanga.cent@gmail.com",
       "phoneTitle": "Telefono / WhatsApp (Filiale Tanzania)",
-      "phone": "+255 686 778 002"
+      "phone": "+393 897 879 480"
+    },
+
+    "branches": {
+      "italy": {
+        "title": "Filiale Italia 🇮🇹",
+        "emailTitle": "Email:",
+        "email": "info@markatz.com",
+        "phoneTitle": "Telefono:",
+        "phone": "+255 745 580 363"
+      },
+      "tanzania": {
+        "title": "Filiale Tanzania 🇹🇿",
+        "locationTitle": "Posizione:",
+        "location": "P.O. Box 6191, Tanga, Tanzania",
+        "emailTitle": "Email:",
+        "email": "tanga.cent@gmail.com",
+        "phoneTitle": "Telefono:",
+        "phone": "+393 897 879 480"
+      }
     },
     "italyBranch": {
       "emailTitle": "Email (Filiale Italia)",
       "email": "info@markatz.com",
       "phoneTitle": "Telefono / WhatsApp (Filiale Italia)",
-      "phone": "+39 389 787 9480"
+      "phone": "+255 745 580 363"
     },
     "form": {
       "name": "Il tuo nome",
@@ -157,20 +176,19 @@
   "footer": {
     "logo": "Marka Trading",
     "contact": {
-      "address1": "W3CQ+XHM Tanga, Tanzania",
-      "address2": "Tanzania",
+      "address1": "   P.O. Box 6191, Tanga, Tanzania",
       "phone": "Telefono:",
-      "phoneNumber": "+255 686 778 002",
+      "phoneNumber": "+255 745 580 363",
       "email": "Email:",
-      "emailAddress": "tanga.cent@gmail.com"
+      "emailAddress": "info@markatz.com"
     },
     "usefulLinks": {
       "title": "Link Utili",
       "home": "Home",
       "about": "Chi siamo",
       "services": "Servizi",
-      "terms": "Termini di servizio",
-      "privacy": "Privacy"
+      "terms": "Galleria",
+      "privacy": "Contattaci"
     },
     "ourServices": {
       "title": "I nostri servizi",
@@ -181,15 +199,9 @@
       "market": "Analisi e vendite di mercato"
     },
     "newsletter": {
-      "title": "Iscriviti agli aggiornamenti",
-      "text": "Iscriviti alla nostra newsletter per rimanere aggiornato sui nostri ultimi prodotti, servizi e offerte!",
-      "email": "Inserisci la tua email",
-      "subscribe": "Iscriviti",
-      "loading": "Caricamento",
-      "success": "Grazie! La tua iscrizione è stata ricevuta."
+      "qrText": "Scansiona il codice QR per contattarci."
     },
     "copyright": {
-      "copyright": "Copyright",
       "allRights": "Tutti i diritti riservati",
       "contact": "Contattaci:"
     },
