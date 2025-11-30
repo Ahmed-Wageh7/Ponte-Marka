@@ -86,7 +86,8 @@
       "cloves": "Chiodi di garofano",
       "beans": "Fagioli",
       "cardamom": "Cardamomo",
-      "blackpepper": "Pepe nero"
+      "blackpepper": "Pepe nero",
+      "coffee": "Caffè"
     },
     "products": {
       "cashew": {
@@ -120,6 +121,13 @@
         "tagline": "Pepe nero premium da Tanga, essiccato al sole per preservare la piperina.",
         "description": "Grani scuri e rugosi con aroma penetrante, perfetti per l'industria alimentare e il dettaglio.",
         "technicalSpecs": "- Densità: 500GL - 550GL (grammi/litro)\n- Umidità: Max 12%\n- Aspetto: Grani interi e puliti (senza pietre)\n- Salmonella: Testata e assente"
+      },
+      "coffee": {
+        "product": "Caffè Tanzanian Heights",
+        "category": "Chicchi Arabica Speciali",
+        "tagline": "Note di agrumi brillanti con corpo pieno e bilanciato.",
+        "description": "Presentiamo chicchi verdi di Arabica completamente lavati provenienti da piantagioni ad alta quota nelle regioni di Mbeya e Kilimanjaro. Questo caffè di grado Specialty offre un profilo aromatico complesso con note di agrumi brillanti e un corpo pieno e bilanciato, garantendo una sinergia perfetta per creare miscele di espresso premium con crema ricca e consistenza eccezionale.",
+        "technicalSpecs": "- Varietà principale: Arabica di alta qualità (Lavata). Robusta (Pulita) disponibile per aumentare densità e corpo.\n- Dimensioni chicchi: AA (18+), AB (16/17), Peaberry (PB).\n- Valutazione qualità: Grado Specialty (Punteggio assaggio 80+).\n- Umidità: Garantita tra 11,0% e 12,5% per stabilità ottimale della tostatura.\n- Purezza & Difetti: Lavorazione precisa per minimizzare i difetti secondo gli standard SCA internazionali.\n- Confezionamento: Sacchi di juta da 60 kg, con opzione di rivestimento GraintPro per massima protezione dell'aroma.\n- Certificazioni principali: Certificato Fitosanitario, Certificato di Qualità, Certificato di Origine."
       }
     }
   },
@@ -137,27 +145,27 @@
 
     "branches": {
       "italy": {
-        "title": "Filiale Italia 🇮🇹",
+        "title": "Filiale Italia ",
         "emailTitle": "Email:",
         "email": "info@markatz.com",
         "phoneTitle": "Telefono:",
-        "phone": "+255 745 580 363"
+        "phone": "+393 897 879 480"
       },
       "tanzania": {
-        "title": "Filiale Tanzania 🇹🇿",
+        "title": "Filiale Tanzania ",
         "locationTitle": "Posizione:",
         "location": "P.O. Box 6191, Tanga, Tanzania",
         "emailTitle": "Email:",
         "email": "tanga.cent@gmail.com",
         "phoneTitle": "Telefono:",
-        "phone": "+393 897 879 480"
+        "phone": "+255 686 778 002"
       }
     },
     "italyBranch": {
       "emailTitle": "Email (Filiale Italia)",
       "email": "info@markatz.com",
       "phoneTitle": "Telefono / WhatsApp (Filiale Italia)",
-      "phone": "+255 745 580 363"
+      "phone": "+393 897 879 480"
     },
     "form": {
       "name": "Il tuo nome",
@@ -176,9 +184,9 @@
   "footer": {
     "logo": "Marka Trading",
     "contact": {
-      "address1": "   P.O. Box 6191, Tanga, Tanzania",
+      "address1": "P.O. Box 6191, Tanga, Tanzania",
       "phone": "Telefono:",
-      "phoneNumber": "+255 745 580 363",
+      "phoneNumber": "+393 897 879 480",
       "email": "Email:",
       "emailAddress": "info@markatz.com"
     },

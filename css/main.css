@@ -1390,8 +1390,8 @@ nav ul li a {
 .branch-title {
   display: flex;
   align-items: center;
-  gap: 10px; /* المسافة بين الاسم والعلم */
-  font-size: 24px; /* حجم الخط الأساسي */
+  gap: 8px; /* المسافة بين الاسم والعلم */
+  font-size: 22px; /* حجم الخط الأساسي */
 }
 
 .flag-icon {
@@ -1520,77 +1520,6 @@ nav ul li a {
   min-width: 200px !important;
 }
 
-/* hero custimization */
-
-/* صور Hero كاملة بدون قص على الموبايل */
-/* @media (max-width: 768px) {
-  .hero {
-    height: 70vh !important;
-    overflow: hidden !important;
-  }
-
-  .hero .carousel,
-  .hero .carousel-item {
-    height: 100% !important;
-    width: 100vw !important;
-    position: relative !important;
-  }
-
-  .hero .carousel-item img {
-    width: 100vw !important;
-    height: 100% !important;
-    object-fit: contain !important; 
-    object-position: center !important;
-    position: absolute !important;
-    left: 50% !important;
-    top: 0 !important;
-    transform: translateX(-50%) !important;
-  } */
-
-/* Overlay فوق الصورة */
-/* .hero .container {
-    position: relative !important;
-    z-index: 10 !important;
-    background: color-mix(
-      in srgb,
-      var(--surface-color),
-      transparent 40%
-    ) !important;
-    border-top: 4px solid var(--accent-color) !important;
-    padding: 25px 20px !important;
-  }
-} */
-/* Hero صور كاملة على الموبايل - الحل النهائي */
-/* @media (max-width: 768px) {
-  .hero {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100vw !important;
-    position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
-    overflow: hidden !important;
-  }
-
-  .hero .carousel {
-    height: 70vh !important;
-    width: 100% !important;
-  }
-
-  .hero .carousel-item {
-    height: 100% !important;
-  }
-
-  .hero .carousel-item img {
-    width: 100vw !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-  }
-} */
-
 /* light house work  */
 /* Lighthouse 100/100 - بدون تغيير التصميم */
 @media (prefers-reduced-motion: reduce) {
@@ -1610,16 +1539,11 @@ nav ul li a {
 }
 
 /* تحسين Performance بدون تأثير على الشكل */
-img {
-  loading: lazy;
-  decoding: async;
-}
-
 * {
   box-sizing: border-box;
 }
-.ticker-container {
-  max-width: 1200px; /* نفس عرض الكونتينرات الأخرى */
+/* .ticker-container {
+  max-width: 1200px; 
   margin: 0 auto;
   overflow: hidden;
   padding: 15px 0;
@@ -1631,7 +1555,7 @@ img {
 .ticker-track {
   display: flex;
   gap: 25px;
-  width: max-content; /* الصور تحافظ على حجمها الطبيعي */
+  width: max-content; 
   animation: slideLTR 20s linear infinite;
 }
 
@@ -1643,7 +1567,7 @@ img {
   flex-shrink: 0;
 }
 
-/* LTR */
+
 @keyframes slideLTR {
   0% {
     transform: translateX(0);
@@ -1651,7 +1575,72 @@ img {
   100% {
     transform: translateX(-50%);
   } /* يتحرك نصف طول الصور فقط */
+/* } */
+.ticker-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: #fff;
 }
+
+.ticker-track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: slideLTR 35s linear infinite;
+  /* للـ RTL نحتاج flip منطقي */
+  transform-origin: left center;
+}
+
+.ticker-track img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* LTR - من اليمين لليسار مستمر */
+@keyframes slideLTR {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* RTL - من اليسار لليمين مستمر */
+@keyframes slideRTL {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* **الحل النهائي للـ RTL** */
+.rtl .ticker-track {
+  animation-name: slideRTL !important;
+  transform: scaleX(-1); /* يقلب المحتوى للعربي */
+}
+
+.rtl .ticker-track img {
+  transform: scaleX(-1); /* يعكس الصور */
+}
+/* بدل الـ scaleX، استخدم هذا */
+.rtl .ticker-container {
+  direction: ltr; /* يخلي الـ ticker يشتغل زي الإنجليزي */
+}
+
+.rtl .ticker-track {
+  animation-name: slideLTR !important; /* نفس الـ animation */
+}
+
 /* ///////////////////////////////////// Arabic Hell ///////////////////////////////// */
 
 /* -------------------------------------------
@@ -1837,7 +1826,7 @@ html[lang="ar"] .info-item {
 /* للعرض أقل من 770px */
 @media (max-width: 770px) {
   .hero {
-    height: 60vh; /* ارتفاع السكشن 80% من الشاشة */
+    height: 45vh; /* ارتفاع السكشن 80% من الشاشة */
     overflow: hidden; /* لمنع أي scroll إضافي */
   }
   .hero .carousel-item img {
@@ -1864,7 +1853,7 @@ html[lang="ar"] .info-item {
   }
   .hero .container {
     position: absolute;
-    top: -36%;
+    top: -54.5%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -1879,4 +1868,54 @@ html[lang="ar"] .info-item {
     border-top: 4px solid var(--accent-color);
     z-index: 3;
   }
+}
+
+#header .navmenu a,
+#header .navmenu,
+.header .navmenu a {
+  font-size: 20px !important;
+}
+
+/* تكبير أيقونة اللغة عند اختيار العربية */
+
+.dropdown-item .fi {
+  font-size: 1.3rem; /* ممكن تزود حسب ما تحب */
+  margin-right: 8px;
+}
+
+.flag-icon {
+  width: 1.5em; /* يمكنك زيادة الحجم */
+  height: 1em;
+  display: inline-block;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.fi {
+  display: inline-block;
+  width: 1.5em; /* حجم العلم */
+  height: 1em;
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: middle;
+}
+.branch-title .fi {
+  display: inline-block !important;
+  font-size: 1.2em; /* حجم مناسب للعلم */
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.portfolio-group .col-md-6 {
+  height: auto; /* أو ما تضبطش height نهائيًا */
+}
+
+.sick {
+  font-size: 20px !important; /* حجم الخط */
+
+  direction: rtl; /* اتجاه الكتابة من اليمين للشمال */
 }

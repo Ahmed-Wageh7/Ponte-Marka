@@ -35,11 +35,10 @@
       as="style"
       onload="this.rel='stylesheet'"
     />
+    <!-- Flag Icons -->
     <link
-      rel="preload"
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.7.0/css/flag-icon.min.css"
-      as="style"
-      onload="this.rel='stylesheet'"
     />
     <link
       rel="preload"
@@ -58,16 +57,15 @@
     <link
       rel="preload"
       as="image"
-      href="images/kajo-compressed.webp"
+      href="images/head/kajo.webp"
       fetchpriority="high"
     />
 
     <!-- Main CSS -->
-    <!-- <link rel="stylesheet" href="css/main.min.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="images/icon_tap.jpeg" />
+    <link rel="icon" type="image/jpeg" href="images/about/icon_tap.webp" />
   </head>
   <body>
     <header id="header" class="header d-flex align-items-center sticky-top">
@@ -76,7 +74,7 @@
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <img
-            src="images.wemp/nav_logo-compressed.webp"
+            src="images/about/nav_logo-head.webp"
             class="w-100 h-100"
             alt="PONTE MARKA Logo"
             width="347"
@@ -104,19 +102,19 @@
             aria-labelledby="langDropdownMobile"
           >
             <li>
-              <a class="dropdown-item" href="#" onclick="changeLang('en')"
-                >🇺🇸 English</a
+              <a class="dropdown-item" href="#" onclick="changeLang('en')">
+                <span class="fi fi-us"></span> English</a
               >
             </li>
             <li>
               <a class="dropdown-item" href="#" onclick="changeLang('it')"
-                >🇮🇹 Italian</a
+                ><span class="fi fi-it"></span>Italian</a
               >
             </li>
             <li>
               <a class="dropdown-item" href="#" onclick="changeLang('ar')"
-                >🇸🇦 العربية</a
-              >
+                >العربيه<span class="fi fi-sa"></span
+              ></a>
             </li>
           </ul>
         </div>
@@ -188,7 +186,7 @@
           <!-- Carousel Item 1 -->
           <div class="carousel-item active">
             <img
-              src="images/kajo-compressed.webp"
+              src="images/head/kajo.webp"
               alt="Premium Cashew Nuts from Tanzania"
               width="1920"
               height="1080"
@@ -196,7 +194,7 @@
             />
             <div class="container">
               <h2 data-i18n="hero.item1.title">Cashew Nuts</h2>
-              <p data-i18n="hero.item1.desc">
+              <p data-i18n="hero.item1.desc" class="sick">
                 Premium-grade cashew nuts carefully sourced for their rich
                 flavor, creamy texture, and high nutritional value. Ideal for
                 roasting, confectionery, healthy snacks, and food manufacturing
@@ -214,13 +212,10 @@
 
           <!-- Carousel Item 2 -->
           <div class="carousel-item">
-            <img
-              src="images.wemp/hero/cloves-compressed.webp"
-              alt="Green Coffee Beans"
-            />
+            <img src="images/head/cloves.webp" alt="Green Coffee Beans" />
             <div class="container">
               <h2 data-i18n="hero.item2.title">Premium Cloves</h2>
-              <p data-i18n="hero.item2.desc">
+              <p data-i18n="hero.item2.desc" class="sick">
                 Hand-picked Tanzanian cloves known for their strong aroma and
                 rich essential oils. Perfect for food processing, herbal blends,
                 and pharmaceutical use due to their high oil content and
@@ -238,10 +233,10 @@
 
           <!-- Carousel Item 3 -->
           <div class="carousel-item">
-            <img src="images.wemp/hero/new-wild-card.webp" alt="PONTE MARKA" />
+            <img src="images/head/company.webp" alt="PONTE MARKA" />
             <div class="container">
               <h2 data-i18n="hero.item3.title">PONTE MARKA</h2>
-              <p data-i18n="hero.item3.desc">
+              <p data-i18n="hero.item3.desc" class="sick">
                 PONTE MARKA is a leading exporter and supplier of premium
                 agricultural products, specializing in cashews, cloves, beans,
                 and cardamom. We are committed to quality, sustainability, and
@@ -260,13 +255,13 @@
           <!-- Carousel Item 4 -->
           <div class="carousel-item">
             <img
-              src="images/PremiumSpeckledBeans-compressed.webp"
+              src="images/head/beens.webp"
               alt="Premium Raw Cashew Nuts"
               class="img-fluid"
             />
             <div class="container">
               <h2 data-i18n="hero.item4.title">Premium Speckled Beans</h2>
-              <p data-i18n="hero.item4.desc">
+              <p data-i18n="hero.item4.desc" class="sick">
                 Popular speckled beans available in purple or brown mottled
                 varieties. Known for their attractive appearance, good swelling
                 capacity, and strong market demand. Widely cultivated across
@@ -285,13 +280,13 @@
           <!-- Carousel Item 5 -->
           <div class="carousel-item">
             <img
-              src="images.wemp/hero/black_pepper-compressed.webp"
+              src="images/head/blackpepper.webp"
               alt="Black Pepper"
               class="img-fluid"
             />
             <div class="container">
               <h2 data-i18n="hero.item5.title">Black Pepper</h2>
-              <p data-i18n="hero.item5.desc">
+              <p data-i18n="hero.item5.desc" class="sick">
                 Naturally sun-dried black pepper with bold aroma and high
                 piperine levels. Uniform dark berries suitable for spice
                 processors, wholesalers, and premium retail packaging.
@@ -309,13 +304,13 @@
           <!-- Carousel Item 6 -->
           <div class="carousel-item">
             <img
-              src="images/Cardamom-powder-compressed.webp"
+              src="images/head/cardmom.webp"
               alt="Dried Green Cardmom"
               class="img-fluid"
             />
             <div class="container">
               <h2 data-i18n="hero.item6.title">Dried Green Cardmom</h2>
-              <p data-i18n="hero.item6.desc">
+              <p data-i18n="hero.item6.desc" class="sick">
                 Naturally sun-dried green cardamom pods with a rich, aromatic
                 flavor. Uniform and bright green, ideal for spice processors,
                 wholesalers, and premium retail packaging.
@@ -345,7 +340,7 @@
               data-aos-delay="200"
             >
               <img
-                src="images.wemp/about_company.webp"
+                src="images/about/about_company.webp"
                 class="rounded-4"
                 width="533"
                 alt="about-section-photo"
@@ -761,6 +756,12 @@
               >
                 Black Pepper
               </li>
+              <li
+                data-filter=".filter-coffee"
+                data-i18n="gallery.filters.coffee"
+              >
+                Coffee
+              </li>
             </ul>
             <!-- End Portfolio Filters -->
 
@@ -1010,6 +1011,58 @@
                 </span>
               </p>
             </div>
+            <div class="portfolio-description" id="desc-coffee">
+              <div class="lang-en">
+                <p>
+                  <strong
+                    ><span data-i18n="gallery.products.cashew.strong.product"
+                      >Product:</span
+                    ></strong
+                  >
+                  <span data-i18n="gallery.products.coffee.product"
+                    >The Tanzanian Heights. The Perfect Body for Your Italian
+                    Blends.</span
+                  >
+                  <br /><br />
+                  <strong
+                    ><span
+                      data-i18n="gallery.products.cashew.strong.description"
+                      >Description (Front):</span
+                    ></strong
+                  >
+                  <span data-i18n="gallery.products.coffee.description">
+                    Introducing pristine, fully Washed Arabica green beans
+                    sourced from high-altitude estates in the Mbeya and
+                    Kilimanjaro regions. This Specialty Grade coffee presents a
+                    complex flavour profile featuring bright citrus notes and a
+                    full, well-rounded body, ensuring perfect synergy for
+                    creating premium espresso blends with rich crema and
+                    exceptional consistency.
+                  </span>
+                  <br /><br />
+                  <strong
+                    ><span
+                      data-i18n="gallery.products.cashew.strong.technicalSpecs"
+                      >Technical Specs (Back/Details):</span
+                    ></strong
+                  ><br />
+                  <span data-i18n="gallery.products.coffee.technicalSpecs">
+                    - Primary Variety: High-Quality Arabica (Washed). Robusta
+                    (Clean) available for density and body enhancement.<br />
+                    - Screen Sizes: AA (18+), AB (16/17), and Peaberry (PB).<br />
+                    - Quality Rating: Specialty Grade (Cupping Score 80+).<br />
+                    - Moisture Content: Guaranteed between 11.0% and 12.5% for
+                    optimal roasting stability.<br />
+                    - Purity & Defects: Precise processing to minimize defects
+                    according to international SCA standards.<br />
+                    - Packaging: New 60kg Jute bags, with option for GraintPro
+                    lining for maximum flavour protection.<br />
+                    - Key Certifications: Phytosanitary Certificate, Quality
+                    Certificate, Certificate of Origin.
+                  </span>
+                </p>
+              </div>
+            </div>
 
             <div
               class="row gy-4 isotope-container"
@@ -1019,12 +1072,12 @@
               <!-- أول 3 صور للـ All فقط (بدون filter-all) -->
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images/Gallery/kajo/kajo-1-compressed.webp"
+                  href="images/cashew/cashew-3.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
                 >
                   <img
-                    src="images/Gallery/kajo/kajo-1-compressed.webp"
+                    src="images/cashew/cashew-3.webp"
                     class="img-fluid"
                     alt="Cashew"
                   />
@@ -1033,12 +1086,12 @@
 
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images.wemp/Gallery/9-2-compressed.webp"
+                  href="images/cloves/cloves-1.webp"
                   class="glightbox-images"
                   data-gallery="cloves"
                 >
                   <img
-                    src="images.wemp/Gallery/9-2-compressed.webp"
+                    src="images/cloves/cloves-1.webp"
                     class="img-fluid"
                     alt="Cloves"
                   />
@@ -1047,40 +1100,57 @@
 
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images.wemp/Gallery/13-compressed.webp"
+                  href="images/cardmom/cardmom-4.webp"
                   class="glightbox-images"
-                  data-gallery="beans"
+                  data-gallery="cardmom"
                 >
                   <img
-                    src="images.wemp/Gallery/13-compressed.webp"
+                    src="images/cardmom/cardmom-4.webp"
                     class="img-fluid"
-                    alt="Beans"
+                    alt="cardmom"
                   />
                 </a>
               </div>
+
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images.wemp/Gallery/cardmom101.webp"
+                  href="images/coffee/coffee-4.webp"
                   class="glightbox-images"
-                  data-gallery="cardamom"
+                  data-gallery="coffee"
                 >
                   <img
-                    src="images/cardmom101.jpeg"
+                    src="images/coffee/coffee-4.webp"
                     class="img-fluid"
-                    alt="Cardamom"
+                    alt="coffee"
                   />
                 </a>
               </div>
+
               <div class="col-lg-4 col-md-6 isotope-item first-three">
                 <a
-                  href="images/blackpepper-1.webp"
+                  href="images/blackpepper/blackpepper-5.webp"
                   class="glightbox-images"
                   data-gallery="blackpepper"
                 >
                   <img
-                    src="images/blackpepper-1.webp"
+                    src="images/blackpepper/blackpepper-5-small.webp"
                     class="img-fluid"
                     alt="blackpepper"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="col-lg-4 col-md-6 isotope-item first-three">
+                <a
+                  href="images/beans/beens-2.webp"
+                  class="glightbox-images"
+                  data-gallery="beans"
+                >
+                  <img
+                    src="images/beans/beens-2.webp"
+                    class="img-fluid"
+                    alt="beans"
                   />
                 </a>
               </div>
@@ -1091,12 +1161,12 @@
                   <!-- أول صورتين ظاهرين -->
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/kajo/kajo-1-compressed.webp"
+                      href="images/cashew/cashew-4.webp"
                       class="glightbox-images"
                       data-gallery="cashew"
                     >
                       <img
-                        src="images/Gallery/kajo/kajo-1-compressed.webp"
+                        src="images/cashew/cashew-4.webp"
                         class="img-fluid"
                         alt="Cashew"
                       />
@@ -1104,12 +1174,12 @@
                   </div>
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/kajo/kajo-2.webp"
+                      href="images/cashew/cashew-7.webp"
                       class="glightbox-images"
                       data-gallery="cashew"
                     >
                       <img
-                        src="images/Gallery/kajo/kajo-2.webp"
+                        src="images/cashew/cashew-7.webp"
                         class="img-fluid"
                         alt="Cashew"
                       />
@@ -1119,31 +1189,31 @@
 
                 <!-- باقي الصور مخفية داخل الألبوم -->
                 <a
-                  href="images/Gallery/kajo/kajo-3.jpg"
+                  href="images/cashew/cashew-1.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
                   aria-label="Cashew Image 3"
                 ></a>
                 <a
-                  href="images/Gallery/kajo/kajo-4.jpeg"
+                  href="images/cashew/cashew-2.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
                   aria-label="Cashew Image 4"
                 ></a>
                 <a
-                  href="images/Gallery/kajo/kajo-5.jpg"
+                  href="images/cashew/cashew-3.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
                   aria-label="Cashew Image 5"
                 ></a>
                 <a
-                  href="images/Gallery/kajo/kajo-6.webp"
+                  href="images/cashew/cashew-5.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
                   aria-label="Cashew Image 6"
                 ></a>
                 <a
-                  href="images/Gallery/kajo/kajo-7.jpg"
+                  href="images/cashew/cashew-6.webp"
                   class="glightbox-images"
                   data-gallery="cashew"
                   aria-label="Cashew Image 7"
@@ -1156,12 +1226,12 @@
                   <!-- أول صورتين ظاهرين -->
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/9.jpeg"
+                      href="images/cloves/cloves-1.webp"
                       class="glightbox-images"
                       data-gallery="cloves"
                     >
                       <img
-                        src="images/Gallery/9.jpeg"
+                        src="images/cloves/cloves-1.webp"
                         class="img-fluid"
                         alt="Cloves"
                       />
@@ -1169,12 +1239,12 @@
                   </div>
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/16.jpeg"
+                      href="images/cloves/cloves-4.webp"
                       class="glightbox-images"
                       data-gallery="cloves"
                     >
                       <img
-                        src="images/Gallery/16.jpeg"
+                        src="images/cloves/cloves-4.webp"
                         class="img-fluid"
                         alt="Cloves"
                       />
@@ -1184,22 +1254,22 @@
 
                 <!-- باقي الصور مخفية داخل الألبوم -->
                 <a
-                  href="images/Gallery/18.jpeg"
+                  href="images/cloves/cloves-2.webp"
                   class="glightbox-images"
                   data-gallery="cloves"
                 ></a>
                 <a
-                  href="images/cloves/cloves1.jpg"
+                  href="images/cloves/cloves-3c.webp"
                   class="glightbox-images"
                   data-gallery="cloves"
                 ></a>
                 <a
-                  href="images/cloves/cloves-2.jpg"
+                  href="images/cloves/cloves-5.webp"
                   class="glightbox-images"
                   data-gallery="cloves"
                 ></a>
                 <a
-                  href="images/cloves/cloves-3.jpg"
+                  href="images/cloves/cloves-6.webp"
                   class="glightbox-images"
                   data-gallery="cloves"
                 ></a>
@@ -1209,14 +1279,14 @@
               <div class="portfolio-group filter-beans" style="display: none">
                 <div class="row g-3">
                   <!-- أول صورتين ظاهرين -->
-                  <div class="col-lg-4 col-md-6 isotope-item first-three">
+                  <div class="col-md-6">
                     <a
-                      href="images.wemp/Gallery/13-compressed.webp"
+                      href="images/beans/beens-1.webp"
                       class="glightbox-images"
                       data-gallery="beans"
                     >
                       <img
-                        src="images.wemp/Gallery/13-compressed.webp"
+                        src="images/beans/beens-1.webp"
                         class="img-fluid"
                         alt="Beans"
                       />
@@ -1224,12 +1294,12 @@
                   </div>
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/14.jpeg"
+                      href="images/beans/beens-2.webp"
                       class="glightbox-images"
                       data-gallery="beans"
                     >
                       <img
-                        src="images/Gallery/14.jpeg"
+                        src="images/beans/beens-2.webp"
                         class="img-fluid"
                         alt="Beans"
                       />
@@ -1239,47 +1309,39 @@
 
                 <!-- باقي الصور مخفية داخل الألبوم -->
                 <a
-                  href="images/Gallery/11.jpeg"
+                  href="images/beans/beens-3.webp"
                   class="glightbox-images"
                   data-gallery="beans"
                 ></a>
                 <a
-                  href="images/Gallery/bean44.jpeg"
+                  href="images/beans/beens-4.webp"
                   class="glightbox-images"
                   data-gallery="beans"
                 ></a>
                 <a
-                  href="images/been55.jpeg"
+                  href="images/beans/beens-5.webp"
                   class="glightbox-images"
                   data-gallery="beans"
                 ></a>
                 <a
-                  href="images/been66.jpeg"
-                  class="glightbox-images"
-                  data-gallery="beans"
-                ></a>
-                <a
-                  href="images/been666.jpeg"
+                  href="images/beans/beens-6.webp"
                   class="glightbox-images"
                   data-gallery="beans"
                 ></a>
               </div>
 
               <!-- Cardamom -->
-              <div
-                class="portfolio-group filter-cardamom"
-                style="display: none"
-              >
+              <div class="portfolio-group filter-cardamom">
                 <div class="row g-3">
                   <!-- أول صورتين ظاهرين -->
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/6.jpeg"
+                      href="images/cardmom/cardmom-1.webp"
                       class="glightbox-images"
                       data-gallery="cardamom"
                     >
                       <img
-                        src="images/Gallery/6.jpeg"
+                        src="images/cardmom/cardmom-1.webp"
                         class="img-fluid"
                         alt="Cardamom"
                       />
@@ -1287,12 +1349,12 @@
                   </div>
                   <div class="col-md-6">
                     <a
-                      href="images/cardmom100.jpeg"
+                      href="images/cardmom/cardmom-4.webp"
                       class="glightbox-images"
                       data-gallery="cardamom"
                     >
                       <img
-                        src="images/cardmom100.jpeg"
+                        src="images/cardmom/cardmom-4.webp"
                         class="img-fluid"
                         alt="Cardamom"
                       />
@@ -1302,42 +1364,39 @@
 
                 <!-- باقي الصور مخفية داخل الألبوم -->
                 <a
-                  href="images/cardmom101.jpeg"
+                  href="images/cardmom/cardmom-2.webp"
                   class="glightbox-images"
                   data-gallery="cardamom"
                 ></a>
                 <a
-                  href="images/cardmom102.jpeg"
+                  href="images/cardmom/cardmom-3.webp"
                   class="glightbox-images"
                   data-gallery="cardamom"
                 ></a>
                 <a
-                  href="images/cardmom104.jpeg"
+                  href="images/cardmom/cardmom-5.webp"
                   class="glightbox-images"
                   data-gallery="cardamom"
                 ></a>
                 <a
-                  href="images/cardmom106.jpeg"
+                  href="images/cardmom/cardmom-6.webp"
                   class="glightbox-images"
                   data-gallery="cardamom"
                 ></a>
               </div>
 
               <!-- Black Pepper -->
-              <div
-                class="portfolio-group filter-blackpepper"
-                style="display: none"
-              >
+              <div class="portfolio-group filter-blackpepper">
                 <div class="row g-3">
                   <!-- أول صورتين ظاهرين -->
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/5.jpeg"
+                      href="images/blackpepper/blackpepper-1.webp"
                       class="glightbox-images"
                       data-gallery="blackpepper"
                     >
                       <img
-                        src="images/Gallery/5.jpeg"
+                        src="images/blackpepper/blackpepper-1.webp"
                         class="img-fluid"
                         alt="Black Pepper"
                       />
@@ -1345,14 +1404,15 @@
                   </div>
                   <div class="col-md-6">
                     <a
-                      href="images/Gallery/4.jpeg"
+                      href="images/blackpepper/blackpepper-5.webp"
                       class="glightbox-images"
                       data-gallery="blackpepper"
                     >
                       <img
-                        src="images/Gallery/4.jpeg"
+                        src="images/blackpepper/blackpepper-5-small.webp"
                         class="img-fluid"
-                        alt="Black Pepper"
+                        alt="blackpepper"
+                        loading="lazy"
                       />
                     </a>
                   </div>
@@ -1360,14 +1420,96 @@
 
                 <!-- باقي الصور مخفية داخل الألبوم -->
                 <a
-                  href="images/blackpepper-1.jpeg"
+                  href="images/blackpepper/blackpepper-4.webp"
                   class="glightbox-images"
                   data-gallery="blackpepper"
                 ></a>
                 <a
-                  href="images/blackpepper-2.jpeg"
+                  href="images/blackpepper/blackpepper-2.webp"
                   class="glightbox-images"
                   data-gallery="blackpepper"
+                ></a>
+                <a
+                  href="images/blackpepper/blackpepper-3.webp"
+                  class="glightbox-images"
+                  data-gallery="blackpepper"
+                ></a>
+                <a
+                  href="images/blackpepper/blackpepper-6.webp"
+                  class="glightbox-images"
+                  data-gallery="blackpepper"
+                ></a>
+              </div>
+
+              <!-- Coffee -->
+              <div class="portfolio-group filter-coffee">
+                <div class="row g-3">
+                  <!-- أول صورتين ظاهرين -->
+                  <div class="col-md-6">
+                    <a
+                      href="images/coffee/coffee-1.webp"
+                      class="glightbox-images"
+                      data-gallery="coffee"
+                    >
+                      <img
+                        src="images/coffee/coffee-1.webp"
+                        class="img-fluid"
+                        alt="Coffee"
+                        data-i18n-alt="gallery.products.coffee.alt1"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <a
+                      href="images/coffee/coffee-2.webp"
+                      class="glightbox-images"
+                      data-gallery="coffee"
+                    >
+                      <img
+                        src="images/coffee/coffee-2.webp"
+                        class="img-fluid"
+                        alt="Coffee"
+                        data-i18n-alt="gallery.products.coffee.alt2"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <!-- باقي الصور مخفية داخل الألبوم -->
+                <a
+                  href="images/coffee/coffee-3.webp"
+                  class="glightbox-images"
+                  data-gallery="coffee"
+                  aria-label="Coffee Image 3"
+                  data-i18n-aria="gallery.products.coffee.image3"
+                ></a>
+                <a
+                  href="images/coffee/coffee-4.webp"
+                  class="glightbox-images"
+                  data-gallery="coffee"
+                  aria-label="Coffee Image 4"
+                  data-i18n-aria="gallery.products.coffee.image4"
+                ></a>
+                <a
+                  href="images/coffee/coffee-5.webp"
+                  class="glightbox-images"
+                  data-gallery="coffee"
+                  aria-label="Coffee Image 5"
+                  data-i18n-aria="gallery.products.coffee.image5"
+                ></a>
+                <a
+                  href="images/coffee/coffee-6.webp"
+                  class="glightbox-images"
+                  data-gallery="coffee"
+                  aria-label="Coffee Image 6"
+                  data-i18n-aria="gallery.products.coffee.image6"
+                ></a>
+                <a
+                  href="images/coffee/coffee-7.webp"
+                  class="glightbox-images"
+                  data-gallery="coffee"
+                  aria-label="Coffee Image 7"
+                  data-i18n-aria="gallery.products.coffee.image7"
                 ></a>
               </div>
             </div>
@@ -1399,9 +1541,14 @@
                     <div class="info">
                       <h3 class="branch-title mb-4">
                         <span data-i18n="contact.branches.italy.title"
-                          >Italy Branch 🇮🇹</span
-                        >
+                          >Italy Branch</span
+                        ><img
+                          src="https://twemoji.maxcdn.com/v/latest/72x72/1f1ee-1f1f9.png"
+                          alt="Italy Flag"
+                          width="24"
+                        />
                       </h3>
+
                       <div class="info-item d-flex mb-3">
                         <i class="bi bi-envelope flex-shrink-0"></i>
                         <div>
@@ -1424,7 +1571,7 @@
                             >
                           </h4>
                           <p data-i18n="contact.branches.italy.phone">
-                            +255 745 580 363
+                            +393 897 879 480
                           </p>
                         </div>
                       </div>
@@ -1436,8 +1583,12 @@
                     <div class="info">
                       <h3 class="branch-title mb-4">
                         <span data-i18n="contact.branches.tanzania.title"
-                          >Tanzania Branch🇹🇿</span
-                        >
+                          >Tanzania Branch</span
+                        ><img
+                          src="https://twemoji.maxcdn.com/v/latest/72x72/1f1f9-1f1ff.png"
+                          alt="Tanzania Flag"
+                          width="24"
+                        />
                       </h3>
                       <div class="info-item d-flex mb-3">
                         <i class="bi bi-geo-alt flex-shrink-0"></i>
@@ -1477,7 +1628,7 @@
                             >
                           </h4>
                           <p data-i18n="contact.branches.tanzania.phone">
-                            +393 897 879 480
+                            +255 686 778 002
                           </p>
                         </div>
                       </div>
@@ -1582,7 +1733,7 @@
                     <div class="p-3">
                       <!-- إزالة كلاس card -->
                       <img
-                        src="images.wemp/new_QRcode.webp"
+                        src="images/about/new_QRcode.webp"
                         alt="QR Code"
                         class="img-fluid mx-auto"
                         style="max-width: 200px"
@@ -1608,30 +1759,32 @@
       <div class="ticker-container">
         <div class="ticker-track">
           <!-- النسخة الأولى -->
-          <img src="images/Gallery/14.jpeg" alt="track-photo" />
-          <img src="images.wemp/Gallery/13-compressed.webp" alt="track-photo" />
-          <img src="images/Gallery/kajo/kajo-3.jpg" alt="track-photo" />
-          <img src="images/Gallery/12.jpeg" alt="track-photo" />
-          <img src="images/Gallery/kajo/kajo-5.jpg" alt="track-photo" />
-          <img src="images/Gallery/17.jpeg" alt="track-photo" />
-          <img src="images/Gallery/bean44.jpeg" alt="track-photo" />
-          <img src="images/Gallery/7.jpeg" alt="track-photo" />
-          <img src="images/Gallery/1.jpeg" alt="track-photo" />
-          <img src="images/Gallery/15.jpeg" alt="track-photo" />
-          <img src="images/Gallery/9.jpeg" alt="track-photo" />
+          <img src="images/cardmom/cardmom-1.webp" alt="track-photo" />
+          <img src="images/cardmom/cardmom-2.webp" alt="track-photo" />
+          <img src="images/cashew/cashew-1.webp" alt="track-photo" />
+          <img src="images/cashew/cashew-2.webp" alt="track-photo" />
+          <img src="images/beans/beens-1.webp" alt="track-photo" />
+          <img src="images/beans/beens-2.webp" alt="track-photo" />
+          <img src="images/coffee/coffee-1.webp" alt="track-photo" />
+          <img src="images/coffee/coffee-2.webp" alt="track-photo" />
+          <img src="images/cloves/cloves-1.webp" alt="track-photo" />
+          <img src="images/cloves/cloves-3.webp" alt="track-photo" />
+          <img src="images/blackpepper/blackpepper-3.webp" alt="track-photo" />
+          <img src="images/blackpepper/blackpepper-5.webp" alt="track-photo" />
 
           <!-- النسخة الثانية (ضروري جداً) -->
-          <img src="images/Gallery/14.jpeg" alt="track-photo" />
-          <img src="images.wemp/Gallery/13-compressed.webp" alt="track-photo" />
-          <img src="images/Gallery/kajo/kajo-3.jpg" alt="track-photo" />
-          <img src="images/Gallery/12.jpeg" alt="track-photo" />
-          <img src="images/Gallery/kajo/kajo-5.jpg" alt="track-photo" />
-          <img src="images/Gallery/17.jpeg" alt="track-photo" />
-          <img src="images/Gallery/bean44.jpeg" alt="track-photo" />
-          <img src="images/Gallery/7.jpeg" alt="track-photo" />
-          <img src="images/Gallery/1.jpeg" alt="track-photo" />
-          <img src="images/Gallery/15.jpeg" alt="track-photo" />
-          <img src="images/Gallery/9.jpeg" alt="track-photo" />
+          <img src="images/cardmom/cardmom-1.webp" alt="track-photo" />
+          <img src="images/cardmom/cardmom-2.webp" alt="track-photo" />
+          <img src="images/cashew/cashew-1.webp" alt="track-photo" />
+          <img src="images/cashew/cashew-2.webp" alt="track-photo" />
+          <img src="images/beans/beens-1.webp" alt="track-photo" />
+          <img src="images/beans/beens-2.webp" alt="track-photo" />
+          <img src="images/coffee/coffee-1.webp" alt="track-photo" />
+          <img src="images/coffee/coffee-2.webp" alt="track-photo" />
+          <img src="images/cloves/cloves-1.webp" alt="track-photo" />
+          <img src="images/cloves/cloves-3.webp" alt="track-photo" />
+          <img src="images/blackpepper/blackpepper-3.webp" alt="track-photo" />
+          <img src="images/blackpepper/blackpepper-5.webp" alt="track-photo" />
         </div>
       </div>
     </a>
@@ -1642,7 +1795,7 @@
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
               <img
-                src="images/nav_logo-removebg-preview.png"
+                src="images/about/nav_logo.webp"
                 alt="Marka Trading Icon"
                 class="logo-icon black_icon"
               />
@@ -1653,8 +1806,8 @@
               </p>
               <p class="mt-3">
                 <strong data-i18n="footer.contact.phone">Phone:</strong>
-                <span data-i18n="footer.contact.phoneNumber"
-                  >+255 745 580 363</span
+                <span data-i18n="footer.contact.phoneNumber">
+                  +393 897 879 480</span
                 >
               </p>
               <p>
@@ -1727,7 +1880,7 @@
           <div class="col-lg-4 col-md-12 footer-newsletter text-center">
             <div class="my-3">
               <img
-                src="images/new_QRcode.jpeg"
+                src="images/about/new_QRcode.webp"
                 alt="QR Code"
                 class="img-fluid mx-auto"
                 style="max-width: 200px"
@@ -1763,7 +1916,7 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
     <a
-      href="https://wa.me/255745580363"
+      href="https://wa.me/255686778002"
       target="_blank"
       class="whatsapp-float"
       aria-label="Chat with us on WhatsApp"

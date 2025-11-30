@@ -229,3 +229,21 @@ scrollTopBtn.addEventListener("click", (e) => {
     behavior: "smooth",
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  // إعادة تحميل عناصر Isotope بعد تعديل DOM أو التأكد من ظهور كل الصور
+  if (typeof iso !== "undefined") {
+    iso.reloadItems(); // يعيد تحميل العناصر الجديدة
+    iso.layout(); // يعيد ترتيب العناصر
+  }
+});
+
+function updateTickerDirection(lang) {
+  const tickerTrack = document.querySelector(".ticker-track");
+  if (!tickerTrack) return;
+
+  if (lang === "ar") {
+    tickerTrack.style.animationName = "slideRTL";
+  } else {
+    tickerTrack.style.animationName = "slideLTR";
+  }
+}

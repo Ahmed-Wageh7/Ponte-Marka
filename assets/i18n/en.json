@@ -87,7 +87,8 @@
       "cloves": "Cloves",
       "beans": "Beans",
       "cardamom": "Cardamom",
-      "blackpepper": "Black Pepper"
+      "blackpepper": "Black Pepper",
+      "coffee": "Coffee"
     },
     "products": {
       "cashew": {
@@ -128,6 +129,14 @@
         "tagline": "Premium black pepper from Tanga, naturally sun-dried to preserve piperine.",
         "description": "Dark, wrinkled grains with a penetrating aroma, perfect for the food industry and retail.",
         "technicalSpecs": "- Density: 500GL - 550GL (grams/liter)\n- Moisture: Max 12%\n- Appearance: Whole, clean grains (de-stoned)\n- Salmonella: Tested and absent"
+      },
+
+      "coffee": {
+        "product": "Tanzanian Heights Coffee",
+        "category": "Specialty Arabica Beans",
+        "tagline": "Bright citrus notes with a full, well-rounded body.",
+        "description": "Introducing pristine, fully Washed Arabica green beans sourced from high-altitude estates in the Mbeya and Kilimanjaro regions. This Specialty Grade coffee presents a complex flavour profile featuring bright citrus notes and a full, well-rounded body, ensuring perfect synergy for creating premium espresso blends with rich crema and exceptional consistency.",
+        "technicalSpecs": "- Primary Variety: High-Quality Arabica (Washed). Robusta (Clean) available for density and body enhancement.\n- Screen Sizes: AA (18+), AB (16/17), and Peaberry (PB).\n- Quality Rating: Specialty Grade (Cupping Score 80+).\n- Moisture Content: Guaranteed between 11.0% and 12.5% for optimal roasting stability.\n- Purity & Defects: Precise processing to minimize defects according to international SCA standards.\n- Packaging: New 60kg Jute bags, with option for GraintPro lining for maximum flavour protection.\n- Key Certifications: Phytosanitary Certificate, Quality Certificate, Certificate of Origin."
       }
     }
   },
@@ -144,27 +153,27 @@
     },
     "branches": {
       "italy": {
-        "title": "Italy Branch 🇮🇹",
+        "title": "Italy Branch ",
         "emailTitle": "Email:",
         "email": "info@markatz.com",
         "phoneTitle": "Call:",
-        "phone": "+255 745 580 363"
+        "phone": "+393 897 879 480"
       },
       "tanzania": {
-        "title": "Tanzania Branch🇹🇿",
+        "title": "Tanzania Branch",
         "locationTitle": "Location:",
         "location": "P.O. Box 6191, Tanga, Tanzania",
         "emailTitle": "Email:",
         "email": "tanga.cent@gmail.com",
         "phoneTitle": "Call:",
-        "phone": "+393 897 879 480"
+        "phone": "+255 686 778 002"
       }
     },
     "italyBranch": {
       "emailTitle": "Email (Italy Branch)",
       "email": "info@markatz.com",
       "phoneTitle": "Phone / WhatsApp (Italy Branch)",
-      "phone": "+255 745 580 363"
+      "phone": " +393 897 879 480"
     },
     "form": {
       "name": "Your Name",
@@ -185,7 +194,7 @@
     "contact": {
       "address1": "P.O. Box 6191, Tanga, Tanzania",
       "phone": "Phone:",
-      "phoneNumber": "+255 745 580 363",
+      "phoneNumber": " +393 897 879 480",
       "email": "Email:",
       "emailAddress": "info@markatz.com"
     },
