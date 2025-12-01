@@ -1826,7 +1826,7 @@ html[lang="ar"] .info-item {
 /* للعرض أقل من 770px */
 @media (max-width: 770px) {
   .hero {
-    height: 45vh; /* ارتفاع السكشن 80% من الشاشة */
+    height: 60vh; /* ارتفاع السكشن 80% من الشاشة */
     overflow: hidden; /* لمنع أي scroll إضافي */
   }
   .hero .carousel-item img {
@@ -1853,7 +1853,7 @@ html[lang="ar"] .info-item {
   }
   .hero .container {
     position: absolute;
-    top: -54.5%;
+    top: -36%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -1918,4 +1918,8 @@ html[lang="ar"] .info-item {
   font-size: 20px !important; /* حجم الخط */
 
   direction: rtl; /* اتجاه الكتابة من اليمين للشمال */
+}
+
+.ticker-track {
+  will-change: transform;
 }
