@@ -1923,3 +1923,15 @@ html[lang="ar"] .info-item {
 .ticker-track {
   will-change: transform;
 }
+
+/* افتراضي: LTR (إنجليزي، إيطالي) */
+.language-toggle img {
+  margin-right: 1rem; /* me-3 */
+  margin-left: 0;
+}
+
+/* لو اللغة عربية RTL */
+html[lang="ar"] .language-toggle img {
+  margin-left: 1rem; /* بدل me-3 */
+  margin-right: 0;
+}
