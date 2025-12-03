@@ -52,6 +52,11 @@
     "videoLink": "assets/videos/About-vid.mp4"
   },
 
+  "certifications": {
+    "title": "Certifications",
+    "description": "Our company is accredited with more than 10 international certifications, reflecting our commitment to global quality standards."
+  },
+
   "services": {
     "vision": {
       "title": "Vision",

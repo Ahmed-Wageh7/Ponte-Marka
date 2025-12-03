@@ -1920,22 +1920,115 @@ html[lang="ar"] .info-item {
   direction: rtl; /* اتجاه الكتابة من اليمين للشمال */
 }
 
-.ticker-track {
-  will-change: transform;
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* certifications */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ===========================
+   Container
+=========================== */
+.cert-ticker-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: relative;
 }
 
-/* افتراضي: LTR (إنجليزي، إيطالي) */
-.language-toggle img {
-  margin-right: 1rem; /* me-3 */
-  margin-left: 0;
+.cert-ticker-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: slideLTR 30s linear infinite;
+  align-items: center;
+  white-space: nowrap;
+  transform-origin: left center;
 }
 
-/* لو اللغة عربية RTL */
-html[lang="ar"] .language-toggle img {
-  margin-left: 1rem; /* بدل me-3 */
-  margin-right: 0;
+.cert-item {
+  flex-shrink: 0;
+  text-decoration: none;
+  position: relative;
+  z-index: 5;
 }
 
-.inner-title {
-  white-space: pre-line;
+.cert-title {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border: 2px solid #dee2e6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-width: 220px;
+  text-align: center;
+}
+
+.cert-item:hover .cert-title {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* popup فوق الكلمة */
+.qr-popup {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.qr-popup img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* LTR - من اليمين لليسار مستمر */
+@keyframes slideLTR {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* RTL - من اليسار لليمين مستمر */
+@keyframes slideRTL {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* عند hover نوقف الحركة */
+.cert-ticker-container:hover .cert-ticker-track,
+.cert-ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* دعم RTL */
+.rtl .cert-ticker-track {
+  animation-name: slideRTL !important;
+}
+
+.rtl .cert-ticker-track .cert-item {
+  direction: ltr; /* يحافظ على نصوص الشهادات */
 }

@@ -51,6 +51,12 @@
     "videoText": "Guarda il Video",
     "videoLink": "assets/videos/About-vid.mp4"
   },
+
+  "certifications": {
+    "title": "Certificazioni",
+    "description": "La nostra azienda è accreditata con più di 10 certificazioni internazionali, riflettendo il nostro impegno per standard di qualità globali."
+  },
+
   "services": {
     "vision": {
       "title": "Visione",

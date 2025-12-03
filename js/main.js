@@ -229,21 +229,82 @@ scrollTopBtn.addEventListener("click", (e) => {
     behavior: "smooth",
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  // إعادة تحميل عناصر Isotope بعد تعديل DOM أو التأكد من ظهور كل الصور
-  if (typeof iso !== "undefined") {
-    iso.reloadItems(); // يعيد تحميل العناصر الجديدة
-    iso.layout(); // يعيد ترتيب العناصر
-  }
+const items = document.querySelectorAll(".cert-item");
+
+items.forEach((item) => {
+  const popup = item.querySelector(".qr-popup");
+
+  item.addEventListener("mouseenter", () => {
+    const rect = item.getBoundingClientRect();
+
+    popup.style.top = rect.top - popup.offsetHeight - 10 + "px";
+    popup.style.left =
+      rect.left + rect.width / 2 - popup.offsetWidth / 2 + "px";
+  });
 });
 
-function updateTickerDirection(lang) {
-  const tickerTrack = document.querySelector(".ticker-track");
-  if (!tickerTrack) return;
+const qrPopup = document.getElementById("qr-popup");
+
+document.querySelectorAll(".cert-item").forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    const imgSrc = item.getAttribute("data-qr");
+    qrPopup.querySelector("img").src = imgSrc;
+
+    const rect = item.getBoundingClientRect();
+    const containerRect = document
+      .querySelector(".cert-ticker-container")
+      .getBoundingClientRect();
+
+    // نحسب مكان الpopup بالنسبة للcontainer
+    qrPopup.style.left = `${
+      rect.left - containerRect.left + rect.width / 2 - 70
+    }px`; // 70 = نصف عرض الصورة
+    qrPopup.style.top = `${rect.top - containerRect.top - 150}px`; // 150 = ارتفاع + مسافة فوق العنصر
+
+    qrPopup.style.opacity = 1;
+    qrPopup.style.visibility = "visible";
+  });
+
+  item.addEventListener("mouseleave", () => {
+    qrPopup.style.opacity = 0;
+    qrPopup.style.visibility = "hidden";
+  });
+});
+
+function changeLang(lang) {
+  localStorage.setItem("selectedLang", lang);
 
   if (lang === "ar") {
-    tickerTrack.style.animationName = "slideRTL";
+    document.documentElement.setAttribute("dir", "rtl");
+    document.body.classList.add("rtl");
   } else {
-    tickerTrack.style.animationName = "slideLTR";
+    document.documentElement.setAttribute("dir", "ltr");
+    document.body.classList.remove("rtl");
   }
+
+  // تحميل نصوص اللغة
+  fetch(`assets/i18n/${lang}.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const keyAttr = el.getAttribute("data-i18n");
+        let keys, text;
+
+        if (keyAttr.startsWith("[placeholder]")) {
+          keys = keyAttr.replace("[placeholder]", "").split(".");
+          text = data;
+          keys.forEach((k) => (text = text?.[k] ?? ""));
+          el.setAttribute("placeholder", text);
+        } else {
+          keys = keyAttr.split(".");
+          text = data;
+          keys.forEach((k) => (text = text?.[k] ?? ""));
+          el.innerText = text;
+        }
+      });
+    })
+    .catch((err) => console.error("Error loading language JSON:", err));
 }
+
+// اختيار اللغة عربي
+changeLang("ar");

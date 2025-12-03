@@ -53,6 +53,12 @@
     "videoText": "مشاهدة الفيديو",
     "videoLink": "assets/videos/About-vid.mp4"
   },
+
+  "certifications": {
+    "title": "الشهادات",
+    "description": "شركتنا معتمدة بأكثر من 10 شهادات دولية، مما يعكس التزامنا بمعايير الجودة العالمية."
+  },
+
   "services": {
     "vision": {
       "title": "الرؤية",
