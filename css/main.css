@@ -1935,3 +1935,7 @@ html[lang="ar"] .language-toggle img {
   margin-left: 1rem; /* بدل me-3 */
   margin-right: 0;
 }
+
+.inner-title {
+  white-space: pre-line;
+}
