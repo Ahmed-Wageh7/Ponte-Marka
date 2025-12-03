@@ -2032,3 +2032,9 @@ html[lang="ar"] .info-item {
 .rtl .cert-ticker-track .cert-item {
   direction: ltr; /* يحافظ على نصوص الشهادات */
 }
+@media (max-width: 1199px) {
+  html[dir="rtl"] .about ul li i {
+    margin-left: 0 !important; /* شيل المسافة من ناحية الشمال */
+    margin-right: 0 !important; /* وشيلها من ناحية اليمين لو موجودة */
+  }
+}
