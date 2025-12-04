@@ -308,3 +308,58 @@ function changeLang(lang) {
 
 // اختيار اللغة عربي
 changeLang("ar");
+
+function updateCarouselButtons() {
+  const carousel = document.querySelector("#hero-carousel");
+  if (!carousel) return;
+
+  const isRTL = document.documentElement.dir === "rtl";
+  const prevBtn = carousel.querySelector(".carousel-control-prev");
+  const nextBtn = carousel.querySelector(".carousel-control-next");
+
+  if (isRTL) {
+    prevBtn.setAttribute("data-bs-slide", "next"); // نقلبهم
+    nextBtn.setAttribute("data-bs-slide", "prev");
+  } else {
+    prevBtn.setAttribute("data-bs-slide", "prev"); // نرجع الوضع الطبيعي
+    nextBtn.setAttribute("data-bs-slide", "next");
+  }
+}
+
+function changeLang(lang) {
+  localStorage.setItem("selectedLang", lang);
+
+  if (lang === "ar") {
+    document.documentElement.setAttribute("dir", "rtl");
+    document.body.classList.add("rtl");
+  } else {
+    document.documentElement.setAttribute("dir", "ltr");
+    document.body.classList.remove("rtl");
+  }
+
+  // تحديث أزرار الكاروسيل حسب الاتجاه
+  updateCarouselButtons();
+
+  // تحميل نصوص اللغة
+  fetch(`assets/i18n/${lang}.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const keyAttr = el.getAttribute("data-i18n");
+        let keys, text;
+
+        if (keyAttr.startsWith("[placeholder]")) {
+          keys = keyAttr.replace("[placeholder]", "").split(".");
+          text = data;
+          keys.forEach((k) => (text = text?.[k] ?? ""));
+          el.setAttribute("placeholder", text);
+        } else {
+          keys = keyAttr.split(".");
+          text = data;
+          keys.forEach((k) => (text = text?.[k] ?? ""));
+          el.innerText = text;
+        }
+      });
+    })
+    .catch((err) => console.error("Error loading language JSON:", err));
+}

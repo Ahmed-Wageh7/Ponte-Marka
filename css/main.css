@@ -1826,7 +1826,7 @@ html[lang="ar"] .info-item {
 /* للعرض أقل من 770px */
 @media (max-width: 770px) {
   .hero {
-    height: 60vh; /* ارتفاع السكشن 80% من الشاشة */
+    height: 40vh; /* ارتفاع السكشن 80% من الشاشة */
     overflow: hidden; /* لمنع أي scroll إضافي */
   }
   .hero .carousel-item img {
@@ -1853,7 +1853,7 @@ html[lang="ar"] .info-item {
   }
   .hero .container {
     position: absolute;
-    top: -36%;
+    top: -59%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -2036,5 +2036,143 @@ html[lang="ar"] .info-item {
   html[dir="rtl"] .about ul li i {
     margin-left: 0 !important; /* شيل المسافة من ناحية الشمال */
     margin-right: 0 !important; /* وشيلها من ناحية اليمين لو موجودة */
+  }
+}
+
+/* ===== Indicators (الدوائر اللي تحت) ===== */
+#hero-carousel .carousel-indicators {
+  bottom: -10px; /* ثابت تحت */
+}
+
+#hero-carousel .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: background-color 0.4s ease, transform 0.3s ease, opacity 0.4s ease;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ffffff !important;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: background-color 0.4s ease, transform 0.3s ease, opacity 0.4s ease;
+}
+
+.carousel-indicators [data-bs-target]:hover,
+.carousel-indicators .active {
+  background-color: #0f981b !important;
+  transform: scale(1.2); /* تكبير خفيف عند hover أو active */
+}
+
+/* ===== Arrows (السهمين يمين وشمال) ===== */
+
+/* شكل الأيقونة الطبيعي (أبيض) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  transition: 0.7s ease;
+  background-size: 60px;
+}
+
+/* نخلي الزرار نفسه صغير قد الأيقونة */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: rgb(172, 171, 171);
+}
+.carousel-control-prev {
+  left: 40px;
+}
+.carousel-control-next {
+  right: 40px;
+}
+/* الدايرة البيضاء الصغيرة */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+/* السهم يصبح أخضر عند الهوفر */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: invert(54%) sepia(94%) saturate(613%) hue-rotate(85deg)
+    brightness(92%) contrast(96%);
+}
+
+/* html[dir="rtl"] .carousel-control-prev {
+  right: 40px;
+  left: auto;
+}
+
+html[dir="rtl"] .carousel-control-next {
+  left: 40px;
+  right: auto;
+} */
+/* الوضع الطبيعي LTR */
+.carousel-control-prev {
+  left: 40px;
+  right: auto;
+}
+
+.carousel-control-next {
+  right: 40px;
+  left: auto;
+}
+
+/* الوضع RTL */
+html[dir="rtl"] .carousel-control-prev {
+  left: 40px; /* بدل left */
+  right: auto;
+}
+
+html[dir="rtl"] .carousel-control-next {
+  right: 40px; /* بدل right */
+  left: auto;
+}
+
+html[dir="rtl"] .portfolio-filters li {
+  font-size: 22px !important; /* تكبير خفيف للنصوص */
+}
+
+@media (max-width: 770px) {
+  /* الأزرار على منتصف الصورة */
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    position: absolute; /* تأكد إنهم absolute */
+    top: 12%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(172, 171, 171, 0.8);
+    z-index: 10; /* أعلى من الصور والcontainer */
+  }
+  .hero .carousel-control-prev {
+    left: 15px !important;
+  }
+  .hero .carousel-control-next {
+    right: 15px !important;
+  }
+
+  /* النقاط أسفل الصورة مباشرة */
+  #hero-carousel .carousel-indicators {
+    position: absolute !important; /* مهم عشان يظهر فوق overflow hidden */
+    /* bottom: 10px; */
+    top: 16rem;
+    left: 37%;
+    transform: translateX(-50%);
+    z-index: 10; /* فوق كل العناصر */
+  }
+
+  /* لو احتاجت تكبير للنقاط */
+  #hero-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
   }
 }
