@@ -2452,55 +2452,44 @@ html[dir="rtl"] .pdf-track {
   margin-top: 8px; /* ✅ مسافة مناسبة */
   transition: all 0.3s ease; /* ✅ انتقال سلس */
 }
-
-/* ✅ الصورة العادية - شكل أنيق */
-.pdf-thumb {
-  width: 120px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12); /* ✅ shadow عادي */
-  transition: all 0.3s ease;
-}
-
-.pdf-item:hover {
-  transform: translateY(-3px);
-}
-
-.pdf-item:hover .pdf-name {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-  color: white !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
-  border-color: #007bff;
-  padding: 12px 16px;
-}
-
-.pdf-item:hover .pdf-thumb {
-  transform: scale(1.03);
-  box-shadow: 0 12px 35px rgba(0, 123, 255, 0.25);
-}
-
-html[dir="rtl"] ul li span {
-  display: block;
-  text-align: right;
-}
+/* ✅ شكل أيقونات العملاء */
 .clients-wrap .client-logo img {
-  width: 120px;
-  height: auto;
+  width: 100%; /* ياخد كل عرض العمود */
+  max-width: 150px; /* أقصى عرض للصورة */
+  height: auto; /* يحافظ على نسبة الطول/العرض */
   object-fit: contain;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 20px; /* يضيف مسافة تحت كل صورة */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.clients-wrap .client-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .clients-wrap .client-logo img {
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 992px) {
+  .clients-wrap .client-logo img {
+    max-width: 110px;
+  }
 }
 
 @media (max-width: 768px) {
   .clients-wrap .client-logo img {
-    width: 80px;
+    max-width: 90px;
   }
 }
 
 @media (max-width: 576px) {
   .clients-wrap .client-logo img {
-    width: 60px;
+    max-width: 70px;
   }
 }
