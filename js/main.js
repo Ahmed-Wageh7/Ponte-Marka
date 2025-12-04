@@ -116,219 +116,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ------------------ Load saved language ------------------
   const savedLang = localStorage.getItem("selectedLang") || "en";
-  changeLang(savedLang);
+  changeLang(savedLang); // تطبيق اللغة المحفوظة أو الإنجليزية بشكل افتراضي
 });
 
 // -------------------- تغيير اللغة + القائمة --------------------
 function changeLang(lang) {
-  localStorage.setItem("selectedLang", lang); // تخزين اللغة
+  // تخزين اللغة في localStorage
+  localStorage.setItem("selectedLang", lang);
 
   // تغيير اتجاه الصفحة
-  if (lang === "ar") {
-    document.documentElement.setAttribute("dir", "rtl");
-    document.body.classList.add("rtl");
-  } else {
-    document.documentElement.setAttribute("dir", "ltr");
-    document.body.classList.remove("rtl");
-  }
-
-  // تحميل نصوص اللغة
-  fetch(`assets/i18n/${lang}.json`)
-    .then((res) => res.json())
-    .then((data) => {
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const keyAttr = el.getAttribute("data-i18n");
-        let keys, text;
-
-        if (keyAttr.startsWith("[placeholder]")) {
-          keys = keyAttr.replace("[placeholder]", "").split(".");
-          text = data;
-          keys.forEach((k) => (text = text?.[k] ?? ""));
-          el.setAttribute("placeholder", text);
-        } else {
-          keys = keyAttr.split(".");
-          text = data;
-          keys.forEach((k) => (text = text?.[k] ?? ""));
-          el.innerText = text;
-        }
-      });
-    })
-    .catch((err) => console.error("Error loading language JSON:", err));
-}
-
-// -------------------- Navbar Active --------------------
-const navLinks = document.querySelectorAll('.navmenu a[href^="#"]');
-const sections = Array.from(navLinks)
-  .map((link) => {
-    const id = link.getAttribute("href").substring(1);
-    return document.getElementById(id);
-  })
-  .filter((sec) => sec !== null);
-
-const observerOptions = {
-  root: null,
-  rootMargin: "-100px 0px 0px 0px",
-  threshold: 0.2,
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      navLinks.forEach((link) => {
-        if (!link.closest(".portfolio-filters")) {
-          link.classList.remove("active");
-        }
-      });
-      const id = entry.target.id;
-      const activeLink = document.querySelector(`.navmenu a[href="#${id}"]`);
-      if (activeLink) activeLink.classList.add("active");
-    }
-  });
-}, observerOptions);
-
-sections.forEach((section) => observer.observe(section));
-
-document.getElementById("current-year").textContent = new Date().getFullYear();
-
-// -------------------- GLightbox إضافي --------------------
-const lightbox2 = GLightbox({ selector: ".glightbox" });
-
-const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
-const navMenu = document.querySelector("#navmenu");
-
-mobileNavToggle.addEventListener("click", () => {
-  document.body.classList.toggle("mobile-nav-active");
-  mobileNavToggle.classList.toggle("bi-list");
-  mobileNavToggle.classList.toggle("bi-x");
-});
-
-document.querySelectorAll("#navmenu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    document.body.classList.remove("mobile-nav-active");
-    mobileNavToggle.classList.add("bi-list");
-    mobileNavToggle.classList.remove("bi-x");
-  });
-});
-
-// احصل على الزر
-const scrollTopBtn = document.getElementById("scroll-top");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    // يظهر بعد تمرير 300px
-    scrollTopBtn.classList.add("active");
-  } else {
-    scrollTopBtn.classList.remove("active");
-  }
-});
-
-scrollTopBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-const items = document.querySelectorAll(".cert-item");
-
-items.forEach((item) => {
-  const popup = item.querySelector(".qr-popup");
-
-  item.addEventListener("mouseenter", () => {
-    const rect = item.getBoundingClientRect();
-
-    popup.style.top = rect.top - popup.offsetHeight - 10 + "px";
-    popup.style.left =
-      rect.left + rect.width / 2 - popup.offsetWidth / 2 + "px";
-  });
-});
-
-const qrPopup = document.getElementById("qr-popup");
-
-document.querySelectorAll(".cert-item").forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    const imgSrc = item.getAttribute("data-qr");
-    qrPopup.querySelector("img").src = imgSrc;
-
-    const rect = item.getBoundingClientRect();
-    const containerRect = document
-      .querySelector(".cert-ticker-container")
-      .getBoundingClientRect();
-
-    // نحسب مكان الpopup بالنسبة للcontainer
-    qrPopup.style.left = `${
-      rect.left - containerRect.left + rect.width / 2 - 70
-    }px`; // 70 = نصف عرض الصورة
-    qrPopup.style.top = `${rect.top - containerRect.top - 150}px`; // 150 = ارتفاع + مسافة فوق العنصر
-
-    qrPopup.style.opacity = 1;
-    qrPopup.style.visibility = "visible";
-  });
-
-  item.addEventListener("mouseleave", () => {
-    qrPopup.style.opacity = 0;
-    qrPopup.style.visibility = "hidden";
-  });
-});
-
-function changeLang(lang) {
-  localStorage.setItem("selectedLang", lang);
-
-  if (lang === "ar") {
-    document.documentElement.setAttribute("dir", "rtl");
-    document.body.classList.add("rtl");
-  } else {
-    document.documentElement.setAttribute("dir", "ltr");
-    document.body.classList.remove("rtl");
-  }
-
-  // تحميل نصوص اللغة
-  fetch(`assets/i18n/${lang}.json`)
-    .then((res) => res.json())
-    .then((data) => {
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const keyAttr = el.getAttribute("data-i18n");
-        let keys, text;
-
-        if (keyAttr.startsWith("[placeholder]")) {
-          keys = keyAttr.replace("[placeholder]", "").split(".");
-          text = data;
-          keys.forEach((k) => (text = text?.[k] ?? ""));
-          el.setAttribute("placeholder", text);
-        } else {
-          keys = keyAttr.split(".");
-          text = data;
-          keys.forEach((k) => (text = text?.[k] ?? ""));
-          el.innerText = text;
-        }
-      });
-    })
-    .catch((err) => console.error("Error loading language JSON:", err));
-}
-
-// اختيار اللغة عربي
-changeLang("ar");
-
-function updateCarouselButtons() {
-  const carousel = document.querySelector("#hero-carousel");
-  if (!carousel) return;
-
-  const isRTL = document.documentElement.dir === "rtl";
-  const prevBtn = carousel.querySelector(".carousel-control-prev");
-  const nextBtn = carousel.querySelector(".carousel-control-next");
-
-  if (isRTL) {
-    prevBtn.setAttribute("data-bs-slide", "next"); // نقلبهم
-    nextBtn.setAttribute("data-bs-slide", "prev");
-  } else {
-    prevBtn.setAttribute("data-bs-slide", "prev"); // نرجع الوضع الطبيعي
-    nextBtn.setAttribute("data-bs-slide", "next");
-  }
-}
-
-function changeLang(lang) {
-  localStorage.setItem("selectedLang", lang);
-
   if (lang === "ar") {
     document.documentElement.setAttribute("dir", "rtl");
     document.body.classList.add("rtl");
@@ -346,17 +142,12 @@ function changeLang(lang) {
     .then((data) => {
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const keyAttr = el.getAttribute("data-i18n");
-        let keys, text;
-
+        let keys = keyAttr.replace("[placeholder]", "").split(".");
+        let text = data;
+        keys.forEach((k) => (text = text?.[k] ?? ""));
         if (keyAttr.startsWith("[placeholder]")) {
-          keys = keyAttr.replace("[placeholder]", "").split(".");
-          text = data;
-          keys.forEach((k) => (text = text?.[k] ?? ""));
           el.setAttribute("placeholder", text);
         } else {
-          keys = keyAttr.split(".");
-          text = data;
-          keys.forEach((k) => (text = text?.[k] ?? ""));
           el.innerText = text;
         }
       });
@@ -364,17 +155,114 @@ function changeLang(lang) {
     .catch((err) => console.error("Error loading language JSON:", err));
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const tracks = document.querySelectorAll(
-//     ".pdf-scroll-track, .pdf-scroll-backup"
-//   );
-//   tracks.forEach((track) => {
-//     const clone = track.innerHTML;
-//     track.innerHTML += clone;
-//   });
-// });
+// -------------------- تحديث أزرار الكاروسيل --------------------
+function updateCarouselButtons() {
+  const carousel = document.querySelector("#hero-carousel");
+  if (!carousel) return;
 
-//PDFS DONE //////////////////////////////////////////////////
+  const isRTL = document.documentElement.dir === "rtl";
+  const prevBtn = carousel.querySelector(".carousel-control-prev");
+  const nextBtn = carousel.querySelector(".carousel-control-next");
+
+  if (isRTL) {
+    prevBtn.setAttribute("data-bs-slide", "next"); // نقلبهم
+    nextBtn.setAttribute("data-bs-slide", "prev");
+  } else {
+    prevBtn.setAttribute("data-bs-slide", "prev");
+    nextBtn.setAttribute("data-bs-slide", "next");
+  }
+}
+
+// -------------------- Navbar Active --------------------
+const navLinks = document.querySelectorAll('.navmenu a[href^="#"]');
+const sections = Array.from(navLinks)
+  .map((link) =>
+    document.getElementById(link.getAttribute("href").substring(1))
+  )
+  .filter((sec) => sec !== null);
+
+const observerOptions = {
+  root: null,
+  rootMargin: "-100px 0px 0px 0px",
+  threshold: 0.2,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navLinks.forEach((link) => {
+        if (!link.closest(".portfolio-filters"))
+          link.classList.remove("active");
+      });
+      const id = entry.target.id;
+      const activeLink = document.querySelector(`.navmenu a[href="#${id}"]`);
+      if (activeLink) activeLink.classList.add("active");
+    }
+  });
+}, observerOptions);
+
+sections.forEach((section) => observer.observe(section));
+
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
+// -------------------- GLightbox إضافي --------------------
+const lightbox2 = GLightbox({ selector: ".glightbox" });
+
+// -------------------- Mobile Nav Toggle --------------------
+const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+mobileNavToggle.addEventListener("click", () => {
+  document.body.classList.toggle("mobile-nav-active");
+  mobileNavToggle.classList.toggle("bi-list");
+  mobileNavToggle.classList.toggle("bi-x");
+});
+
+document.querySelectorAll("#navmenu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.body.classList.remove("mobile-nav-active");
+    mobileNavToggle.classList.add("bi-list");
+    mobileNavToggle.classList.remove("bi-x");
+  });
+});
+
+// -------------------- Scroll Top Button --------------------
+const scrollTopBtn = document.getElementById("scroll-top");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) scrollTopBtn.classList.add("active");
+  else scrollTopBtn.classList.remove("active");
+});
+scrollTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// -------------------- QR Popups --------------------
+const qrPopup = document.getElementById("qr-popup");
+document.querySelectorAll(".cert-item").forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    const imgSrc = item.getAttribute("data-qr");
+    qrPopup.querySelector("img").src = imgSrc;
+
+    const rect = item.getBoundingClientRect();
+    const containerRect = document
+      .querySelector(".cert-ticker-container")
+      .getBoundingClientRect();
+
+    qrPopup.style.left = `${
+      rect.left - containerRect.left + rect.width / 2 - 70
+    }px`;
+    qrPopup.style.top = `${rect.top - containerRect.top - 150}px`;
+
+    qrPopup.style.opacity = 1;
+    qrPopup.style.visibility = "visible";
+  });
+
+  item.addEventListener("mouseleave", () => {
+    qrPopup.style.opacity = 0;
+    qrPopup.style.visibility = "hidden";
+  });
+});
+
+// -------------------- PDFs --------------------
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
@@ -400,7 +288,6 @@ async function loadAllPDFs() {
     "Tax-Identification-Certificate.pdf",
   ];
 
-  // ✅ السر: إنشاء الأصليات الأول
   const originalItems = [];
   for (let pdfName of pdfFiles) {
     const item = await createPDFItem(pdfFolder + pdfName, pdfName);
@@ -408,14 +295,8 @@ async function loadAllPDFs() {
     originalItems.push(item);
   }
 
-  // ✅ نسخ الأصليات مرة واحدة للـ infinite loop السلس
-  originalItems.forEach((item) => {
-    track.appendChild(item.cloneNode(true));
-  });
-
-  console.log(
-    `تم تحميل ${pdfFiles.length} PDF + النسخ للـ infinite loop بدون فراغ`
-  );
+  originalItems.forEach((item) => track.appendChild(item.cloneNode(true)));
+  console.log(`تم تحميل ${pdfFiles.length} PDF + النسخ للـ infinite loop`);
 }
 
 async function createPDFItem(pdfUrl, pdfName) {
@@ -433,10 +314,7 @@ async function createPDFItem(pdfUrl, pdfName) {
 
   const name = document.createElement("span");
   name.className = "pdf-name";
-  const cleanName = pdfName
-    .replace(".pdf", "")
-    .replace(/-/g, " ")
-    .replace(/_/g, " ");
+  const cleanName = pdfName.replace(".pdf", "").replace(/[-_]/g, " ");
   name.textContent =
     cleanName.length > 25 ? cleanName.substring(0, 25) + "..." : cleanName;
 
@@ -452,12 +330,12 @@ async function generateThumbnail(pdfUrl) {
     const scale = 0.4;
     const viewport = page.getViewport({ scale });
     const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
-    canvas.height = viewport.height;
     canvas.width = viewport.width;
-    await page.render({ canvasContext: context, viewport }).promise;
+    canvas.height = viewport.height;
+    await page.render({ canvasContext: canvas.getContext("2d"), viewport })
+      .promise;
     return canvas.toDataURL("image/jpeg", 0.7);
-  } catch (e) {
+  } catch {
     return (
       "image/svg+xml;base64," +
       btoa(`
@@ -474,22 +352,3 @@ async function generateThumbnail(pdfUrl) {
 }
 
 document.addEventListener("DOMContentLoaded", loadAllPDFs);
-
-async function changeLanguage(lang) {
-  try {
-    // تحميل JSON
-    const response = await fetch(`languages/${lang}.json`);
-    const translations = await response.json();
-
-    // ملء النصوص بتاعتك
-    document.querySelector('[data-i18n="hero.title"]').textContent =
-      translations.hero.title;
-    // ... باقي النصوص
-
-    // ✅ تحديث الـ lang و dir
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  } catch (error) {
-    console.error("Language change failed:", error);
-  }
-}
