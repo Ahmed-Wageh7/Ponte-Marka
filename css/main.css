@@ -703,7 +703,7 @@ section,
 .hero .container {
   background: color-mix(in srgb, var(--surface-color), transparent 40%);
   position: relative;
-  text-align: left;
+  text-align: center !important; /* ✅ كل النصوص وسط */
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 4px solid var(--accent-color);
@@ -712,8 +712,7 @@ section,
 
 @media (max-width: 1200px) {
   .hero .container {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 50px;
   }
 }
 
@@ -721,6 +720,7 @@ section,
   margin-bottom: 20px;
   font-size: 36px;
   font-weight: 700;
+  text-align: center !important; /* ✅ العنوان مركزي */
 }
 
 @media (max-width: 768px) {
@@ -733,10 +733,10 @@ section,
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
-  display: inline-block;
+  display: inline-block; /* ✅ خلي الزر حجمه الطبيعي */
   padding: 8px 32px;
   transition: 0.5s;
-  margin: 10px;
+  margin: 10px auto; /* ✅ مركزي أفقياً */
   border-radius: 4px;
   color: var(--contrast-color);
   border: 2px solid var(--accent-color);
@@ -747,60 +747,30 @@ section,
   color: var(--contrast-color);
 }
 
-/* ✅ إزالة text-align و direction من .hero .container الأساسي */
-.hero .container {
-  background: color-mix(in srgb, var(--surface-color), transparent 40%);
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-top: 4px solid var(--accent-color);
-  z-index: 3;
-}
-
-/* ✅ إنجليزي/إيطالي - شمال */
+/* إزالة أي text-align و direction محددة حسب اللغة */
 html[lang="en"] .hero .container,
 html[lang="it"] .hero .container,
-html[dir="ltr"] .hero .container {
-  text-align: left !important;
-  direction: ltr !important;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* ✅ عربي - يمين (الأهم) */
+html[dir="ltr"] .hero .container,
 html[lang="ar"] .hero .container,
 html[dir="rtl"] .hero .container {
-  text-align: right !important;
-  direction: rtl !important;
-  padding-right: 20px;
-  padding-left: 20px;
+  text-align: center !important;
+  direction: ltr !important; /* direction حسب احتياجك، عادة ltr مناسب للنصوص المختلطة */
 }
 
-/* ✅ العناوين */
 html[lang="en"] .hero h2,
 html[lang="it"] .hero h2,
-html[dir="ltr"] .hero h2 {
-  text-align: left !important;
-}
-
+html[dir="ltr"] .hero h2,
 html[lang="ar"] .hero h2,
 html[dir="rtl"] .hero h2 {
-  text-align: right !important;
+  text-align: center !important;
 }
 
-/* ✅ الأزرار */
 html[lang="ar"] .hero .btn-get-started,
 html[dir="rtl"] .hero .btn-get-started {
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-  .hero .container {
-    margin: 0 50px;
-  }
-}
-
 @media (max-width: 768px) {
   .hero .container {
     text-align: center !important;

@@ -9,32 +9,32 @@
   "hero": {
     "item1": {
       "title": "Anacardi",
-      "desc": "Anacardi di alta qualità selezionati con cura per il loro sapore ricco, la consistenza cremosa e l'alto valore nutrizionale. Ideali per tostatura, dolci, snack salutari e produzione alimentare.",
+      "desc": "Anacardi di alta qualità selezionati con cura per il loro sapore ricco, la consistenza cremosa e l'alto valore nutrizionale Ideali per tostatura, dolci, snack salutari e produzione alimentare",
       "btn": "Leggi di più"
     },
     "item2": {
       "title": "Chiodi di Garofano Premium",
-      "desc": "Chiodi di garofano della Tanzania, raccolti a mano, noti per il loro aroma intenso e oli essenziali ricchi. Perfetti per lavorazioni alimentari, miscele di erbe e uso farmaceutico.",
+      "desc": "Chiodi di garofano della Tanzania, raccolti a mano, noti per il loro aroma intenso e oli essenziali ricchi. Perfetti per lavorazioni alimentari, miscele di erbe e uso farmaceutico",
       "btn": "Leggi di più"
     },
     "item3": {
       "title": "PONTE MARKA",
-      "desc": "PONTE MARKA è un'azienda leader nell'esportazione e fornitura di prodotti agricoli premium, specializzata in anacardi, chiodi di garofano, fagioli e cardamomo. Impegnata nella qualità, sostenibilità e nel fornire il meglio dai campi della Tanzania.",
+      "desc": "PONTE MARKA è un'azienda leader nell'esportazione e fornitura di prodotti agricoli premium, specializzata in anacardi, chiodi di garofano, fagioli e cardamomo. Impegnata nella qualità, sostenibilità e nel fornire il meglio dai campi della Tanzania",
       "btn": "Leggi di più"
     },
     "item4": {
       "title": "Fagioli Maculati Premium",
-      "desc": "Fagioli maculati disponibili in viola o marrone. Noti per il loro aspetto attraente, buona capacità di rigonfiamento e forte domanda sul mercato. Coltivati in varie regioni della Tanzania.",
+      "desc": "Fagioli maculati disponibili in viola o marrone. Noti per il loro aspetto attraente, buona capacità di rigonfiamento e forte domanda sul mercato. Coltivati in varie regioni della Tanzania",
       "btn": "Leggi di più"
     },
     "item5": {
       "title": "Pepe Nero",
-      "desc": "Pepe nero naturalmente essiccato al sole, con aroma intenso e alto contenuto di piperina. Adatto a trasformatori di spezie, grossisti e confezionamento premium.",
+      "desc": "Pepe nero naturalmente essiccato al sole, con aroma intenso e alto contenuto di piperina. Adatto a trasformatori di spezie, grossisti e confezionamento premium",
       "btn": "Leggi di più"
     },
     "item6": {
       "title": "Cardamomo Verde Essiccato",
-      "desc": "Baccelli di cardamomo verde essiccati naturalmente con sapore ricco e aromatico. Uniformi e luminosi, ideali per trasformazione di spezie e confezioni di qualità.",
+      "desc": "Baccelli di cardamomo verde essiccati naturalmente con sapore ricco e aromatico. Uniformi e luminosi, ideali per trasformazione di spezie e confezioni di qualità",
       "btn": "Leggi di più"
     }
   },
@@ -60,32 +60,32 @@
   "services": {
     "vision": {
       "title": "Visione",
-      "desc": "Essere il ponte dell'eccellenza che collega la ricchezza naturale della Tanzania ai mercati globali, garantendo che ogni prodotto racconti una storia di qualità, sostenibilità e cooperazione internazionale."
+      "desc": "Essere il ponte dell'eccellenza che collega la ricchezza naturale della Tanzania ai mercati globali, garantendo che ogni prodotto racconti una storia di qualità, sostenibilità e cooperazione internazionale"
     },
     "mission": {
       "title": "Missione",
-      "desc": "Coltivare, selezionare ed esportare fibre di sisal, anacardi e spezie premium, gestendo l'intera catena di approvvigionamento dalla terra alla spedizione con rigorosi standard fitosanitari."
+      "desc": "Coltivare, selezionare ed esportare fibre di sisal, anacardi e spezie premium, gestendo l'intera catena di approvvigionamento dalla terra alla spedizione con rigorosi standard fitosanitari"
     },
     "integrity": {
       "title": "Integrità e Fiducia",
-      "desc": "Manteniamo trasparenza assoluta e costruiamo fiducia a lungo termine con ogni partner commerciale, promuovendo relazioni internazionali affidabili e durature."
+      "desc": "Manteniamo trasparenza assoluta e costruiamo fiducia a lungo termine con ogni partner commerciale, promuovendo relazioni internazionali affidabili e durature"
     },
     "quality": {
       "title": "Qualità Certificata",
-      "desc": "Rigoroso rispetto degli standard internazionali, incluse certificazioni fitosanitarie, fumigazione e conformità all’esportazione, per garantire prodotti di qualità premium."
+      "desc": "Rigoroso rispetto degli standard internazionali, incluse certificazioni fitosanitarie, fumigazione e conformità all'esportazione, per garantire prodotti di qualità premium"
     },
     "glocal": {
       "title": "Approccio Glocal",
-      "desc": "Radici locali forti in Tanzania combinate con standard operativi globali garantiscono pratiche aziendali sostenibili e professionali."
+      "desc": "Radici locali forti in Tanzania combinate con standard operativi globali garantiscono pratiche aziendali sostenibili e professionali"
     },
     "responsive": {
       "title": "Reattivo e Multilingue",
-      "desc": "Il nostro sito web è completamente reattivo su tutti i dispositivi e supporta diverse lingue: inglese, italiano e arabo per l'accessibilità internazionale."
+      "desc": "Il nostro sito web è completamente reattivo su tutti i dispositivi e supporta diverse lingue: inglese, italiano e arabo per l'accessibilità internazionale"
     }
   },
   "gallery": {
     "sectionTitle": "Galleria",
-    "sectionSubtitle": "Esplora i nostri campi, raccolti e processi produttivi—mostrando l'eccellente qualità dei nostri prodotti agricoli e il nostro impegno per l'eccellenza.",
+    "sectionSubtitle": "Esplora i nostri campi, raccolti e processi produttivi—mostrando l'eccellente qualità dei nostri prodotti agricoli e il nostro impegno per l'eccellenza",
     "filters": {
       "all": "Tutti",
       "cashew": "Anacardi",

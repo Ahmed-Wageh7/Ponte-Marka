@@ -281,7 +281,7 @@ async function loadAllPDFs() {
     "Marka-business-license.pdf",
     "Plant-Health-Certificate.pdf",
     "Sisal-Export-license.pdf",
-    "Sisal-trading-licens.pdf",
+    "Sisal-Trading-License.pdf",
     "Tanzania-Business-Licence.pdf",
     "Tax-clearance-certificate-tanga.pdf",
     "Tax-Clearance-Certificate.pdf",
