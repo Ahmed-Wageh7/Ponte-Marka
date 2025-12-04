@@ -261,7 +261,7 @@ document.querySelectorAll(".cert-item").forEach((item) => {
     qrPopup.style.visibility = "hidden";
   });
 });
-
+// -------------------- PDFs --------------------
 // -------------------- PDFs --------------------
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
@@ -301,8 +301,38 @@ async function loadAllPDFs() {
 
 async function createPDFItem(pdfUrl, pdfName) {
   const item = document.createElement("a");
-  item.href = pdfUrl;
-  item.target = "_blank";
+
+  // ✅ تعديل الروابط الخاصة لبعض PDFs
+  const lowerName = pdfName.toLowerCase();
+  if (lowerName.includes("black-pepper")) {
+    item.href =
+      "https://ekilimo.kilimo.go.tz/license-permit-verification/32a5c9d9-cc8e-4024-a489-e3f75c3afb3f";
+    item.target = "_blank";
+  } else if (lowerName.includes("cardamom")) {
+    item.href =
+      "https://ekilimo.kilimo.go.tz/license-permit-verification/11881d24-0ace-4633-a399-37c7049f77bf";
+    item.target = "_blank";
+  } else if (lowerName.includes("copra")) {
+    item.href = "https://asds.kilimo.go.tz/qr-info/TZ-TAN-COPRA-913688";
+    item.target = "_blank";
+  } else if (lowerName.includes("plant-health")) {
+    item.href =
+      "https://ekilimo.kilimo.go.tz/license-permit-verification/e8ab5f56-1db1-49bc-8207-1922d2d28656";
+    item.target = "_blank";
+  } else if (lowerName.includes("sisal-export")) {
+    item.href =
+      "https://ekilimo.kilimo.go.tz/license-permit-verification/ef8b12d6-6edc-4f1f-8fd4-3b7314854d11";
+    item.target = "_blank";
+  } else if (lowerName.includes("sisal-trading")) {
+    item.href =
+      "https://ekilimo.kilimo.go.tz/license-permit-verification/19ec2928-12c6-465c-bee6-3d19ce5b9869";
+    item.target = "_blank";
+  } else {
+    // الباقي يفتح PDF كالمعتاد
+    item.href = pdfUrl;
+    item.target = "_blank";
+  }
+
   item.className = "pdf-item";
   item.title = pdfName;
 
