@@ -100,7 +100,7 @@
         "product": " Anacardi Grezzi (Esportazione Premium)",
         "tagline": " Croccanti e naturalmente dolci. Selezionati per calibro e resa.",
         "description": "Esportiamo anacardi grezzi e lavorati della massima qualità. La nostra filiera garantisce noci sane con elevate rese in sgusciatura, ideali per la tostatura e per l'industria dolciaria italiana ed europea.",
-        "technicalSpecs": "- Gradi (Chicchi): WW180, WW210, WW240, WW320 (Whole White)\n- Umidità: Max 8-10%\nDifetti: &lt; 5%",
+        "technicalSpecs": "- Gradi (Chicchi): WW180, WW210, WW240, WW320 (Whole White)\n- Umidità: Max 8-10%\nDifetti: < 5%",
         "strong": {
           "product": "Prodotto:",
           "category": "Categoria:",
@@ -113,7 +113,7 @@
         "product": "Chiodi di Garofano",
         "tagline": "L'essenza aromatica della Tanzania. Raccolti a mano.",
         "description": "I nostri chiodi di garofano sono rinomati per l'alto contenuto di oli essenziali e per il colore rosso-bruno intenso. Puliti e selezionati con cura per garantire un prodotto privo di impurità.",
-        "technicalSpecs": "- Qualità: CG1 (Raccolta manuale)\n- Umidità: &lt; 12%\n-Gambi: Max 2-3%\nOli Essenziali: Alto contenuto"
+        "technicalSpecs": "- Qualità: CG1 (Raccolta manuale)\n- Umidità: < 12%\n-Gambi: Max 2-3%\nOli Essenziali: Alto contenuto"
       },
       "beans": {
         "product": "Mix di Fagioli e Legumi",
@@ -150,7 +150,7 @@
       "title": "Posizione (Filiale Tanzania)",
       "address": "P.O. Box 6191, Tanga, Tanzania",
       "emailTitle": "Email (Filiale Tanzania)",
-      "email": "tanga.cent@gmail.com",
+      "email": "info@markatz.com",
       "phoneTitle": "Telefono / WhatsApp (Filiale Tanzania)",
       "phone": "+39 389 787 9480"
     },
@@ -168,9 +168,9 @@
         "locationTitle": "Posizione:",
         "location": "P.O. Box 6191, Tanga, Tanzania",
         "emailTitle": "Email:",
-        "email": "tanga.cent@gmail.com",
+        "email": "info@markatz.com",
         "phoneTitle": "Telefono:",
-        "phone": "+25 568 677 8002"
+        "phone": "+255 686 778 002"
       }
     },
     "italyBranch": {

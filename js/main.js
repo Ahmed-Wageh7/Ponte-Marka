@@ -363,3 +363,133 @@ function changeLang(lang) {
     })
     .catch((err) => console.error("Error loading language JSON:", err));
 }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const tracks = document.querySelectorAll(
+//     ".pdf-scroll-track, .pdf-scroll-backup"
+//   );
+//   tracks.forEach((track) => {
+//     const clone = track.innerHTML;
+//     track.innerHTML += clone;
+//   });
+// });
+
+//PDFS DONE //////////////////////////////////////////////////
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+async function loadAllPDFs() {
+  const pdfFolder = "assets/pdfs/";
+  const track = document.querySelector(".pdf-track");
+  track.innerHTML = "";
+
+  const pdfFiles = [
+    "Black-Pepper&Cloves-Phytosanitary-Certificate.pdf",
+    "Cardamom-Phytosanitary-Certificate.pdf",
+    "Copra-Certificate.pdf",
+    "Fire-Certificate.pdf",
+    "Fumigation-Certificate.pdf",
+    "Health-Certificate.pdf",
+    "Marka-business-license.pdf",
+    "Plant-Health-Certificate.pdf",
+    "Sisal-Export-license.pdf",
+    "Sisal-trading-licens.pdf",
+    "Tanzania-Business-Licence.pdf",
+    "Tax-clearance-certificate-tanga.pdf",
+    "Tax-Clearance-Certificate.pdf",
+    "Tax-Identification-Certificate.pdf",
+  ];
+
+  // ✅ السر: إنشاء الأصليات الأول
+  const originalItems = [];
+  for (let pdfName of pdfFiles) {
+    const item = await createPDFItem(pdfFolder + pdfName, pdfName);
+    track.appendChild(item);
+    originalItems.push(item);
+  }
+
+  // ✅ نسخ الأصليات مرة واحدة للـ infinite loop السلس
+  originalItems.forEach((item) => {
+    track.appendChild(item.cloneNode(true));
+  });
+
+  console.log(
+    `تم تحميل ${pdfFiles.length} PDF + النسخ للـ infinite loop بدون فراغ`
+  );
+}
+
+async function createPDFItem(pdfUrl, pdfName) {
+  const item = document.createElement("a");
+  item.href = pdfUrl;
+  item.target = "_blank";
+  item.className = "pdf-item";
+  item.title = pdfName;
+
+  const thumb = document.createElement("img");
+  thumb.className = "pdf-thumb";
+  thumb.src = await generateThumbnail(pdfUrl);
+  thumb.alt = pdfName;
+  thumb.loading = "lazy";
+
+  const name = document.createElement("span");
+  name.className = "pdf-name";
+  const cleanName = pdfName
+    .replace(".pdf", "")
+    .replace(/-/g, " ")
+    .replace(/_/g, " ");
+  name.textContent =
+    cleanName.length > 25 ? cleanName.substring(0, 25) + "..." : cleanName;
+
+  item.append(thumb, name);
+  return item;
+}
+
+async function generateThumbnail(pdfUrl) {
+  try {
+    const loadingTask = pdfjsLib.getDocument(pdfUrl);
+    const pdf = await loadingTask.promise;
+    const page = await pdf.getPage(1);
+    const scale = 0.4;
+    const viewport = page.getViewport({ scale });
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+    await page.render({ canvasContext: context, viewport }).promise;
+    return canvas.toDataURL("image/jpeg", 0.7);
+  } catch (e) {
+    return (
+      "image/svg+xml;base64," +
+      btoa(`
+      <svg width="85" height="110" xmlns="http://www.w3.org/2000/svg">
+        <rect width="85" height="110" rx="8" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+        <rect x="12" y="20" width="60" height="40" rx="4" fill="#fff"/>
+        <text x="42" y="52" text-anchor="middle" fill="#1976d2" font-size="14" font-weight="bold">PDF</text>
+        <circle cx="42" cy="75" r="20" fill="#fff" stroke="#1976d2" stroke-width="2"/>
+        <path d="M38 72 L46 72 L42 78 Z" fill="#1976d2"/>
+      </svg>
+    `)
+    );
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadAllPDFs);
+
+async function changeLanguage(lang) {
+  try {
+    // تحميل JSON
+    const response = await fetch(`languages/${lang}.json`);
+    const translations = await response.json();
+
+    // ملء النصوص بتاعتك
+    document.querySelector('[data-i18n="hero.title"]').textContent =
+      translations.hero.title;
+    // ... باقي النصوص
+
+    // ✅ تحديث الـ lang و dir
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  } catch (error) {
+    console.error("Language change failed:", error);
+  }
+}

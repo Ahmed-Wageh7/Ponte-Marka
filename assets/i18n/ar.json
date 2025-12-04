@@ -153,9 +153,9 @@
       "title": "الموقع (فرع تنزانيا)",
       "address": "P.O. Box 6191, Tanga, Tanzania ",
       "emailTitle": "البريد الإلكتروني (فرع تنزانيا)",
-      "email": "tanga.cent@gmail.com",
+      "email": " info@markatz.com",
       "phoneTitle": "الهاتف / واتساب (فرع تنزانيا)",
-      "phone": "4808 978 793 93+"
+      "phone": "4808 978 793 39+"
     },
     "branches": {
       "italy": {
@@ -163,23 +163,23 @@
         "emailTitle": "البريد الإلكتروني:",
         "email": "info@markatz.com",
         "phoneTitle": "الهاتف:",
-        "phone": "4808 978 793 93+"
+        "phone": "9480 787 389 39+"
       },
       "tanzania": {
         "title": "فرع تنزانيا ",
         "locationTitle": "الموقع:",
         "location": "P.O. Box 6191, Tanga, Tanzania",
         "emailTitle": "البريد الإلكتروني:",
-        "email": "tanga.cent@gmail.com",
+        "email": "info@markatz.com",
         "phoneTitle": "الهاتف:",
-        "phone": "8002 677 568 25+"
+        "phone": "363 580 745 255+"
       }
     },
     "italyBranch": {
       "emailTitle": "البريد الإلكتروني (فرع إيطاليا)",
       "email": "info@markatz.com",
       "phoneTitle": "الهاتف / واتساب (فرع إيطاليا)",
-      "phone": "4808 978 793 93+"
+      "phone": "9480 787 389 39+"
     },
     "form": {
       "name": "اسمك",
@@ -200,7 +200,7 @@
     "contact": {
       "address1": " P.O. Box 6191, Tanga, Tanzania ",
       "phone": "الهاتف:",
-      "phoneNumber": "4808 978 793 93+",
+      "phoneNumber": "9480 787 389 39+",
       "email": "البريد الإلكتروني:",
       "emailAddress": "info@markatz.com"
     },

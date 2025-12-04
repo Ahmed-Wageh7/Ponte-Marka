@@ -29,12 +29,12 @@
     },
     "item5": {
       "title": "Black Pepper",
-      "desc": "Naturally sun-dried black pepper with bold aroma and high piperine levels. Suitable for spice processors, wholesalers, and premium retail packaging.",
+      "desc": "Naturally black pepper with bold aroma and high piperine levels. Suitable for spice processors, wholesalers, and premium retail packaging.",
       "btn": "Read More"
     },
     "item6": {
       "title": "Dried Green Cardamom",
-      "desc": "Naturally sun-dried green cardamom pods with a rich, aromatic flavor. Uniform and bright green, ideal for spice processors and premium packaging.",
+      "desc": "Naturally green cardamom pods with a rich, aromatic flavor. Uniform and bright green, ideal for spice processors and premium packaging.",
       "btn": "Read More"
     }
   },
@@ -101,7 +101,7 @@
         "category": "Nuts & Dried Fruits (Premium Export)",
         "tagline": "Crunchy and naturally sweet. Selected for size and outturn.",
         "description": " We export raw and processed cashew nuts of the highest quality. Our supply chain guarantees healthy nuts with high outturn rates, perfect for roasting and the Italian and European confectionery industry.",
-        "technicalSpecs": "- Grades (Kernels): WW180, WW210, WW240, WW320 (Whole White)\n- Moisture: Max 8-10%\n- Defects: &lt; 5%",
+        "technicalSpecs": "- Grades (Kernels): WW180, WW210, WW240, WW320 (Whole White)\n- Moisture: Max 8-10%\n- Defects: < 5%",
         "strong": {
           "product": "Product:",
           "category": "Category:",
@@ -114,7 +114,7 @@
         "product": "Cloves",
         "tagline": "The aromatic essence of Tanzania. Hand-picked.",
         "description": "Our cloves are famous for their high essential oil content and rich reddish-brown color. Carefully cleaned and sorted to ensure they are free from impurities.",
-        "technicalSpecs": "- Quality: CG1 (Hand-picked)\n- Moisture: &lt; 12%\n - Stems: Max 2-3%\n- Essential Oils: High Content"
+        "technicalSpecs": "- Quality: CG1 (Hand-picked)\n- Moisture: < 12%\n - Stems: Max 2-3%\n- Essential Oils: High Content"
       },
       "beans": {
         "product": "Mixed Beans",
@@ -148,7 +148,7 @@
       "title": "Location (Tanzania Branch)",
       "address": "P.O. Box 6191, Tanga, Tanzania",
       "emailTitle": "Email (Tanzania Branch)",
-      "email": "tanga.cent@gmail.com",
+      "email": "info@markatz.com",
       "phoneTitle": "Phone / WhatsApp (Tanzania Branch)",
       "phone": "+39 389 787 9480"
     },
@@ -165,9 +165,9 @@
         "locationTitle": "Location:",
         "location": "P.O. Box 6191, Tanga, Tanzania",
         "emailTitle": "Email:",
-        "email": "tanga.cent@gmail.com",
+        "email": "info@markatz.com",
         "phoneTitle": "Call:",
-        "phone": "+25 568 677 8002"
+        "phone": "+255 686 778 002"
       }
     },
     "italyBranch": {
